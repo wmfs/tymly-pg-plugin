@@ -6,7 +6,7 @@ const process = require('process')
 const STATE_MACHINE_NAME = 'tymlyTest_aDayInTheLife'
 
 describe('Restart statebox test - cat state machine', function () {
-  const tymly = require('tymly')
+  const tymly = require('@wmfs/tymly')
   let tymlyService
   let statebox
   this.timeout(process.env.TIMEOUT || 5000)

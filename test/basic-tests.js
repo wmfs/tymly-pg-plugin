@@ -3,7 +3,7 @@
 'use strict'
 
 const expect = require('chai').expect
-const tymly = require('tymly')
+const tymly = require('@wmfs/tymly')
 const path = require('path')
 const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const process = require('process')
