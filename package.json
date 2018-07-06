@@ -30,7 +30,7 @@
     "@wmfs/pg-delta-file": "1.1.0",
     "@wmfs/pg-diff-sync": "1.0.0",
     "@wmfs/pg-info": "1.0.2",
-    "@wmfs/pg-model": "1.0.1",
+    "@wmfs/pg-model": "1.0.2",
     "@wmfs/pg-telepods": "1.0.1",
     "@wmfs/relationize": "1.0.1",
     "@wmfs/supercopy": "1.0.2",
