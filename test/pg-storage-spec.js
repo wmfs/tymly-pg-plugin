@@ -13,6 +13,7 @@ describe('PG storage tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
   let tymlyService
+  let storage
   let client
   let people
   let planets
@@ -41,6 +42,7 @@ describe('PG storage tests', function () {
         function (err, tymlyServices) {
           expect(err).to.eql(null)
           tymlyService = tymlyServices.tymly
+          storage = tymlyServices.storage
           client = tymlyServices.storage.client
           const models = tymlyServices.storage.models
           people = models.tymlyTest_people
@@ -573,7 +575,6 @@ describe('PG storage tests', function () {
     })
   })
 
-
   describe('reference data', () => {
     it('should find a star (reference table loaded as seed data) via primary key', function (done) {
       star.findById(
@@ -587,6 +588,82 @@ describe('PG storage tests', function () {
             }
           )
           done()
+        }
+      )
+    })
+  })
+
+  describe('set created by and modified by', () => {
+    it('create a new person', async () => {
+      storage.setCurrentUser('test')
+
+      const properties = await people.create(
+        {
+          employeeNo: '1000',
+          firstName: 'James',
+          lastName: 'Thompson',
+          age: 39
+        },
+        {}
+      )
+      storage.setCurrentUser(null)
+
+      expect(properties).to.eql(
+        {
+          idProperties: {employeeNo: '1000'}
+        }
+      )
+    })
+
+    it('find person, check createdBy', async () => {
+      const doc = await people.findOne(
+        {
+          where: {
+            employeeNo: {equals: '1000'}
+          }
+        }
+      )
+
+      expect(doc).to.eql(
+        {
+          'employeeNo': '1000',
+          'firstName': 'James',
+          'lastName': 'Thompson',
+          'age': 39,
+          '_createdBy': 'test'
+        }
+      )
+    })
+
+    it('upsert record', async () => {
+      storage.setCurrentUser(() => 'modifier')
+      await people.patch(
+        {
+          employeeNo: '1000',
+          firstName: 'Jim'
+        },
+        {}
+      )
+      storage.setCurrentUser(null)
+    })
+
+    it('find person, check createdBy', async () => {
+      const doc = await people.findOne(
+        {
+          where: {
+            employeeNo: {equals: '1000'}
+          }
+        }
+      )
+
+      expect(doc).to.eql(
+        {
+          'employeeNo': '1000',
+          'firstName': 'Jim',
+          'lastName': 'Thompson',
+          'age': 39,
+          '_createdBy': 'test',
+          '_modifiedBy': 'modifier'
         }
       )
     })
