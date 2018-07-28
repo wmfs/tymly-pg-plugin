@@ -593,6 +593,51 @@ describe('PG storage tests', function () {
     })
   })
 
+  describe('related tables', () => {
+    it('should create mars, with two moons and a few craters', function (done) {
+      planets.create(
+        {
+          name: 'mars',
+          title: 'Mars',
+          type: 'Terrestrial',
+          diameter: 6700,
+          color: 'red',
+          url: 'http://en.wikipedia.org/wiki/Mars',
+          moons: [
+            {
+              title: 'Phobos',
+              discoveredBy: 'Asaph Hall',
+              discoveryYear: 1800,
+              craters: [
+                {
+                  title: 'Stickney',
+                  diameter: 9
+                }
+              ]
+            },
+            {
+              title: 'Deimos',
+              discoveredBy: 'Asaph Hall',
+              discoveryYear: 1800
+            }
+          ]
+        },
+        {},
+        function (err, idProperties) {
+          expect(err).to.equal(null)
+          expect(idProperties).to.eql(
+            {
+              idProperties: {
+                name: 'mars'
+              }
+            }
+          )
+          done()
+        }
+      )
+    })
+  })
+
   describe('set created by and modified by', () => {
     it('create a new person', async () => {
       storage.setCurrentUser('test')
@@ -624,13 +669,13 @@ describe('PG storage tests', function () {
         }
       )
 
-      expect(doc).to.eql(
+      expect(doc).to.containSubset(
         {
           'employeeNo': '1000',
           'firstName': 'James',
           'lastName': 'Thompson',
           'age': 39,
-          '_createdBy': 'test'
+          'createdBy': 'test'
         }
       )
     })
@@ -647,7 +692,7 @@ describe('PG storage tests', function () {
       storage.setCurrentUser(null)
     })
 
-    it('find person, check createdBy', async () => {
+    it('find person, check modifiedBy', async () => {
       const doc = await people.findOne(
         {
           where: {
@@ -656,14 +701,14 @@ describe('PG storage tests', function () {
         }
       )
 
-      expect(doc).to.eql(
+      expect(doc).to.containSubset(
         {
           'employeeNo': '1000',
           'firstName': 'Jim',
           'lastName': 'Thompson',
           'age': 39,
-          '_createdBy': 'test',
-          '_modifiedBy': 'modifier'
+          'createdBy': 'test',
+          'modifiedBy': 'modifier'
         }
       )
     })

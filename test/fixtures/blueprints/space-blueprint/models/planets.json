@@ -23,7 +23,7 @@
     },
     "color": {
       "description": "What color is this planet?",
-      "type": "number"
+      "type": "string"
     },
     "url": {
       "type": "string",
