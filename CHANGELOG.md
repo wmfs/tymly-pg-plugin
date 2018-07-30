@@ -1,3 +1,26 @@
+# [1.18.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.17.0...v1.18.0) (2018-07-30)
+
+
+### ✨ Features
+
+* Link up currentUser hook into pg-model ([755b741](https://github.com/wmfs/tymly-pg-plugin/commit/755b741))
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-model requirement to 1.1.1 ([7992cc6](https://github.com/wmfs/tymly-pg-plugin/commit/7992cc6))
+
+
+### 🚨 Tests
+
+* Added describes ([d2efba4](https://github.com/wmfs/tymly-pg-plugin/commit/d2efba4))
+* Added tests for setCurrentUser ([e146733](https://github.com/wmfs/tymly-pg-plugin/commit/e146733))
+
+
+### 💎 Styles
+
+* Standards fix ([a7f99a0](https://github.com/wmfs/tymly-pg-plugin/commit/a7f99a0))
+
 # [1.17.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.16.0...v1.17.0) (2018-07-27)
 
 
