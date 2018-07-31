@@ -1,3 +1,16 @@
+# [1.19.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.18.0...v1.19.0) (2018-07-31)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement to 1.3.0 ([ed05799](https://github.com/wmfs/tymly-pg-plugin/commit/ed05799))
+* **deps-dev:** update semantic-release requirement to 15.9.2 ([c27a336](https://github.com/wmfs/tymly-pg-plugin/commit/c27a336))
+
+
+### 📦 Code Refactoring
+
+* Switch from passing a callback into telepods to using the promise it returns ([ad7d3ac](https://github.com/wmfs/tymly-pg-plugin/commit/ad7d3ac))
+
 # [1.18.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.17.0...v1.18.0) (2018-07-30)
 
 
