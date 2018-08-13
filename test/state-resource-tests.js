@@ -121,7 +121,7 @@ describe('State Resource Tests', function () {
         } else {
           expect(result.rows.length).to.eql(3)
           for (const res of result.rows) {
-            switch(res.animal){
+            switch (res.animal){
               case 'dog':
                 expect(res.colour).to.eql('brown')
                 expect(res['year_born']).to.eql(2011)
