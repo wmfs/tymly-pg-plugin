@@ -1,3 +1,23 @@
+## [1.24.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.24.0...v1.24.1) (2018-08-13)
+
+
+### 🐛 Bug Fixes
+
+* **tests:** reorder test expectations ([a04f554](https://github.com/wmfs/tymly-pg-plugin/commit/a04f554))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update semantic-release requirement from 15.9.6 to 15.9.7 ([95fabf2](https://github.com/wmfs/tymly-pg-plugin/commit/95fabf2))
+* **deps-dev:** update semantic-release requirement from 15.9.7 to 15.9.8 ([c470297](https://github.com/wmfs/tymly-pg-plugin/commit/c470297))
+
+
+### 🚨 Tests
+
+* edit tests to satisfy difference in OS ([05aa8ae](https://github.com/wmfs/tymly-pg-plugin/commit/05aa8ae))
+* standard fix ([9580eab](https://github.com/wmfs/tymly-pg-plugin/commit/9580eab))
+* standard fix ([464031e](https://github.com/wmfs/tymly-pg-plugin/commit/464031e))
+
 # [1.24.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.23.0...v1.24.0) (2018-08-09)
 
 
