@@ -119,17 +119,23 @@ describe('State Resource Tests', function () {
         if (err) {
           done(err)
         } else {
-          expect(result.rows[0].animal).to.eql('cat')
-          expect(result.rows[1].animal).to.eql('dog')
-          expect(result.rows[2].animal).to.eql('mouse')
-
-          expect(result.rows[0].colour).to.eql('black')
-          expect(result.rows[1].colour).to.eql('brown')
-          expect(result.rows[2].colour).to.eql('grey')
-
-          expect(result.rows[0]['year_born']).to.eql(2015)
-          expect(result.rows[1]['year_born']).to.eql(2011)
-          expect(result.rows[2]['year_born']).to.eql(2014)
+          expect(result.rows.length).to.eql(3)
+          for (const res of result.rows) {
+            switch(res.animal){
+              case 'dog':
+                expect(res.colour).to.eql('brown')
+                expect(res['year_born']).to.eql(2011)
+                break
+              case 'cat':
+                expect(res.colour).to.eql('black')
+                expect(res['year_born']).to.eql(2015)
+                break
+              case 'mouse':
+                expect(res.colour).to.eql('grey')
+                expect(res['year_born']).to.eql(2014)
+                break
+            }
+          }
           done()
         }
       }
