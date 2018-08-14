@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.25.0...v1.26.0) (2018-08-14)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.16.0 to 1.16.1 ([c0954c1](https://github.com/wmfs/tymly-pg-plugin/commit/c0954c1))
+
 # [1.25.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.24.1...v1.25.0) (2018-08-13)
 
 
