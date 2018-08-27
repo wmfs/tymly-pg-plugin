@@ -1,3 +1,13 @@
+# [1.31.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.30.0...v1.31.0) (2018-08-27)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.0.1 to 1.1.0 ([70fd978](https://github.com/wmfs/tymly-pg-plugin/commit/70fd978))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement from 7.0.1 to 7.0.2 ([209413a](https://github.com/wmfs/tymly-pg-plugin/commit/209413a))
+* **deps-dev:** update [@semantic-release](https://github.com/semantic-release)/git requirement from 7.0.2 to 7.0.3 ([708f12a](https://github.com/wmfs/tymly-pg-plugin/commit/708f12a))
+* **deps-dev:** update semantic-release requirement from 15.9.9 to 15.9.11 ([d534221](https://github.com/wmfs/tymly-pg-plugin/commit/d534221))
+
 # [1.30.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.29.0...v1.30.0) (2018-08-23)
 
 
