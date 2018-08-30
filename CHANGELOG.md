@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.33.0...v1.34.0) (2018-08-30)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.5.0 to 1.6.0 ([29daa91](https://github.com/wmfs/tymly-pg-plugin/commit/29daa91))
+
 # [1.33.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.32.0...v1.33.0) (2018-08-30)
 
 
