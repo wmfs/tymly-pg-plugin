@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.32.0...v1.33.0) (2018-08-30)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.0.2 to 1.1.0 ([1e4fb0c](https://github.com/wmfs/tymly-pg-plugin/commit/1e4fb0c))
+
 # [1.32.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.31.0...v1.32.0) (2018-08-30)
 
 
