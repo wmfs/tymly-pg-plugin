@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.40.0...v1.41.0) (2018-09-05)
+
+
+### ✨ Features
+
+* Add filterFunctionName to deltaFile options ([b08e952](https://github.com/wmfs/tymly-pg-plugin/commit/b08e952))
+
 # [1.40.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.39.0...v1.40.0) (2018-09-05)
 
 
