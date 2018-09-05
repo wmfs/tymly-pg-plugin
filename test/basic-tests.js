@@ -238,7 +238,7 @@ describe('PostgreSQL storage tests', function () {
   })
 
   it('should load seed-data into the db (which has a JSONB column)', function (done) {
-    models.tymlyTest_title.find({where: {title: {equals: 'Miss'}}})
+    models.tymlyTest_title.find({ where: { title: { equals: 'Miss' } } })
       .then(result => {
         console.log(JSON.stringify(result))
         expect(result[0]).to.have.property('id').and.equal('3')

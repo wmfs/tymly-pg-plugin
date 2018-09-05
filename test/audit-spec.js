@@ -80,7 +80,7 @@ describe('Audit service tests', function () {
   it('should check the change has been documented in tymly.rewind', (done) => {
     models['tymly_rewind'].find({
       where: {
-        modelName: {equals: 'tymly_test.animal_with_age'}
+        modelName: { equals: 'tymly_test.animal_with_age' }
       }
     })
       .then(res => {
@@ -132,7 +132,7 @@ describe('Audit service tests', function () {
   it('should check the change has NOT been documented in tymly.rewind', (done) => {
     models['tymly_rewind'].find({
       where: {
-        modelName: {equals: 'tymly_test.animal_with_year'}
+        modelName: { equals: 'tymly_test.animal_with_year' }
       }
     })
       .then(res => {

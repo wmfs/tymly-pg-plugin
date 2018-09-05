@@ -243,8 +243,8 @@ describe('PG storage tests', function () {
       people.find(
         {
           where: {
-            firstName: {equals: 'Bart'},
-            lastName: {equals: 'Simpson'}
+            firstName: { equals: 'Bart' },
+            lastName: { equals: 'Simpson' }
           }
         },
         function (err, doc) {
@@ -325,8 +325,8 @@ describe('PG storage tests', function () {
       people.findOne(
         {
           where: {
-            firstName: {equals: 'Homer'},
-            lastName: {equals: 'Simpson'}
+            firstName: { equals: 'Homer' },
+            lastName: { equals: 'Simpson' }
           }
         },
         function (err, doc) {
@@ -349,8 +349,8 @@ describe('PG storage tests', function () {
       people.findOne(
         {
           where: {
-            firstName: {equals: 'Maude'},
-            lastName: {equals: 'Flanders'}
+            firstName: { equals: 'Maude' },
+            lastName: { equals: 'Flanders' }
           }
         },
         function (err, doc) {
@@ -455,7 +455,7 @@ describe('PG storage tests', function () {
           firstName: 'Marge',
           lastName: 'Simpson',
           age: 45,
-          children: {name: 'Lisa', age: 13}
+          children: { name: 'Lisa', age: 13 }
         },
         {},
         function (err, idProperties) {
@@ -480,8 +480,8 @@ describe('PG storage tests', function () {
           lastName: 'Simpson',
           age: 45,
           children: [
-            {name: 'Lisa', age: 13},
-            {name: 'Bart', age: 12}
+            { name: 'Lisa', age: 13 },
+            { name: 'Bart', age: 12 }
           ]
         },
         {},
@@ -655,7 +655,7 @@ describe('PG storage tests', function () {
 
       expect(properties).to.eql(
         {
-          idProperties: {employeeNo: '1000'}
+          idProperties: { employeeNo: '1000' }
         }
       )
     })
@@ -664,7 +664,7 @@ describe('PG storage tests', function () {
       const doc = await people.findOne(
         {
           where: {
-            employeeNo: {equals: '1000'}
+            employeeNo: { equals: '1000' }
           }
         }
       )
@@ -696,7 +696,7 @@ describe('PG storage tests', function () {
       const doc = await people.findOne(
         {
           where: {
-            employeeNo: {equals: '1000'}
+            employeeNo: { equals: '1000' }
           }
         }
       )
