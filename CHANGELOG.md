@@ -1,3 +1,12 @@
+# [1.53.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.52.0...v1.53.0) (2018-09-11)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement from 1.2.0 to 1.4.0 ([52d7221](https://github.com/wmfs/tymly-pg-plugin/commit/52d7221))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-model requirement from 1.2.0 to 1.5.0 ([cc4461e](https://github.com/wmfs/tymly-pg-plugin/commit/cc4461e))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.8.0 to 1.9.0 ([bbebc94](https://github.com/wmfs/tymly-pg-plugin/commit/bbebc94))
+
 # [1.52.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.51.0...v1.52.0) (2018-09-11)
 
 
