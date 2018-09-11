@@ -1,3 +1,10 @@
+# [1.55.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.54.0...v1.55.0) (2018-09-11)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.3.0 to 1.5.0 ([c7a022c](https://github.com/wmfs/tymly-pg-plugin/commit/c7a022c))
+
 # [1.54.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.53.0...v1.54.0) (2018-09-11)
 
 
