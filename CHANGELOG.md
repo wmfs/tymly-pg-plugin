@@ -1,3 +1,11 @@
+# [1.54.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.53.0...v1.54.0) (2018-09-11)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.1.0 to 1.3.0 ([c456b5d](https://github.com/wmfs/tymly-pg-plugin/commit/c456b5d))
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.4.0 to 1.5.0 ([f7e4130](https://github.com/wmfs/tymly-pg-plugin/commit/f7e4130))
+
 # [1.53.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.52.0...v1.53.0) (2018-09-11)
 
 
