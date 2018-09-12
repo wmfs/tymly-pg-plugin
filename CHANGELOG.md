@@ -1,3 +1,10 @@
+# [1.66.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.65.0...v1.66.0) (2018-09-12)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-info requirement from 1.5.0 to 1.6.0 ([a86b27f](https://github.com/wmfs/tymly-pg-plugin/commit/a86b27f))
+
 # [1.65.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.64.0...v1.65.0) (2018-09-12)
 
 
