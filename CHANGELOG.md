@@ -1,3 +1,14 @@
+# [1.64.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.63.0...v1.64.0) (2018-09-12)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-delta-file requirement from 1.6.0 to 1.7.0 ([81d6372](https://github.com/wmfs/tymly-pg-plugin/commit/81d6372))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.4.0 to 1.5.0 ([4a98b10](https://github.com/wmfs/tymly-pg-plugin/commit/4a98b10))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.14.0 to 1.15.0 ([d89d73f](https://github.com/wmfs/tymly-pg-plugin/commit/d89d73f))
+* **deps:** update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.6.0 to 1.7.0 ([4aee5fc](https://github.com/wmfs/tymly-pg-plugin/commit/4aee5fc))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.29.0 to 1.30.0 ([f1a8afd](https://github.com/wmfs/tymly-pg-plugin/commit/f1a8afd))
+
 # [1.63.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.62.0...v1.63.0) (2018-09-12)
 
 
