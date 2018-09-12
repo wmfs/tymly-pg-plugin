@@ -1,3 +1,12 @@
+# [1.63.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.62.0...v1.63.0) (2018-09-12)
+
+
+### 🛠 Builds
+
+* **deps:** update lodash requirement from 4.17.10 to 4.17.11 ([6edef49](https://github.com/wmfs/tymly-pg-plugin/commit/6edef49))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.26.1 to 1.27.0 ([5ee29b3](https://github.com/wmfs/tymly-pg-plugin/commit/5ee29b3))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.27.0 to 1.29.0 ([a87df84](https://github.com/wmfs/tymly-pg-plugin/commit/a87df84))
+
 # [1.62.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.61.0...v1.62.0) (2018-09-12)
 
 
