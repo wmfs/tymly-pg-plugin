@@ -1,3 +1,10 @@
+# [1.67.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.66.0...v1.67.0) (2018-09-13)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.5.0 to 1.6.0 ([badb6bf](https://github.com/wmfs/tymly-pg-plugin/commit/badb6bf))
+
 # [1.66.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.65.0...v1.66.0) (2018-09-12)
 
 
