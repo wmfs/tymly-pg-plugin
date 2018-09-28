@@ -1,3 +1,18 @@
+# [1.68.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.67.0...v1.68.0) (2018-09-28)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-delta-file requirement from 1.7.0 to 1.8.0 ([e5d9446](https://github.com/wmfs/tymly-pg-plugin/commit/e5d9446))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.31.0 to 1.32.0 ([17c8e33](https://github.com/wmfs/tymly-pg-plugin/commit/17c8e33))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.32.0 to 1.33.0 ([aaf0d87](https://github.com/wmfs/tymly-pg-plugin/commit/aaf0d87))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.33.0 to 1.34.0 ([d63f842](https://github.com/wmfs/tymly-pg-plugin/commit/d63f842))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.34.0 to 1.35.0 ([55d7c07](https://github.com/wmfs/tymly-pg-plugin/commit/55d7c07))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.35.0 to 1.36.0 ([fc1a593](https://github.com/wmfs/tymly-pg-plugin/commit/fc1a593))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.36.0 to 1.37.0 ([bb0b638](https://github.com/wmfs/tymly-pg-plugin/commit/bb0b638))
+* **deps-dev:** update chai requirement from 4.1.2 to 4.2.0 ([f6a1caa](https://github.com/wmfs/tymly-pg-plugin/commit/f6a1caa))
+* **deps-dev:** update semantic-release requirement ([f746511](https://github.com/wmfs/tymly-pg-plugin/commit/f746511))
+
 # [1.67.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.66.0...v1.67.0) (2018-09-13)
 
 
