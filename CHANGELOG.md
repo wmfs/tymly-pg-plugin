@@ -1,3 +1,18 @@
+# [1.76.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.75.0...v1.76.0) (2018-10-08)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement from 1.5.0 to 1.7.0 ([9510ee6](https://github.com/wmfs/tymly-pg-plugin/commit/9510ee6))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-delta-file requirement ([4ad5054](https://github.com/wmfs/tymly-pg-plugin/commit/4ad5054))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.5.0 to 1.6.0 ([b0c4a76](https://github.com/wmfs/tymly-pg-plugin/commit/b0c4a76))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-model requirement from 1.7.0 to 1.8.0 ([8fa9e7c](https://github.com/wmfs/tymly-pg-plugin/commit/8fa9e7c))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.17.0 to 1.18.0 ([6261291](https://github.com/wmfs/tymly-pg-plugin/commit/6261291))
+* **deps:** update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.7.0 to 1.8.0 ([c059bb4](https://github.com/wmfs/tymly-pg-plugin/commit/c059bb4))
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.7.0 to 1.8.0 ([fada7fc](https://github.com/wmfs/tymly-pg-plugin/commit/fada7fc))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.42.0 to 1.43.0 ([4893957](https://github.com/wmfs/tymly-pg-plugin/commit/4893957))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.43.0 to 1.44.0 ([2b18da7](https://github.com/wmfs/tymly-pg-plugin/commit/2b18da7))
+
 # [1.75.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.74.0...v1.75.0) (2018-10-08)
 
 
