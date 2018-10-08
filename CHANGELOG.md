@@ -1,3 +1,10 @@
+# [1.75.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.74.0...v1.75.0) (2018-10-08)
+
+
+### 🛠 Builds
+
+* **deps:** update debug requirement from 4.0.1 to 4.1.0 ([3665b39](https://github.com/wmfs/tymly-pg-plugin/commit/3665b39))
+
 # [1.74.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.73.0...v1.74.0) (2018-10-04)
 
 
