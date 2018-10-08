@@ -29,7 +29,7 @@
     "@wmfs/hl-pg-client": "1.7.0",
     "@wmfs/pg-delta-file": "1.13.0",
     "@wmfs/pg-diff-sync": "1.6.0",
-    "@wmfs/pg-info": "1.6.0",
+    "@wmfs/pg-info": "1.7.0",
     "@wmfs/pg-model": "1.8.0",
     "@wmfs/pg-telepods": "1.18.0",
     "@wmfs/relationize": "1.8.0",
