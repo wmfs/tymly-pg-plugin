@@ -1,3 +1,15 @@
+# [1.79.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.78.0...v1.79.0) (2018-10-16)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.20.0 to 1.21.0 ([761be89](https://github.com/wmfs/tymly-pg-plugin/commit/761be89))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.45.0 to 1.46.0 ([b12d184](https://github.com/wmfs/tymly-pg-plugin/commit/b12d184))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.46.0 to 1.47.0 ([ca8358f](https://github.com/wmfs/tymly-pg-plugin/commit/ca8358f))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.47.0 to 1.48.0 ([14fbf52](https://github.com/wmfs/tymly-pg-plugin/commit/14fbf52))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.48.0 to 1.48.1 ([ddffef6](https://github.com/wmfs/tymly-pg-plugin/commit/ddffef6))
+* **deps-dev:** update nyc requirement from 13.0.1 to 13.1.0 ([81dbbef](https://github.com/wmfs/tymly-pg-plugin/commit/81dbbef))
+
 # [1.78.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.77.0...v1.78.0) (2018-10-08)
 
 
