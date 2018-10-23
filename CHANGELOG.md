@@ -1,3 +1,16 @@
+# [1.81.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.80.0...v1.81.0) (2018-10-23)
+
+
+### 🛠 Builds
+
+* **deps:** update dottie requirement from 2.0.0 to 2.0.1 ([6a546fd](https://github.com/wmfs/tymly-pg-plugin/commit/6a546fd))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.51.0 to 1.52.0 ([476e192](https://github.com/wmfs/tymly-pg-plugin/commit/476e192))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.52.0 to 1.52.1 ([a55cd6a](https://github.com/wmfs/tymly-pg-plugin/commit/a55cd6a))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.52.1 to 1.53.0 ([57c411c](https://github.com/wmfs/tymly-pg-plugin/commit/57c411c))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.53.0 to 1.54.0 ([ca9c79d](https://github.com/wmfs/tymly-pg-plugin/commit/ca9c79d))
+* **deps-dev:** update semantic-release requirement ([064653c](https://github.com/wmfs/tymly-pg-plugin/commit/064653c))
+* **deps-dev:** update semantic-release requirement ([02624dd](https://github.com/wmfs/tymly-pg-plugin/commit/02624dd))
+
 # [1.80.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.79.0...v1.80.0) (2018-10-19)
 
 
