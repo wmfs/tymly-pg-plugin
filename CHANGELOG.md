@@ -1,3 +1,10 @@
+# [1.82.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.81.0...v1.82.0) (2018-10-23)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-model requirement from 1.8.0 to 1.9.0 ([95ae960](https://github.com/wmfs/tymly-pg-plugin/commit/95ae960))
+
 # [1.81.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.80.0...v1.81.0) (2018-10-23)
 
 
