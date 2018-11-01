@@ -1,3 +1,12 @@
+# [1.88.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.87.0...v1.88.0) (2018-11-01)
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.0 to 7.2.1 ([ba3e3d7](https://github.com/wmfs/tymly-pg-plugin/commit/ba3e3d7))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.56.0 to 1.57.0 ([e7ce4b7](https://github.com/wmfs/tymly-pg-plugin/commit/e7ce4b7))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.57.0 to 1.58.0 ([ef0e852](https://github.com/wmfs/tymly-pg-plugin/commit/ef0e852))
+
 # [1.87.0](https://github.com/wmfs/tymly-pg-plugin.git/compare/v1.86.0...v1.87.0) (2018-10-31)
 
 
