@@ -1,3 +1,13 @@
+# [1.93.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.92.0...v1.93.0) (2018-11-03)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.8.0 to 1.9.0 ([cbbaf72](https://github.com/wmfs/tymly-pg-plugin/commit/cbbaf72))
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-info requirement from 1.8.0 to 1.9.0 ([1d7a426](https://github.com/wmfs/tymly-pg-plugin/commit/1d7a426))
+* **deps:** update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.9.0 to 1.10.0 ([59e026f](https://github.com/wmfs/tymly-pg-plugin/commit/59e026f))
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.10.0 to 1.11.0 ([da83f9c](https://github.com/wmfs/tymly-pg-plugin/commit/da83f9c))
+
 # [1.92.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.91.0...v1.92.0) (2018-11-03)
 
 
