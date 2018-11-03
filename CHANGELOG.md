@@ -1,3 +1,11 @@
+# [1.92.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.91.0...v1.92.0) (2018-11-03)
+
+
+### 🛠 Builds
+
+* **deps:** update boom requirement from 7.2.1 to 7.2.2 ([0cc3a94](https://github.com/wmfs/tymly-pg-plugin/commit/0cc3a94))
+* **deps-dev:** update semantic-release requirement ([d70802b](https://github.com/wmfs/tymly-pg-plugin/commit/d70802b))
+
 # [1.91.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.90.0...v1.91.0) (2018-11-01)
 
 
