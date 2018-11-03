@@ -33,7 +33,7 @@
     "@wmfs/pg-model": "1.10.0",
     "@wmfs/pg-telepods": "1.24.0",
     "@wmfs/relationize": "1.10.0",
-    "@wmfs/supercopy": "1.10.0"
+    "@wmfs/supercopy": "1.11.0"
   },
   "devDependencies": {
     "chai": "4.2.0",
