@@ -1,3 +1,12 @@
+# [1.98.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.97.0...v1.98.0) (2018-11-07)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-delta-file requirement ([ca884e1](https://github.com/wmfs/tymly-pg-plugin/commit/ca884e1))
+* **deps:** update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.11.0 to 1.12.0 ([304ab9b](https://github.com/wmfs/tymly-pg-plugin/commit/304ab9b))
+* **deps-dev:** update semantic-release requirement ([1faece8](https://github.com/wmfs/tymly-pg-plugin/commit/1faece8))
+
 # [1.97.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.96.0...v1.97.0) (2018-11-04)
 
 
