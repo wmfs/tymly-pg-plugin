@@ -1,3 +1,17 @@
+# [1.103.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.102.0...v1.103.0) (2018-11-15)
+
+
+### ✨ Features
+
+* allow sequences in blueprint, and getNextVal state resource ([5c617e8](https://github.com/wmfs/tymly-pg-plugin/commit/5c617e8))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.58.0 to 1.59.0 ([c980605](https://github.com/wmfs/tymly-pg-plugin/commit/c980605))
+* **deps-dev:** update semantic-release requirement ([f998578](https://github.com/wmfs/tymly-pg-plugin/commit/f998578))
+* **deps-dev:** update semantic-release requirement ([de5094d](https://github.com/wmfs/tymly-pg-plugin/commit/de5094d))
+
 # [1.102.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.101.0...v1.102.0) (2018-11-10)
 
 
