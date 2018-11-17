@@ -1,3 +1,11 @@
+# [1.104.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.103.0...v1.104.0) (2018-11-17)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-delta-file requirement ([7420a92](https://github.com/wmfs/tymly-pg-plugin/commit/7420a92))
+* **deps-dev:** update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.59.0 to 1.60.0 ([2259e0d](https://github.com/wmfs/tymly-pg-plugin/commit/2259e0d))
+
 # [1.103.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.102.0...v1.103.0) (2018-11-15)
 
 
