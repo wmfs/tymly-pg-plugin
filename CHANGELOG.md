@@ -1,3 +1,15 @@
+# [1.109.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.108.0...v1.109.0) (2018-12-18)
+
+
+### ✨ Features
+
+* Apply database creates and database alterations separately. ([4a67415](https://github.com/wmfs/tymly-pg-plugin/commit/4a67415))
+
+
+### 🐛 Bug Fixes
+
+* Update the right dependency you absolute melt ([8908aec](https://github.com/wmfs/tymly-pg-plugin/commit/8908aec))
+
 # [1.108.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.107.0...v1.108.0) (2018-11-30)
 
 
