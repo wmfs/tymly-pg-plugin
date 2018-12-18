@@ -1,3 +1,10 @@
+## [1.111.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.111.0...v1.111.1) (2018-12-18)
+
+
+### 🐛 Bug Fixes
+
+* No-op change to force plugin to release ([06db66a](https://github.com/wmfs/tymly-pg-plugin/commit/06db66a))
+
 # [1.111.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.110.0...v1.111.0) (2018-12-18)
 
 
