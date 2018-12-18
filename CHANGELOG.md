@@ -1,3 +1,10 @@
+# [1.110.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.109.0...v1.110.0) (2018-12-18)
+
+
+### ✨ Features
+
+* Actually commit the file that does the create/update change ([7834a72](https://github.com/wmfs/tymly-pg-plugin/commit/7834a72))
+
 # [1.109.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.108.0...v1.109.0) (2018-12-18)
 
 
