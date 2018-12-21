@@ -1,3 +1,10 @@
+# [1.112.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.111.1...v1.112.0) (2018-12-21)
+
+
+### 🚨 Tests
+
+* Tweak day in the life blueprint Parallel task ([98fed59](https://github.com/wmfs/tymly-pg-plugin/commit/98fed59))
+
 ## [1.111.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.111.0...v1.111.1) (2018-12-18)
 
 
