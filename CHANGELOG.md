@@ -1,3 +1,5 @@
+# [1.113.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.112.0...v1.113.0) (2018-12-21)
+
 # [1.112.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.111.1...v1.112.0) (2018-12-21)
 
 
