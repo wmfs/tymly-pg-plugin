@@ -3,7 +3,7 @@
   "analyzeCommits": {
     "preset": "angular",
     "releaseRules": [
-      {"type": "build", "scope":"deps", "release": "minor"}
+      {"type": "Build", "scope":"deps", "release": "minor"}
     ]
   },
   "verifyConditions": [
