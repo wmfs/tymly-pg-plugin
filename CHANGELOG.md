@@ -1,3 +1,16 @@
+# [1.114.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.113.0...v1.114.0) (2019-01-08)
+
+
+### 🛠 Builds
+
+* **deps:** Update debug requirement from 4.1.0 to 4.1.1 ([#288](https://github.com/wmfs/tymly-pg-plugin/issues/288)) ([f00be9c](https://github.com/wmfs/tymly-pg-plugin/commit/f00be9c))
+* **deps-dev:** Update rimraf requirement from 2.6.2 to 2.6.3 ([#295](https://github.com/wmfs/tymly-pg-plugin/issues/295)) ([bd0f203](https://github.com/wmfs/tymly-pg-plugin/commit/bd0f203))
+
+
+### ⚙️ Continuous Integrations
+
+* revert release rule back to 'build' ([226c343](https://github.com/wmfs/tymly-pg-plugin/commit/226c343))
+
 # [1.113.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.112.0...v1.113.0) (2018-12-21)
 
 # [1.112.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.111.1...v1.112.0) (2018-12-21)
