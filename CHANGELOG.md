@@ -1,3 +1,28 @@
+# [1.115.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.114.0...v1.115.0) (2019-01-29)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.28.0 to 1.29.0 ([dc40c62](https://github.com/wmfs/tymly-pg-plugin/commit/dc40c62))
+* **deps-dev:** Update [@semantic-release](https://github.com/semantic-release)/git requirement ([a3962f3](https://github.com/wmfs/tymly-pg-plugin/commit/a3962f3))
+* **deps-dev:** Update semantic-release requirement ([3ee8d98](https://github.com/wmfs/tymly-pg-plugin/commit/3ee8d98))
+
+
+### 🚨 Tests
+
+* FindById tests, to confirm they work properly with the pg storage service ([5c1dc26](https://github.com/wmfs/tymly-pg-plugin/commit/5c1dc26))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add circle ci config ([0258ff7](https://github.com/wmfs/tymly-pg-plugin/commit/0258ff7))
+* **travis:** update travis config ([4e3dc98](https://github.com/wmfs/tymly-pg-plugin/commit/4e3dc98))
+
+
+### ♻️ Chores
+
+* Add getNextValueFromSequence Example ([091a796](https://github.com/wmfs/tymly-pg-plugin/commit/091a796))
+
 # [1.114.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.113.0...v1.114.0) (2019-01-08)
 
 
