@@ -1,3 +1,35 @@
+# [1.116.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.115.0...v1.116.0) (2019-03-04)
+
+
+### ✨ Features
+
+* **audit:** Tymly.Replay captures correct key_string ([b90e08a](https://github.com/wmfs/tymly-pg-plugin/commit/b90e08a))
+
+
+### 🐛 Bug Fixes
+
+* Generate primary key name array properly. ([59f1e85](https://github.com/wmfs/tymly-pg-plugin/commit/59f1e85))
+
+
+### 📦 Code Refactoring
+
+* **audit:** Hoist db structure query out of loop for improved boot time ([1e497c9](https://github.com/wmfs/tymly-pg-plugin/commit/1e497c9))
+
+
+### 🚨 Tests
+
+* **audit:** Check key_string ([3c8cb35](https://github.com/wmfs/tymly-pg-plugin/commit/3c8cb35))
+
+
+### ♻️ Chores
+
+* **deps:** Bumped async, hl-pg-client, pg-diff-sync, pg-info, pg-model, relationise, supercopy ver ([76f232c](https://github.com/wmfs/tymly-pg-plugin/commit/76f232c))
+
+
+### 💎 Styles
+
+* Lint fix ([788016d](https://github.com/wmfs/tymly-pg-plugin/commit/788016d))
+
 # [1.115.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.114.0...v1.115.0) (2019-01-29)
 
 
