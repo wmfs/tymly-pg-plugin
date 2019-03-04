@@ -1,3 +1,10 @@
+## [1.116.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.116.0...v1.116.1) (2019-03-04)
+
+
+### 🐛 Bug Fixes
+
+* **audit:** Pickup _modified_by from new data ([03c9de2](https://github.com/wmfs/tymly-pg-plugin/commit/03c9de2))
+
 # [1.116.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.115.0...v1.116.0) (2019-03-04)
 
 
