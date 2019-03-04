@@ -39,12 +39,14 @@ BEGIN
       model_name,
       key_string,
       old_values,
-      diff
+      diff,
+      _modified_by
     ) VALUES (
       model_name,
       array_to_string(key_fields, '_', 'XXX'),
       old_json,
-      diff
+      diff,
+      json_extract_path_text(new_json, '_modified_by')
     );
   END IF;
   RETURN new;
