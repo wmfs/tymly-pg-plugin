@@ -4,6 +4,8 @@ $BODY$
 DECLARE
   model_name TEXT = TG_ARGV[0];
   primary_key_columns TEXT ARRAY = TG_ARGV[1];
+  key_fields TEXT ARRAY;
+  key_field TEXT;
   key_value_pair RECORD;
   old_json JSON;
   new_json JSON;
@@ -26,6 +28,11 @@ BEGIN
       END IF;
     END IF;
   END LOOP;
+
+  FOREACH key_field IN ARRAY primary_key_columns LOOP
+	key_fields := array_append(key_fields, json_extract_path_text(old_json, key_field));
+  END LOOP;
+
   IF changed THEN
     new._modified = now();
     INSERT INTO tymly.rewind (
@@ -35,7 +42,7 @@ BEGIN
       diff
     ) VALUES (
       model_name,
-      'XXX',
+      array_to_string(key_fields, '_', 'XXX'),
       old_json,
       diff
     );
