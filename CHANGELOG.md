@@ -1,3 +1,10 @@
+# [1.117.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.116.1...v1.117.0) (2019-03-05)
+
+
+### ✨ Features
+
+* **audit-trail:** New auditTrail module to grab the edit history of anything in tymly.rewind ([be97864](https://github.com/wmfs/tymly-pg-plugin/commit/be97864))
+
 ## [1.116.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.116.0...v1.116.1) (2019-03-04)
 
 
