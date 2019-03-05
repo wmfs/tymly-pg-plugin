@@ -1,3 +1,10 @@
+## [1.117.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.117.0...v1.117.1) (2019-03-05)
+
+
+### 🐛 Bug Fixes
+
+* **auditTrail:** Formatted log now an object, with change, modified, modifiedBy ([4fbe90c](https://github.com/wmfs/tymly-pg-plugin/commit/4fbe90c))
+
 # [1.117.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.116.1...v1.117.0) (2019-03-05)
 
 
