@@ -1,3 +1,15 @@
+# [1.118.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.117.1...v1.118.0) (2019-03-05)
+
+
+### ✨ Features
+
+* **audit-trail:** Return raw or formatted history but not both. Control with "format": "raw" parame ([8638002](https://github.com/wmfs/tymly-pg-plugin/commit/8638002))
+
+
+### 💎 Styles
+
+* lint ([63cf4f3](https://github.com/wmfs/tymly-pg-plugin/commit/63cf4f3))
+
 ## [1.117.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.117.0...v1.117.1) (2019-03-05)
 
 
