@@ -90,7 +90,7 @@ describe('Audit Trail tests', () => {
     )
   })
 
-  function check(res, expected, done) {
+  function check (res, expected, done) {
     try {
       expect(res).to.eql(expected)
       done()
