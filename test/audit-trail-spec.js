@@ -10,7 +10,31 @@ const rawHistory = [
     keyString: 'dog_henry',
     oldValues: {
       name: 'henry',
-      colour: 'black',
+      colour: null,
+      size: 'small',
+      animal: 'dog'
+    },
+    diff: {
+      colour: {
+        from: '',
+        to: 'brown'
+      }
+    },
+    modifiedBy: 'bob',
+    modified: DateTime.fromObject({
+      year: 2018,
+      month: 12,
+      day: 1,
+      hour: 11,
+      minute: 0
+    }).toJSDate()
+  },
+  {
+    modelName: 'test_animal',
+    keyString: 'dog_henry',
+    oldValues: {
+      name: 'henry',
+      colour: 'brown',
       size: 'small',
       animal: 'dog'
     },
@@ -32,13 +56,48 @@ const rawHistory = [
       hour: 12,
       minute: 0
     }).toJSDate()
-  }]
+  },
+  {
+    modelName: 'test_animal',
+    keyString: 'dog_henry',
+    oldValues: {
+      name: 'henry',
+      colour: 'black',
+      size: 'small',
+      animal: 'dog'
+    },
+    diff: {
+      size: {
+        from: 'small',
+        to: ''
+      }
+    },
+    modifiedBy: 'bill',
+    modified: DateTime.fromObject({
+      year: 2018,
+      month: 12,
+      day: 1,
+      hour: 12,
+      minute: 5
+    }).toJSDate()
+  }
+]
 
 const formattedHistory = [
+  {
+    change: 'Size "small" was cleared',
+    modifiedBy: 'bill',
+    modified: '12:05 Dec 1, 2018'
+  },
   {
     change: 'Colour changed from "brown" to "black"',
     modifiedBy: 'bill',
     modified: '12:00 Dec 1, 2018'
+  },
+  {
+    change: 'Colour set to "brown"',
+    modifiedBy: 'bob',
+    modified: '11:00 Dec 1, 2018'
   }
 ]
 
@@ -69,6 +128,9 @@ describe('Audit Trail tests', () => {
             },
             colour: {
               title: 'Colour'
+            },
+            size: {
+              title: 'Size'
             },
             smell: {
               title: 'Smell',
