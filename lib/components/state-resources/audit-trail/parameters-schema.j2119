@@ -1,0 +1,3 @@
+This document specifies a JSON object called an "Audit Trail".
+An Audit Trail MUST have a string field named "model".
+An Audit Trail MUST have an object field named "keys".
