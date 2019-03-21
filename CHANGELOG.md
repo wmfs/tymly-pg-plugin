@@ -1,3 +1,10 @@
+## [1.118.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.118.1...v1.118.2) (2019-03-21)
+
+
+### 🐛 Bug Fixes
+
+* Add parameters schema for AuditTrail state resource. ([ebbbab7](https://github.com/wmfs/tymly-pg-plugin/commit/ebbbab7))
+
 ## [1.118.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.118.0...v1.118.1) (2019-03-06)
 
 
