@@ -1,3 +1,12 @@
+# [1.119.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.118.2...v1.119.0) (2019-04-05)
+
+
+### 🛠 Builds
+
+* **deps:** Update luxon requirement from 1.11.1 to 1.12.0 ([8ed58b8](https://github.com/wmfs/tymly-pg-plugin/commit/8ed58b8))
+* **deps-dev:** Update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.83.1 to 1.92.0 ([64a4f90](https://github.com/wmfs/tymly-pg-plugin/commit/64a4f90))
+* **deps-dev:** Update mocha requirement from 5.2.0 to 6.0.2 ([029f080](https://github.com/wmfs/tymly-pg-plugin/commit/029f080))
+
 ## [1.118.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.118.1...v1.118.2) (2019-03-21)
 
 
