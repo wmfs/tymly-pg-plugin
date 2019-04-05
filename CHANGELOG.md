@@ -1,3 +1,11 @@
+# [1.120.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.119.0...v1.120.0) (2019-04-05)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.13.0 to 1.13.2 ([1926d64](https://github.com/wmfs/tymly-pg-plugin/commit/1926d64))
+* **deps-dev:** Update codecov requirement from 3.2.0 to 3.3.0 ([5abc983](https://github.com/wmfs/tymly-pg-plugin/commit/5abc983))
+
 # [1.119.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.118.2...v1.119.0) (2019-04-05)
 
 
