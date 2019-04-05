@@ -1,3 +1,10 @@
+# [1.121.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.120.0...v1.121.0) (2019-04-05)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-model requirement from 1.13.0 to 1.14.0 ([4ac73ae](https://github.com/wmfs/tymly-pg-plugin/commit/4ac73ae))
+
 # [1.120.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.119.0...v1.120.0) (2019-04-05)
 
 
