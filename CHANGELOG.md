@@ -1,3 +1,11 @@
+# [1.122.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.121.0...v1.122.0) (2019-04-09)
+
+
+### 🛠 Builds
+
+* **deps:** Bump pg-model, pg-delta-file, luxon ([f53e7df](https://github.com/wmfs/tymly-pg-plugin/commit/f53e7df))
+* **dev-deps:** Bumped mocha and semantic-release/changelog ([b96507c](https://github.com/wmfs/tymly-pg-plugin/commit/b96507c))
+
 # [1.121.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.120.0...v1.121.0) (2019-04-05)
 
 
