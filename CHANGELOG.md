@@ -1,3 +1,15 @@
+# [1.123.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.122.0...v1.123.0) (2019-06-26)
+
+
+### 🛠 Builds
+
+* **deps:** Update async requirement from 2.6.2 to 3.1.0 ([428bb0d](https://github.com/wmfs/tymly-pg-plugin/commit/428bb0d))
+* **deps:** Update luxon requirement from 1.12.1 to 1.16.0 ([06abc77](https://github.com/wmfs/tymly-pg-plugin/commit/06abc77))
+* **deps-dev:** Update [@semantic-release](https://github.com/semantic-release)/git requirement ([752c524](https://github.com/wmfs/tymly-pg-plugin/commit/752c524))
+* **deps-dev:** Update codecov requirement from 3.3.0 to 3.5.0 ([cda732a](https://github.com/wmfs/tymly-pg-plugin/commit/cda732a))
+* **deps-dev:** Update mocha requirement from 6.1.2 to 6.1.4 ([a004dd5](https://github.com/wmfs/tymly-pg-plugin/commit/a004dd5))
+* **deps-dev:** Update semantic-release requirement ([a88d40b](https://github.com/wmfs/tymly-pg-plugin/commit/a88d40b))
+
 # [1.122.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.121.0...v1.122.0) (2019-04-09)
 
 
