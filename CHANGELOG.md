@@ -1,3 +1,18 @@
+# [1.125.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.124.0...v1.125.0) (2019-07-03)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/hl-pg-client requirement from 1.11.1 to 1.12.0 ([ff6934e](https://github.com/wmfs/tymly-pg-plugin/commit/ff6934e))
+* **deps-dev:** Update [@semantic-release](https://github.com/semantic-release)/git requirement ([a6049cc](https://github.com/wmfs/tymly-pg-plugin/commit/a6049cc))
+* **deps-dev:** Update [@wmfs](https://github.com/wmfs)/tymly requirement from 1.92.0 to 1.94.1 ([decb10d](https://github.com/wmfs/tymly-pg-plugin/commit/decb10d))
+* **deps-dev:** Update nyc requirement from 13.3.0 to 14.1.1 ([89acf28](https://github.com/wmfs/tymly-pg-plugin/commit/89acf28))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** Update CircleCI config - Travis migration ([a19af11](https://github.com/wmfs/tymly-pg-plugin/commit/a19af11))
+
 # [1.124.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.123.0...v1.124.0) (2019-06-28)
 
 
