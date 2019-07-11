@@ -1,3 +1,20 @@
+# [1.126.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.125.0...v1.126.0) (2019-07-11)
+
+
+### 🛠 Builds
+
+* **deps:** Update lodash requirement from 4.17.11 to 4.17.14 ([eb2bd2d](https://github.com/wmfs/tymly-pg-plugin/commit/eb2bd2d))
+
+
+### 📚 Documentation
+
+* add circleci status [skip ci] ([05f83af](https://github.com/wmfs/tymly-pg-plugin/commit/05f83af))
+
+
+### ⚙️ Continuous Integrations
+
+* **travis:** remove Travis config ([76ff9de](https://github.com/wmfs/tymly-pg-plugin/commit/76ff9de))
+
 # [1.125.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.124.0...v1.125.0) (2019-07-03)
 
 
