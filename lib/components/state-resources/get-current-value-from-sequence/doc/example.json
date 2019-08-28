@@ -1,0 +1,11 @@
+{
+  "GetCurrentValueFromSequence": {
+    "Type": "Task",
+    "Resource": "module:getCurrentValueFromSequence",
+    "ResourceConfig": {
+      "namespace": "wmfs",
+      "id": "tempUprn"
+    },
+    "Next": "Create"
+  }
+}
