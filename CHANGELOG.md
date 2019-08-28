@@ -1,3 +1,10 @@
+# [1.127.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.126.0...v1.127.0) (2019-08-28)
+
+
+### ✨ Features
+
+* state resource to get current value in sequence ([4bbfdb3](https://github.com/wmfs/tymly-pg-plugin/commit/4bbfdb3))
+
 # [1.126.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.125.0...v1.126.0) (2019-07-11)
 
 
