@@ -1,3 +1,10 @@
+# [1.128.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.127.0...v1.128.0) (2019-09-09)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/relationize requirement from 1.12.0 to 1.14.0 ([5189cac](https://github.com/wmfs/tymly-pg-plugin/commit/5189cac))
+
 # [1.127.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.126.0...v1.127.0) (2019-08-28)
 
 
