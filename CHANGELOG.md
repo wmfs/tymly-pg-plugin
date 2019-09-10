@@ -1,3 +1,12 @@
+# [1.130.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.129.0...v1.130.0) (2019-09-10)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-info requirement from 1.10.0 to 1.11.0 ([33279e1](https://github.com/wmfs/tymly-pg-plugin/commit/33279e1))
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-telepods requirement from 1.31.0 to 1.34.0 ([368481b](https://github.com/wmfs/tymly-pg-plugin/commit/368481b))
+* **deps:** Update [@wmfs](https://github.com/wmfs)/supercopy requirement from 1.15.0 to 1.18.0 ([9bf9613](https://github.com/wmfs/tymly-pg-plugin/commit/9bf9613))
+
 # [1.129.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.128.0...v1.129.0) (2019-09-10)
 
 
