@@ -1,3 +1,10 @@
+# [1.131.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.130.0...v1.131.0) (2019-09-10)
+
+
+### 🛠 Builds
+
+* **deps:** Update [@wmfs](https://github.com/wmfs)/pg-diff-sync requirement from 1.13.2 to 1.15.0 ([264f780](https://github.com/wmfs/tymly-pg-plugin/commit/264f780))
+
 # [1.130.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.129.0...v1.130.0) (2019-09-10)
 
 
