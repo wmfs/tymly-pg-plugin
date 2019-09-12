@@ -1,3 +1,11 @@
+# [1.132.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.131.0...v1.132.0) (2019-09-12)
+
+
+### 🛠 Builds
+
+* **deps:** Update dependancies ([011c173](https://github.com/wmfs/tymly-pg-plugin/commit/011c173))
+* **deps-dev:** update dev dependancies ([83abfa6](https://github.com/wmfs/tymly-pg-plugin/commit/83abfa6))
+
 # [1.131.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.130.0...v1.131.0) (2019-09-10)
 
 
