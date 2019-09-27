@@ -1,3 +1,16 @@
+# [1.133.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.132.0...v1.133.0) (2019-09-27)
+
+
+### ✨ Features
+
+* csv-delta-file state resource returns model info as well as total row count ([7dbaaa7](https://github.com/wmfs/tymly-pg-plugin/commit/7dbaaa7))
+
+
+### 🐛 Bug Fixes
+
+* Convert delta-export from promises to async/await ([9323c33](https://github.com/wmfs/tymly-pg-plugin/commit/9323c33))
+* No need to take a callback to init ([1bdb740](https://github.com/wmfs/tymly-pg-plugin/commit/1bdb740))
+
 # [1.132.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.131.0...v1.132.0) (2019-09-12)
 
 
