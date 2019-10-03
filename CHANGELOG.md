@@ -1,3 +1,20 @@
+# [1.135.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.134.0...v1.135.0) (2019-10-03)
+
+
+### ✨ Features
+
+* Plug in new pg-delta-file version to get dry-run capability ([c5fe33f](https://github.com/wmfs/tymly-pg-plugin/commit/c5fe33f))
+
+
+### 🐛 Bug Fixes
+
+* Lint fixes following bump to standard 14 ([a0a42ae](https://github.com/wmfs/tymly-pg-plugin/commit/a0a42ae))
+
+
+### 🛠 Builds
+
+* Bump dependencies ([27bea2c](https://github.com/wmfs/tymly-pg-plugin/commit/27bea2c))
+
 # [1.134.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.133.0...v1.134.0) (2019-09-30)
 
 
