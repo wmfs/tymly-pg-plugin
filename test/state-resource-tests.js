@@ -124,15 +124,15 @@ describe('State Resource Tests', function () {
             switch (res.animal) {
               case 'dog':
                 expect(res.colour).to.eql('brown')
-                expect(res['year_born']).to.eql(2011)
+                expect(res.year_born).to.eql(2011)
                 break
               case 'cat':
                 expect(res.colour).to.eql('black')
-                expect(res['year_born']).to.eql(2015)
+                expect(res.year_born).to.eql(2015)
                 break
               case 'mouse':
                 expect(res.colour).to.eql('grey')
-                expect(res['year_born']).to.eql(2014)
+                expect(res.year_born).to.eql(2014)
                 break
             }
           }
