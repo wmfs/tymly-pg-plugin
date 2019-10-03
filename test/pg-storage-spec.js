@@ -167,10 +167,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'employeeNo': '3',
-              'firstName': 'Lisa',
-              'lastName': 'Simpson',
-              'age': 8
+              employeeNo: '3',
+              firstName: 'Lisa',
+              lastName: 'Simpson',
+              age: 8
             }
           )
           done()
@@ -204,33 +204,33 @@ describe('PG storage tests', function () {
           expect(doc).to.containSubset(
             [
               {
-                'age': 8,
-                'employeeNo': '3',
-                'firstName': 'Lisa',
-                'lastName': 'Simpson'
+                age: 8,
+                employeeNo: '3',
+                firstName: 'Lisa',
+                lastName: 'Simpson'
               },
               {
-                'age': 10,
-                'employeeNo': '5',
-                'firstName': 'Bart',
-                'lastName': 'Simpson'
+                age: 10,
+                employeeNo: '5',
+                firstName: 'Bart',
+                lastName: 'Simpson'
               },
               {
-                'age': 36,
-                'employeeNo': '4',
-                'firstName': 'Marge',
-                'lastName': 'Simpson'
+                age: 36,
+                employeeNo: '4',
+                firstName: 'Marge',
+                lastName: 'Simpson'
               },
               {
-                'age': 39,
-                'employeeNo': '1',
-                'firstName': 'Homer',
-                'lastName': 'Simpson'
+                age: 39,
+                employeeNo: '1',
+                firstName: 'Homer',
+                lastName: 'Simpson'
               },
               {
-                'employeeNo': '2',
-                'firstName': 'Maggie',
-                'lastName': 'Simpson'
+                employeeNo: '2',
+                firstName: 'Maggie',
+                lastName: 'Simpson'
               }
             ]
           )
@@ -253,10 +253,10 @@ describe('PG storage tests', function () {
           expect(doc).to.containSubset(
             [
               {
-                'age': 10,
-                'employeeNo': '5',
-                'firstName': 'Bart',
-                'lastName': 'Simpson'
+                age: 10,
+                employeeNo: '5',
+                firstName: 'Bart',
+                lastName: 'Simpson'
               }
             ]
           )
@@ -281,16 +281,16 @@ describe('PG storage tests', function () {
           expect(doc).to.containSubset(
             [
               {
-                'employeeNo': '4',
-                'firstName': 'Marge',
-                'lastName': 'Simpson',
-                'age': 36
+                employeeNo: '4',
+                firstName: 'Marge',
+                lastName: 'Simpson',
+                age: 36
               },
               {
-                'employeeNo': '1',
-                'firstName': 'Homer',
-                'lastName': 'Simpson',
-                'age': 39
+                employeeNo: '1',
+                firstName: 'Homer',
+                lastName: 'Simpson',
+                age: 39
               }
             ]
           )
@@ -309,10 +309,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'age': 10,
-              'employeeNo': '5',
-              'firstName': 'Bart',
-              'lastName': 'Simpson'
+              age: 10,
+              employeeNo: '5',
+              firstName: 'Bart',
+              lastName: 'Simpson'
             }
           )
 
@@ -333,10 +333,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'age': 39,
-              'employeeNo': '1',
-              'firstName': 'Homer',
-              'lastName': 'Simpson'
+              age: 39,
+              employeeNo: '1',
+              firstName: 'Homer',
+              lastName: 'Simpson'
             }
           )
 
@@ -384,10 +384,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'employeeNo': '2',
-              'firstName': 'Maggie',
-              'lastName': 'Simpson',
-              'age': 1
+              employeeNo: '2',
+              firstName: 'Maggie',
+              lastName: 'Simpson',
+              age: 1
             }
           )
           done()
@@ -417,9 +417,9 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'employeeNo': '2',
-              'firstName': 'Maggie',
-              'lastName': 'Simpson'
+              employeeNo: '2',
+              firstName: 'Maggie',
+              lastName: 'Simpson'
             }
           )
           done()
@@ -529,10 +529,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'employeeNo': '10',
-              'firstName': 'Abe',
-              'lastName': 'Simpson',
-              'age': 82
+              employeeNo: '10',
+              firstName: 'Abe',
+              lastName: 'Simpson',
+              age: 82
             }
           )
           done()
@@ -563,10 +563,10 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'employeeNo': '10',
-              'firstName': 'Abraham',
-              'lastName': 'Simpson',
-              'age': 83
+              employeeNo: '10',
+              firstName: 'Abraham',
+              lastName: 'Simpson',
+              age: 83
             }
           )
           done()
@@ -583,8 +583,8 @@ describe('PG storage tests', function () {
           expect(err).to.equal(null)
           expect(doc).to.containSubset(
             {
-              'name': 'Proxima Centauri',
-              'type': 'Red Dwarf'
+              name: 'Proxima Centauri',
+              type: 'Red Dwarf'
             }
           )
           done()
@@ -671,11 +671,11 @@ describe('PG storage tests', function () {
 
       expect(doc).to.containSubset(
         {
-          'employeeNo': '1000',
-          'firstName': 'James',
-          'lastName': 'Thompson',
-          'age': 39,
-          'createdBy': 'test'
+          employeeNo: '1000',
+          firstName: 'James',
+          lastName: 'Thompson',
+          age: 39,
+          createdBy: 'test'
         }
       )
     })
@@ -703,12 +703,12 @@ describe('PG storage tests', function () {
 
       expect(doc).to.containSubset(
         {
-          'employeeNo': '1000',
-          'firstName': 'Jim',
-          'lastName': 'Thompson',
-          'age': 39,
-          'createdBy': 'test',
-          'modifiedBy': 'modifier'
+          employeeNo: '1000',
+          firstName: 'Jim',
+          lastName: 'Thompson',
+          age: 39,
+          createdBy: 'test',
+          modifiedBy: 'modifier'
         }
       )
     })

@@ -14,7 +14,7 @@ describe('Testing functionality as a state-resource', function () {
   let client
   let tymlyService
   let statebox
-  let STATE_MACHINE_NAME = 'foodTest_food_1_0'
+  const STATE_MACHINE_NAME = 'foodTest_food_1_0'
   let executionName
 
   before(function () {

@@ -12,8 +12,8 @@ const process = require('process')
 describe('Multicopy tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
-  let connectionString = process.env.PG_CONNECTION_STRING
-  let client = new HlPgClient(connectionString)
+  const connectionString = process.env.PG_CONNECTION_STRING
+  const client = new HlPgClient(connectionString)
 
   before(function () {
     if (process.env.PG_CONNECTION_STRING && !/^postgres:\/\/[^:]+:[^@]+@(?:localhost|127\.0\.0\.1).*$/.test(process.env.PG_CONNECTION_STRING)) {
