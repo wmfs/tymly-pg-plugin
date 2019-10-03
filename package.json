@@ -26,7 +26,7 @@
     "debug": "4.1.1",
     "dottie": "2.0.1",
     "lodash": "4.17.15",
-    "luxon": "1.17.2",
+    "luxon": "1.19.3",
     "@wmfs/hl-pg-client": "1.13.0",
     "@wmfs/pg-delta-file": "1.32.1",
     "@wmfs/pg-diff-sync": "1.15.0",
@@ -39,17 +39,17 @@
   "devDependencies": {
     "chai": "4.2.0",
     "chai-subset": "1.6.0",
-    "codecov": "3.5.0",
+    "codecov": "3.6.1",
     "conventional-changelog-metahub": "2.0.2",
     "cz-conventional-changelog": "3.0.2",
-    "mocha": "6.2.0",
+    "mocha": "6.2.1",
     "nyc": "14.1.1",
     "rimraf": "3.0.0",
     "semantic-release": "15.13.24",
-    "standard": "12.0.1",
+    "standard": "14.3.1",
     "@semantic-release/changelog": "3.0.4",
     "@semantic-release/git": "7.0.16",
-    "@wmfs/tymly": "1.98.0"
+    "@wmfs/tymly": "1.98.1"
   },
   "scripts": {
     "lint": "standard",
