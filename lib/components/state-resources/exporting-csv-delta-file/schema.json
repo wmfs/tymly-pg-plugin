@@ -15,7 +15,7 @@
       "description": "An array of objects that contain a `table` object... which in turn define how to assemble each CSV line. Please see [pg-delta-file](https://github.com/wmfs/tymly/tree/master/pg-delta-file) for more information."
     }
   },
-  "required": ["since"]
+  "required": []
 }
 
 
