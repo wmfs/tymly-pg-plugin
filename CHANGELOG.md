@@ -1,3 +1,10 @@
+# [1.136.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.135.1...v1.136.0) (2019-11-21)
+
+
+### ✨ Features
+
+* statelint parameters config ([](https://github.com/wmfs/tymly-pg-plugin/commit/4c6706b))
+
 ## [1.135.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.135.0...v1.135.1) (2019-11-14)
 
 
