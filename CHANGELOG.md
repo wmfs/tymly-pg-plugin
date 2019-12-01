@@ -1,3 +1,15 @@
+# [1.137.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.136.0...v1.137.0) (2019-12-01)
+
+
+### ✨ Features
+
+* Extend export-csv-delta-file to be able to take a progress callback ([](https://github.com/wmfs/tymly-pg-plugin/commit/55b3689))
+
+
+### ♻️ Chores
+
+* Bump pg-delta-file from 1.32.1 to 1.33.0 ([](https://github.com/wmfs/tymly-pg-plugin/commit/86494b5))
+
 # [1.136.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.135.1...v1.136.0) (2019-11-21)
 
 
