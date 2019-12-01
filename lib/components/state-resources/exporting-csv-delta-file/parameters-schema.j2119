@@ -1,1 +1,7 @@
-This document specifies a JSON object called a "Config".
+This document specifies a JSON object called a "DeltaExport Parameters".
+A DeltaExport Parameters MAY have a timestamp field named "lastExportDate".
+A DeltaExport Parameters MAY have a string field named "outputFilepath".
+A DeltaExport Parameters MAY have a boolean field named "dryRun".
+A DeltaExport Parameters MAY have a string field named "parentExecutionName".
+A DeltaExport Parameters MAY have a string field named "parentCallbackFormatter".
+A DeltaExport Parameters MAY have a string field named "parentResultPath".
