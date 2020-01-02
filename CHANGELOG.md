@@ -1,3 +1,10 @@
+# [1.140.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.139.0...v1.140.0) (2020-01-02)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.18.0 to 1.20.0 ([3cac8bd](https://github.com/wmfs/tymly-pg-plugin/commit/3cac8bd2b852886587f393a6ad2d32317105c5ca))
+
 # [1.139.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.138.0...v1.139.0) (2020-01-02)
 
 
