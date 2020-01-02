@@ -1,3 +1,22 @@
+# [1.138.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.137.0...v1.138.0) (2020-01-02)
+
+
+### 🛠 Builds
+
+* **deps:** Bump dottie from 2.0.1 to 2.0.2 ([da0f3bf](https://github.com/wmfs/tymly-pg-plugin/commit/da0f3bf016a8f0da2b02ed307ba199736e1deb9e))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.4 to 3.0.6 ([e0cf1eb](https://github.com/wmfs/tymly-pg-plugin/commit/e0cf1eb6f8fbd2c96afafd907ab15afc4354a53e))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.16 to 7.0.18 ([1bd288c](https://github.com/wmfs/tymly-pg-plugin/commit/1bd288c4920ada2e658c7e3354651e106bed692f))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.98.1 to 1.103.3 ([733cdc5](https://github.com/wmfs/tymly-pg-plugin/commit/733cdc56cafd95de058f27345758671c818c2b58))
+* **deps-dev:** Bump conventional-changelog-metahub from 2.0.2 to 3.0.0 ([3c9b2a4](https://github.com/wmfs/tymly-pg-plugin/commit/3c9b2a4fb798579ef32be5330234a1a15230cdc9))
+* **deps-dev:** Bump mocha from 6.2.1 to 6.2.2 ([8056815](https://github.com/wmfs/tymly-pg-plugin/commit/805681553bb495051cba55157d143f4666cdff93))
+* **deps-dev:** Bump nyc from 14.1.1 to 15.0.0 ([ab7a5d9](https://github.com/wmfs/tymly-pg-plugin/commit/ab7a5d90b1e290a7399cfc7d10beeb950a069754))
+* **deps-dev:** Bump semantic-release from 15.13.24 to 15.14.0 ([a1dcf82](https://github.com/wmfs/tymly-pg-plugin/commit/a1dcf82448a09bc648f7d0b4f4c3a36f64f1387c))
+
+
+### ♻️ Chores
+
+* add plugin.json ([d7f903f](https://github.com/wmfs/tymly-pg-plugin/commit/d7f903f5d927315a6ca4e03a2eac5febe87a34c9))
+
 # [1.137.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.136.0...v1.137.0) (2019-12-01)
 
 
