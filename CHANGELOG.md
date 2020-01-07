@@ -1,3 +1,23 @@
+# [1.142.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.141.0...v1.142.0) (2020-01-07)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/relationize from 1.14.0 to 1.15.0 ([98c40c3](https://github.com/wmfs/tymly-pg-plugin/commit/98c40c33b9063dc8ce0e9b49366b29a317d8321e))
+* **deps-dev:** add [@semantic-release](https://github.com/semantic-release)/exec ([5f9086f](https://github.com/wmfs/tymly-pg-plugin/commit/5f9086fc9f05797810655df78467531db754f999))
+* **deps-dev:** Bump mocha from 6.2.2 to 7.0.0 ([6f88dce](https://github.com/wmfs/tymly-pg-plugin/commit/6f88dce9bb8a787e58afaf2ac701f4dc8209942c))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** update config ([d3e3aa6](https://github.com/wmfs/tymly-pg-plugin/commit/d3e3aa6d5bb5ebb51c69168b95e93a0a23c79fee))
+
+
+### ♻️ Chores
+
+* add version_plugin script ([4709ac8](https://github.com/wmfs/tymly-pg-plugin/commit/4709ac8ed89e5512ac435e2f9ca4331b2e53bce9))
+* update .releaserc.json ([f000e5d](https://github.com/wmfs/tymly-pg-plugin/commit/f000e5d690cc5d9394f1bf3412fe5acfb9b1e183))
+
 # [1.141.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.140.0...v1.141.0) (2020-01-02)
 
 
