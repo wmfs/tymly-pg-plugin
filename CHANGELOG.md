@@ -1,3 +1,10 @@
+# [1.151.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.150.0...v1.151.0) (2020-01-08)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.38.0 to 1.41.0 ([da88973](https://github.com/wmfs/tymly-pg-plugin/commit/da88973d552c0dd44f2afc4ce47f748de3cb9492))
+
 # [1.150.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.149.0...v1.150.0) (2020-01-08)
 
 
