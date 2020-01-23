@@ -1,3 +1,19 @@
+## [1.151.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.151.0...v1.151.1) (2020-01-22)
+
+
+### 🐛 Bug Fixes
+
+* When notifying parent, make sure we sent taskComplete properly. ([603c66c](https://github.com/wmfs/tymly-pg-plugin/commit/603c66c9c1a7292cb9a789390b847fe37ae79837))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.107.0 to 1.108.0 ([ef3fbe9](https://github.com/wmfs/tymly-pg-plugin/commit/ef3fbe9ab20522bf9b61cf9ab9e1096a6c393383))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.108.0 to 1.109.0 ([90491c5](https://github.com/wmfs/tymly-pg-plugin/commit/90491c55d2777c3389616a6002f2cd86a92caab2))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.109.0 to 1.110.0 ([8a678f6](https://github.com/wmfs/tymly-pg-plugin/commit/8a678f64a9baefe06203e89bd576876dc136aa5d))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.110.0 to 1.112.0 ([5e8d754](https://github.com/wmfs/tymly-pg-plugin/commit/5e8d754bfce438c65ecc2fdec5637d997df95934))
+* **deps-dev:** Bump conventional-changelog-metahub from 3.0.0 to 4.0.0 ([aaa9884](https://github.com/wmfs/tymly-pg-plugin/commit/aaa9884b8e683518c22d3536d3d0f7c2a4762aa4))
+
 # [1.151.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.150.0...v1.151.0) (2020-01-08)
 
 
