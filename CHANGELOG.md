@@ -1,3 +1,11 @@
+# [1.154.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.153.0...v1.154.0) (2020-01-27)
+
+
+### 🛠 Builds
+
+* **deps:** Bump async from 3.1.0 to 3.1.1 ([1cee1fa](https://github.com/wmfs/tymly-pg-plugin/commit/1cee1fa7143eba0400c0ec91df3e04206c96e011))
+* **deps:** Bump luxon from 1.21.3 to 1.22.0 ([dc3176a](https://github.com/wmfs/tymly-pg-plugin/commit/dc3176a901e98bce2506feb78a3cbacd99ed47b1))
+
 # [1.153.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.152.0...v1.153.0) (2020-01-27)
 
 
