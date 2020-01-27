@@ -1,3 +1,18 @@
+# [1.152.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.151.1...v1.152.0) (2020-01-27)
+
+
+### ✨ Features
+
+* Exporting CSV Delta File state resource to accept array of functions [ch405] ([56fd091](https://github.com/wmfs/tymly-pg-plugin/commit/56fd0911e206749e36fb38910296d7e1a746eca4))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.0 to 1.112.1 ([9324e12](https://github.com/wmfs/tymly-pg-plugin/commit/9324e12a12cc000670ea73cd3700f3a95ac03516))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.112.1 to 1.113.0 ([1a3cbd6](https://github.com/wmfs/tymly-pg-plugin/commit/1a3cbd6ad55b86a91ff6d8077afd3f40780f3b06))
+* **deps-dev:** Bump codecov from 3.6.1 to 3.6.2 ([c344af2](https://github.com/wmfs/tymly-pg-plugin/commit/c344af2ff98dbf99c7284f6e03ad55324cfcb216))
+* **deps-dev:** Bump mocha from 7.0.0 to 7.0.1 ([f19af97](https://github.com/wmfs/tymly-pg-plugin/commit/f19af978afccb4336cae525b130d33b4f8a1e3fa))
+
 ## [1.151.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.151.0...v1.151.1) (2020-01-22)
 
 
