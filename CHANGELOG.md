@@ -1,3 +1,15 @@
+# [1.159.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.158.0...v1.159.0) (2020-01-29)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.26.0 to 1.27.0 ([c55f163](https://github.com/wmfs/tymly-pg-plugin/commit/c55f163e0bfc54ed453105c7243e83688efcc143))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/changelog from 3.0.6 to 5.0.0 ([e7445c5](https://github.com/wmfs/tymly-pg-plugin/commit/e7445c5a74212346b432934af1a7a9f94eb5e2cd))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.116.0 to 1.117.0 ([95b741e](https://github.com/wmfs/tymly-pg-plugin/commit/95b741e8d97afd6591e04eeaa31f92b12c8d522d))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.117.0 to 1.118.0 ([efeb45d](https://github.com/wmfs/tymly-pg-plugin/commit/efeb45dbd14ea942eb4e757985b7fb69aabc2551))
+* **deps-dev:** Bump cz-conventional-changelog from 3.0.2 to 3.1.0 ([901a208](https://github.com/wmfs/tymly-pg-plugin/commit/901a208d9a552346a6ca224117b59bd1aeeabaff))
+* **deps-dev:** Bump rimraf from 3.0.0 to 3.0.1 ([05cc840](https://github.com/wmfs/tymly-pg-plugin/commit/05cc840e40fc968f684e52aac335dfca86e17623))
+
 # [1.158.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.157.0...v1.158.0) (2020-01-27)
 
 
