@@ -1,3 +1,15 @@
+# [1.169.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.168.0...v1.169.0) (2020-02-10)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.29.0 to 1.30.0 ([7f3928e](https://github.com/wmfs/tymly-pg-plugin/commit/7f3928eb2b09b79092957741920af43186a242f4))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.118.0 to 1.119.0 ([b7e25d2](https://github.com/wmfs/tymly-pg-plugin/commit/b7e25d206dd98403fe8ae0c0da086e98b389da9d))
+* **deps-dev:** Bump codecov from 3.6.2 to 3.6.3 ([7c829a8](https://github.com/wmfs/tymly-pg-plugin/commit/7c829a8748a95fd6c116e6d244cc2064cfee7c5e))
+* **deps-dev:** Bump codecov from 3.6.3 to 3.6.4 ([558f83a](https://github.com/wmfs/tymly-pg-plugin/commit/558f83af81830cdd2afaf8c11a0e1654155eca0b))
+* **deps-dev:** Bump codecov from 3.6.4 to 3.6.5 ([72b6ee5](https://github.com/wmfs/tymly-pg-plugin/commit/72b6ee59941f2c567a6b21c0e4187029a7759fb3))
+* **deps-dev:** Bump rimraf from 3.0.1 to 3.0.2 ([442ccd8](https://github.com/wmfs/tymly-pg-plugin/commit/442ccd823e68776fb32b6c3a7b0fc55804fc4cf8))
+
 # [1.168.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.167.0...v1.168.0) (2020-01-30)
 
 
