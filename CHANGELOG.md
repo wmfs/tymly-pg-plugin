@@ -1,3 +1,17 @@
+# [1.173.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.172.0...v1.173.0) (2020-02-26)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-delta-file from 1.44.0 to 1.46.0 ([4004318](https://github.com/wmfs/tymly-pg-plugin/commit/400431871ba9d1916928b345cfceaa2ed9820544))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-info from 1.14.0 to 1.15.0 ([c56bc90](https://github.com/wmfs/tymly-pg-plugin/commit/c56bc900e05eb762e524d403be88c20331d024ed))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.53.0 to 1.56.0 ([54a0d78](https://github.com/wmfs/tymly-pg-plugin/commit/54a0d78bbbaf42186d83103ba25d0f2151c4b3f9))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.30.0 to 1.33.0 ([b4460f8](https://github.com/wmfs/tymly-pg-plugin/commit/b4460f8f4f6bb30838f0e29316e55dc8b645626e))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/exec from 3.3.8 to 5.0.0 ([b624a2d](https://github.com/wmfs/tymly-pg-plugin/commit/b624a2dcd15326b09cc8071f8760e9611d536f63))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.120.0 to 1.123.0 ([0f47641](https://github.com/wmfs/tymly-pg-plugin/commit/0f476414e460ab9f9adc68bdbaea4aa610be4236))
+* **deps-dev:** Bump conventional-changelog-metahub from 4.0.0 to 4.0.1 ([2383817](https://github.com/wmfs/tymly-pg-plugin/commit/238381756a0c52e9a7bab5dbdb78d34f6de57ca0))
+* **deps-dev:** Bump mocha from 7.0.1 to 7.1.0 ([105ac7d](https://github.com/wmfs/tymly-pg-plugin/commit/105ac7dd4644812c403fdc775867be8e0113a484))
+
 # [1.172.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.171.0...v1.172.0) (2020-02-26)
 
 
