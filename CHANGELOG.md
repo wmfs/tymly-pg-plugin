@@ -1,3 +1,13 @@
+# [1.172.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.171.0...v1.172.0) (2020-02-26)
+
+
+### 🛠 Builds
+
+* **deps:** Bump async from 3.1.1 to 3.2.0 ([60ecf87](https://github.com/wmfs/tymly-pg-plugin/commit/60ecf87c14526cce346ed722a4e41f2a1016126e))
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/git from 7.0.18 to 9.0.0 ([af583c5](https://github.com/wmfs/tymly-pg-plugin/commit/af583c5f0488621fd35e86a43713f460929e2da8))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.119.0 to 1.120.0 ([8628849](https://github.com/wmfs/tymly-pg-plugin/commit/8628849ed4e7b80d0550fc633e77725d1b0e3eb2))
+* **deps-dev:** Bump semantic-release from 15.14.0 to 17.0.4 ([7474a26](https://github.com/wmfs/tymly-pg-plugin/commit/7474a26bc77b324c48aa4658d6acf0b91d626302))
+
 # [1.171.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.170.0...v1.171.0) (2020-02-14)
 
 
