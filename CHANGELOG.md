@@ -1,3 +1,11 @@
+# [1.175.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.174.0...v1.175.0) (2020-02-27)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.17.0 to 1.18.0 ([7f8e8dd](https://github.com/wmfs/tymly-pg-plugin/commit/7f8e8dde2b352aa09746f701843cd5c553d7b590))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/relationize from 1.17.0 to 1.19.0 ([3979131](https://github.com/wmfs/tymly-pg-plugin/commit/3979131804a9efa4e703d4973280f3cf8d0180a7))
+
 # [1.174.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.173.0...v1.174.0) (2020-02-27)
 
 
