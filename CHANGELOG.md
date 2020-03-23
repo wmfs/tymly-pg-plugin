@@ -1,3 +1,18 @@
+# [1.177.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.176.0...v1.177.0) (2020-03-23)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/relationize from 1.19.0 to 1.20.0 ([d72a2c3](https://github.com/wmfs/tymly-pg-plugin/commit/d72a2c3c42b4cf7ae7d1b0fc088db2fe39448419))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.124.0 to 1.125.0 ([4b6bae2](https://github.com/wmfs/tymly-pg-plugin/commit/4b6bae2c2695f9972b40c1851e3331b413bcebae))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.125.0 to 1.126.0 ([188080d](https://github.com/wmfs/tymly-pg-plugin/commit/188080d371298b4d6a75df49128af64affec29df))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.126.0 to 1.126.1 ([f175c13](https://github.com/wmfs/tymly-pg-plugin/commit/f175c136460fc2d5756b75607cc1b29d40c20c18))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.126.1 to 1.126.2 ([1e0d99f](https://github.com/wmfs/tymly-pg-plugin/commit/1e0d99fb00212feae98d7e311cf4f05ccc270baa))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.126.2 to 1.127.0 ([8144053](https://github.com/wmfs/tymly-pg-plugin/commit/8144053758ac3ba3b699471bdf097a2dfe46b83c))
+* **deps-dev:** Bump mocha from 7.1.0 to 7.1.1 ([1239299](https://github.com/wmfs/tymly-pg-plugin/commit/1239299de1d42a9472f36ce001e18c81e87c97ab))
+* **deps-dev:** Bump standard from 14.3.1 to 14.3.2 ([faee706](https://github.com/wmfs/tymly-pg-plugin/commit/faee70601f9b688d39677f720f3dfbda55cd10b7))
+* **deps-dev:** Bump standard from 14.3.2 to 14.3.3 ([13a02a9](https://github.com/wmfs/tymly-pg-plugin/commit/13a02a933920359d344cf3cf6fc0a613783c1793))
+
 # [1.176.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.175.0...v1.176.0) (2020-02-27)
 
 
