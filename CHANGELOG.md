@@ -1,3 +1,15 @@
+# [1.179.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.178.0...v1.179.0) (2020-03-29)
+
+
+### ✨ Features
+
+* Update function calls sendTaskLastHeartbeat rather than sendTaskSuccess ([0e515f0](https://github.com/wmfs/tymly-pg-plugin/commit/0e515f049318dbb662d634bc5d4b52b58aac9aa1))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@semantic-release](https://github.com/semantic-release)/changelog from 5.0.0 to 5.0.1 ([c0c4ef3](https://github.com/wmfs/tymly-pg-plugin/commit/c0c4ef3308fa9c7b2f52db1b42d3f41a663b6760))
+
 # [1.178.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.177.0...v1.178.0) (2020-03-23)
 
 
