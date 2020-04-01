@@ -1,3 +1,17 @@
+# [1.180.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.179.0...v1.180.0) (2020-04-01)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.33.0 to 1.34.0 ([7a2a7b6](https://github.com/wmfs/tymly-pg-plugin/commit/7a2a7b632fd1d4b84da930c09438d12fe1f54acd))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.127.0 to 1.128.0 ([7cbf625](https://github.com/wmfs/tymly-pg-plugin/commit/7cbf62577a95f2ee8b38872384483bd06b8618a4))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.128.0 to 1.129.0 ([e17347e](https://github.com/wmfs/tymly-pg-plugin/commit/e17347e226b38695ba8ffd54eb017ae610054e7e))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add context env var config to config.yml ([1e8fbb9](https://github.com/wmfs/tymly-pg-plugin/commit/1e8fbb92fc7d6c466b124cfe24b904bd7752753a))
+
 # [1.179.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.178.0...v1.179.0) (2020-03-29)
 
 
