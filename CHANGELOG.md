@@ -1,3 +1,12 @@
+# [1.188.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.187.0...v1.188.0) (2020-04-05)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.62.0 to 1.63.0 ([19a68db](https://github.com/wmfs/tymly-pg-plugin/commit/19a68dbfdcf182d5e509d8246b0d6d284c2530b5))
+* **deps:** Bump luxon from 1.22.2 to 1.23.0 ([c7912f6](https://github.com/wmfs/tymly-pg-plugin/commit/c7912f641c86c5d1877f276d4e68f4f0589f3391))
+* **deps-dev:** Bump nyc from 15.0.0 to 15.0.1 ([3cd78b2](https://github.com/wmfs/tymly-pg-plugin/commit/3cd78b2f82fe72ae2c23f19c2e993aedeb863d41))
+
 # [1.187.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.186.0...v1.187.0) (2020-04-02)
 
 
