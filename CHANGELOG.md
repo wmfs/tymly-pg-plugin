@@ -1,3 +1,10 @@
+## [1.195.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.1...v1.195.2) (2020-04-20)
+
+
+### 🐛 Bug Fixes
+
+* **state-resource:** Remove callback parameter from init method ([c0b336c](https://github.com/wmfs/tymly-pg-plugin/commit/c0b336c3301ed03902c67d328136b26491ec2745))
+
 ## [1.195.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.0...v1.195.1) (2020-04-20)
 
 
