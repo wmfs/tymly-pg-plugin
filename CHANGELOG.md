@@ -1,3 +1,17 @@
+## [1.195.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.0...v1.195.1) (2020-04-20)
+
+
+### 🐛 Bug Fixes
+
+* **state-resource:** Remove callback parameter from init method ([4b0564a](https://github.com/wmfs/tymly-pg-plugin/commit/4b0564adc0eb66a2d0b138d6273e9c542fd809ef))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.0 to 1.135.1 ([799779e](https://github.com/wmfs/tymly-pg-plugin/commit/799779e07cf7c7346dfd0c98e4ad360f5509e404))
+* **deps-dev:** Bump semantic-release from 17.0.4 to 17.0.5 ([09de2fa](https://github.com/wmfs/tymly-pg-plugin/commit/09de2facca04785f7a12d834721f5aeb1cfeb1d9))
+* **deps-dev:** Bump semantic-release from 17.0.5 to 17.0.6 ([8cf7fe7](https://github.com/wmfs/tymly-pg-plugin/commit/8cf7fe7b36a494e9a3c9b68e4d8a9d67b694d379))
+
 # [1.195.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.194.0...v1.195.0) (2020-04-15)
 
 
