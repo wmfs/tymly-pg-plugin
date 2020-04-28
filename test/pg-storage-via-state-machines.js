@@ -27,8 +27,8 @@ describe('PG storage service via state machine tests', function () {
     }
   })
 
-  it('should create some tymly services to test PostgreSQL storage', function (done) {
-    tymly.boot(
+  it('boot tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
@@ -41,31 +41,28 @@ describe('PG storage service via state machine tests', function () {
         ],
 
         config: {}
-      },
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        client = tymlyServices.storage.client
-        statebox = tymlyServices.statebox
-        registryService = tymlyServices.registry
-        categoryService = tymlyServices.categories
-        models = tymlyServices.storage.models
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    client = tymlyServices.storage.client
+    statebox = tymlyServices.statebox
+    registryService = tymlyServices.registry
+    categoryService = tymlyServices.categories
+    models = tymlyServices.storage.models
   })
 
-  it('Should initially drop-cascade the pg_model_test schema, if one exists', async () => {
+  it('drop-cascade the pg_model_test schema, if one exists', async () => {
     await sqlScriptRunner.install(client)
   })
 
-  it('should find the simple-storage state-machine by name', function () {
+  it('find the simple-storage state-machine', () => {
     const stateMachine = statebox.findStateMachineByName(STATE_MACHINE_NAME)
     expect(stateMachine.name).to.eql(STATE_MACHINE_NAME)
   })
 
-  it('should start a simple-storage execution', function (done) {
-    statebox.startExecution(
+  it('run simple-storage execution', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         employeeNo: 1,
         firstName: 'Homer',
@@ -75,23 +72,20 @@ describe('PG storage service via state machine tests', function () {
       STATE_MACHINE_NAME, // state machine name
       {
         sendResponse: 'COMPLETE'
-      }, // options
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.stateMachineName).to.eql(STATE_MACHINE_NAME)
-        expect(executionDescription.currentStateName).to.eql('FindingById')
-        expect(executionDescription.ctx.foundHomer.employeeNo).to.eql('1')
-        expect(executionDescription.ctx.foundHomer.firstName).to.eql('Homer')
-        expect(executionDescription.ctx.foundHomer.lastName).to.eql('Simpson')
-        expect(executionDescription.ctx.foundHomer.age).to.eql(39)
-        done()
       }
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.stateMachineName).to.eql(STATE_MACHINE_NAME)
+    expect(executionDescription.currentStateName).to.eql('FindingById')
+    expect(executionDescription.ctx.foundHomer.employeeNo).to.eql('1')
+    expect(executionDescription.ctx.foundHomer.firstName).to.eql('Homer')
+    expect(executionDescription.ctx.foundHomer.lastName).to.eql('Simpson')
+    expect(executionDescription.ctx.foundHomer.age).to.eql(39)
   })
 
-  it('should succeed on another upsert', function (done) {
-    statebox.startExecution(
+  it('run simple-storage execution again', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         employeeNo: 50,
         firstName: 'Seymour',
@@ -101,18 +95,14 @@ describe('PG storage service via state machine tests', function () {
       STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      function (err, executionDescription) {
-        console.log(executionDescription)
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        done()
       }
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
   })
 
-  it('should start a simple storage execution with "bad data" (extra data)', function (done) {
-    statebox.startExecution(
+  it('run simple-storage execution with bad data (extra fields)', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         skinner: {
           employeeNo: 50,
@@ -123,28 +113,21 @@ describe('PG storage service via state machine tests', function () {
         }
       },
       'tymlyTest_badpeople_1_0',
-      {},
-      function (err, result) {
-        expect(err).to.eql(null)
-        executionName = result.executionName
-        done()
-      }
+      {}
     )
+
+    executionName = executionDescription.executionName
   })
 
-  it('state should be "FAILED" on "bad data" due to extra data', function (done) {
-    statebox.waitUntilStoppedRunning(
-      executionName,
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        done()
-      }
-    )
+  it('state "SUCCEEDED" on "bad data" because extra fields are ok', async () => {
+    const executionDescription =
+      await statebox.waitUntilStoppedRunning(executionName)
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
   })
 
-  it('should start a simple storage execution with "bad data" (missing rows)', function (done) {
-    statebox.startExecution(
+  it('start simple-storage execution with bad data (missing fields)', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         skinner: {
           employeeNo: 50,
@@ -152,33 +135,22 @@ describe('PG storage service via state machine tests', function () {
         }
       },
       'tymlyTest_badpeople_1_0',
-      {},
-      function (err, result) {
-        expect(err).to.eql(null)
-        executionName = result.executionName
-        done()
-      }
+      {}
     )
+
+    executionName = executionDescription.executionName
   })
 
-  it('state should be "FAILED" on "bad data" due to missing rows', function (done) {
-    statebox.waitUntilStoppedRunning(
-      executionName,
-      function (err, executionDescription) {
-        try {
-          expect(err).to.eql(null)
-          expect(executionDescription).to.not.eql(null)
-          expect(executionDescription.status).to.eql('FAILED')
-          done()
-        } catch (oops) {
-          done(oops)
-        }
-      }
-    )
+  it('state "FAILED" on "bad data" due to missing rows', async () => {
+    const executionDescription =
+      await statebox.waitUntilStoppedRunning(executionName)
+
+    expect(executionDescription).to.not.eql(null)
+    expect(executionDescription.status).to.eql('FAILED')
   })
 
-  it('should start a simple storage execution with "bad data" (missing PK)', function (done) {
-    statebox.startExecution(
+  it('start simple-storage execution with "bad data" (missing PK)', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         skinner: {
           firstName: 'Seymour',
@@ -187,38 +159,25 @@ describe('PG storage service via state machine tests', function () {
         }
       },
       'tymlyTest_badpeople_1_0',
-      {},
-      function (err, result) {
-        expect(err).to.eql(null)
-        executionName = result.executionName
-        done()
-      }
+      {}
     )
+
+    executionName = executionDescription.executionName
   })
 
-  it('state should be "FAILED" on "bad data" due to missing PK', function (done) {
-    statebox.waitUntilStoppedRunning(
-      executionName,
-      function (err, executionDescription) {
-        try {
-          if (err) console.error(err)
-          expect(err).to.eql(null)
-          expect(executionDescription).to.not.eql(null)
-          expect(executionDescription.status).to.eql('FAILED')
-          done()
-        } catch (oops) {
-          console.log('!!!!!!Failed execution name is ', executionName)
-          done(oops)
-        }
-      }
-    )
+  it('state "FAILED" on "bad data" due to missing PK', async () => {
+    const executionDescription =
+      await statebox.waitUntilStoppedRunning(executionName)
+
+    expect(executionDescription).to.not.eql(null)
+    expect(executionDescription.status).to.eql('FAILED')
   })
 
-  it('should ensure the registry service (which has JSONB columns) still works', function () {
+  it('verify registry service (which has JSONB columns)', () => {
     expect(registryService.registry.tymlyTest_planetSizeUnit.value).to.eql('km')
   })
 
-  it('should ensure the categories service (which has JSONB columns) still works', function () {
+  it('verify categories service (which has JSONB columns)', () => {
     expect(Object.keys(categoryService.categories).includes('gas')).to.eql(true)
     expect(Object.keys(categoryService.categories).includes('terrestrial')).to.eql(true)
     expect(categoryService.categories.gas).to.eql({
@@ -237,56 +196,43 @@ describe('PG storage service via state machine tests', function () {
     })
   })
 
-  it('should load seed-data into the db (which has a JSONB column)', function (done) {
-    models.tymlyTest_title.find({ where: { title: { equals: 'Miss' } } })
-      .then(result => {
-        console.log(JSON.stringify(result))
-        expect(result[0]).to.have.property('id').and.equal('3')
-        expect(result[0]).to.have.property('title').and.equal('Miss')
-        expect(result[0]).to.have.property('style')
-        expect(result[0].style).to.have.property('backgroundColor').and.equal('#ffffff')
-        done()
-      })
-      .catch(error => {
-        done(error)
-      })
+  it('verify seed-data into the db (which has a JSONB column)', async () => {
+    const result = await models.tymlyTest_title.find({ where: { title: { equals: 'Miss' } } })
+
+    expect(result[0]).to.have.property('id').and.equal('3')
+    expect(result[0]).to.have.property('title').and.equal('Miss')
+    expect(result[0]).to.have.property('style')
+    expect(result[0].style).to.have.property('backgroundColor').and.equal('#ffffff')
   })
 
-  it('should find the seed-data state-machine by name', function () {
+  it('find the seed-data state-machine by name', () => {
     const stateMachine = statebox.findStateMachineByName('tymlyTest_seedDataTest_1_0')
     expect(stateMachine.name).to.eql('tymlyTest_seedDataTest_1_0')
   })
 
-  it('should start a seed-data execution', function (done) {
-    statebox.startExecution(
+  it('start seed-data execution', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         idToFind: 3
       }, // input
       'tymlyTest_seedDataTest_1_0', // state machine name
       {
         sendResponse: 'COMPLETE'
-      }, // options
-      function (err, executionDescription) {
-        try {
-          expect(err).to.eql(null)
-          expect(executionDescription.ctx.foundTitle.title).to.eql('Miss')
-          expect(executionDescription.currentStateName).to.eql('FindingById')
-          expect(executionDescription.currentResource).to.eql('module:findingById')
-          expect(executionDescription.stateMachineName).to.eql('tymlyTest_seedDataTest_1_0')
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          done()
-        } catch (err) {
-          done(err)
-        }
       }
     )
+
+    expect(executionDescription.ctx.foundTitle.title).to.eql('Miss')
+    expect(executionDescription.currentStateName).to.eql('FindingById')
+    expect(executionDescription.currentResource).to.eql('module:findingById')
+    expect(executionDescription.stateMachineName).to.eql('tymlyTest_seedDataTest_1_0')
+    expect(executionDescription.status).to.eql('SUCCEEDED')
   })
 
-  it('Should uninstall test schemas', async () => {
+  after('uninstall test schemas', async () => {
     await sqlScriptRunner.uninstall(client)
   })
 
-  it('should shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
