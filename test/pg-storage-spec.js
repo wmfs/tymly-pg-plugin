@@ -27,8 +27,8 @@ describe('PG storage tests', function () {
   })
 
   describe('start up', () => {
-    it('should create some out-the-box tymly services to test PG storage state-machines', (done) => {
-      tymly.boot(
+    it('boot tymly', async () => {
+      const tymlyServices = await tymly.boot(
         {
           pluginPaths: [
             path.resolve(__dirname, './../lib')
@@ -38,55 +38,45 @@ describe('PG storage tests', function () {
             path.resolve(__dirname, './fixtures/blueprints/people-blueprint'),
             path.resolve(__dirname, './fixtures/blueprints/space-blueprint')
           ]
-        },
-        function (err, tymlyServices) {
-          expect(err).to.eql(null)
-          tymlyService = tymlyServices.tymly
-          storage = tymlyServices.storage
-          client = tymlyServices.storage.client
-          const models = tymlyServices.storage.models
-          people = models.tymlyTest_people
-          planets = models.tymlyTest_planets
-          star = models.tymlyTest_star
-
-          star.findById('Arcturus')
-            .then(seededStar => expect(seededStar.name).to.eql('Arcturus'))
-            .then(() => planets.findById('Mercury'))
-            .then(seededPlanet => expect(seededPlanet.name).to.eql('Mercury'))
-            .then(() => done())
-            .catch(err => done(err))
         }
       )
+
+      tymlyService = tymlyServices.tymly
+      storage = tymlyServices.storage
+      client = tymlyServices.storage.client
+      const models = tymlyServices.storage.models
+      people = models.tymlyTest_people
+      planets = models.tymlyTest_planets
+      star = models.tymlyTest_star
+
+      const seededStar = await star.findById('Arcturus')
+      expect(seededStar.name).to.eql('Arcturus')
+      const seededPlanet = await planets.findById('Mercury')
+      expect(seededPlanet.name).to.eql('Mercury')
     })
   })
 
   describe('single table', () => {
-    it('should create a new person', function (done) {
-      people.create(
+    it('create a new person', async () => {
+      const idProperties = await people.create(
         {
           employeeNo: '1',
           firstName: 'Homer',
           lastName: 'Simpson',
           age: 39
         },
-        {},
-        function (err, idProperties) {
-          expect(err).to.equal(null)
-          expect(idProperties).to.eql(
-            {
-              idProperties:
-                {
-                  employeeNo: '1'
-                }
-            }
-          )
-          done()
-        }
+        {}
       )
+
+      expect(idProperties).to.eql({
+        idProperties: {
+          employeeNo: '1'
+        }
+      })
     })
 
-    it('should create multiple new people', function (done) {
-      people.create(
+    it('create multiple new people', async () => {
+      await people.create(
         [
           {
             employeeNo: '2',
@@ -111,345 +101,283 @@ describe('PG storage tests', function () {
             lastName: 'Simpson',
             age: 10
           }
-
         ],
-        {},
-        function (err) {
-          expect(err).to.equal(null)
-          done()
-        }
+        {}
       )
     })
 
-    it('should fail creating a new person with an already-used primary key', function (done) {
-      people.create(
-        {
-          employeeNo: '1',
-          firstName: 'Ned',
-          lastName: 'Flanders',
-          age: 60
-        },
-        {},
-        function (err) {
-          expect(err).to.not.equal(null)
-          done()
-        }
-      )
-    })
-
-    it('should fail creating new people with an already-used primary key', function (done) {
-      people.create(
-        [
+    it('fail when primary key already used', async () => {
+      try {
+        await people.create(
           {
-            employeeNo: '6',
+            employeeNo: '1',
             firstName: 'Ned',
             lastName: 'Flanders',
             age: 60
           },
-          {
-            employeeNo: '2',
-            firstName: 'Maude',
-            lastName: 'Flanders'
-          }
-        ],
-        {},
-        function (err) {
-          expect(err).to.not.equal(null)
-          done()
-        }
-      )
+          {}
+        )
+      } catch (err) {
+        return
+      }
+
+      expect.fail('Should have thrown')
     })
 
-    it('should find a person via primary key', function (done) {
-      people.findById(
-        '3',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
+    it('fail creating new people with an already-used primary key', async () => {
+      try {
+        await people.create(
+          [
             {
-              employeeNo: '3',
-              firstName: 'Lisa',
-              lastName: 'Simpson',
-              age: 8
+              employeeNo: '6',
+              firstName: 'Ned',
+              lastName: 'Flanders',
+              age: 60
+            },
+            {
+              employeeNo: '2',
+              firstName: 'Maude',
+              lastName: 'Flanders'
             }
-          )
-          done()
+          ],
+          {}
+        )
+      } catch (err) {
+        return
+      }
+
+      expect.fail('Should have thrown')
+    })
+
+    it('find a person by primary key', async () => {
+      const doc = await people.findById(3)
+
+      expect(doc).to.containSubset(
+        {
+          employeeNo: '3',
+          firstName: 'Lisa',
+          lastName: 'Simpson',
+          age: 8
         }
       )
     })
 
-    it("should fail finding a person that's not there", function (done) {
-      people.findById(
-        '0',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.equal(undefined)
-          done()
-        }
-      )
+    it('find nothing for an unknown primary key', async () => {
+      const doc = await people.findById(0)
+
+      expect(doc).to.equal(undefined)
     })
 
-    it('should find 5 people, youngest first', function (done) {
-      people.find(
+    it('find 5 people, order youngest first', async () => {
+      const doc = await people.find(
         {
           orderBy: ['age']
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-
-          expect(doc[0].age).to.equal(8)
-          expect(doc[1].age).to.equal(10)
-          expect(doc[2].age).to.equal(36)
-          expect(doc[3].age).to.equal(39)
-          expect(doc).to.containSubset(
-            [
-              {
-                age: 8,
-                employeeNo: '3',
-                firstName: 'Lisa',
-                lastName: 'Simpson'
-              },
-              {
-                age: 10,
-                employeeNo: '5',
-                firstName: 'Bart',
-                lastName: 'Simpson'
-              },
-              {
-                age: 36,
-                employeeNo: '4',
-                firstName: 'Marge',
-                lastName: 'Simpson'
-              },
-              {
-                age: 39,
-                employeeNo: '1',
-                firstName: 'Homer',
-                lastName: 'Simpson'
-              },
-              {
-                employeeNo: '2',
-                firstName: 'Maggie',
-                lastName: 'Simpson'
-              }
-            ]
-          )
-          done()
         }
+      )
+
+      expect(doc[0].age).to.equal(8)
+      expect(doc[1].age).to.equal(10)
+      expect(doc[2].age).to.equal(36)
+      expect(doc[3].age).to.equal(39)
+      expect(doc).to.containSubset(
+        [
+          {
+            age: 8,
+            employeeNo: '3',
+            firstName: 'Lisa',
+            lastName: 'Simpson'
+          },
+          {
+            age: 10,
+            employeeNo: '5',
+            firstName: 'Bart',
+            lastName: 'Simpson'
+          },
+          {
+            age: 36,
+            employeeNo: '4',
+            firstName: 'Marge',
+            lastName: 'Simpson'
+          },
+          {
+            age: 39,
+            employeeNo: '1',
+            firstName: 'Homer',
+            lastName: 'Simpson'
+          },
+          {
+            employeeNo: '2',
+            firstName: 'Maggie',
+            lastName: 'Simpson'
+          }
+        ]
       )
     })
 
-    it('should find Bart by name', function (done) {
-      people.find(
+    it('find Bart by name', async () => {
+      const doc = await people.find(
         {
           where: {
             firstName: { equals: 'Bart' },
             lastName: { equals: 'Simpson' }
           }
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.have.length(1)
-          expect(doc).to.containSubset(
-            [
-              {
-                age: 10,
-                employeeNo: '5',
-                firstName: 'Bart',
-                lastName: 'Simpson'
-              }
-            ]
-          )
-
-          done()
         }
+      )
+
+      expect(doc).to.have.length(1)
+      expect(doc).to.containSubset(
+        [
+          {
+            age: 10,
+            employeeNo: '5',
+            firstName: 'Bart',
+            lastName: 'Simpson'
+          }
+        ]
       )
     })
 
-    it('should find Marge and Homer (offset 2/limit 2)', function (done) {
-      people.find(
+    it('find Marge and Homer, (order by/offset 2/limit 2)', async () => {
+      const doc = await people.find(
         {
           orderBy: ['age'],
           limit: 2,
           offset: 2
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.have.length(2)
-          expect(doc[0].employeeNo).to.eql('4')
-          expect(doc[1].employeeNo).to.eql('1')
-          expect(doc).to.containSubset(
-            [
-              {
-                employeeNo: '4',
-                firstName: 'Marge',
-                lastName: 'Simpson',
-                age: 36
-              },
-              {
-                employeeNo: '1',
-                firstName: 'Homer',
-                lastName: 'Simpson',
-                age: 39
-              }
-            ]
-          )
-          done()
         }
+      )
+
+      expect(doc).to.have.length(2)
+      expect(doc[0].employeeNo).to.eql('4')
+      expect(doc[1].employeeNo).to.eql('1')
+      expect(doc).to.containSubset(
+        [
+          {
+            employeeNo: '4',
+            firstName: 'Marge',
+            lastName: 'Simpson',
+            age: 36
+          },
+          {
+            employeeNo: '1',
+            firstName: 'Homer',
+            lastName: 'Simpson',
+            age: 39
+          }
+        ]
       )
     })
 
-    it('should get the second youngest known person (Bart)', function (done) {
-      people.findOne(
+    it('findOne second youngest known person (orderBy/offset)', async () => {
+      const doc = await people.findOne(
         {
           orderBy: ['age'],
           offset: 1
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              age: 10,
-              employeeNo: '5',
-              firstName: 'Bart',
-              lastName: 'Simpson'
-            }
-          )
+        }
+      )
 
-          done()
+      expect(doc).to.containSubset(
+        {
+          age: 10,
+          employeeNo: '5',
+          firstName: 'Bart',
+          lastName: 'Simpson'
         }
       )
     })
 
-    it('should get one Homer by name', function (done) {
-      people.findOne(
+    it('findOne by name', async () => {
+      const doc = await people.findOne(
         {
           where: {
             firstName: { equals: 'Homer' },
             lastName: { equals: 'Simpson' }
           }
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              age: 39,
-              employeeNo: '1',
-              firstName: 'Homer',
-              lastName: 'Simpson'
-            }
-          )
+        }
+      )
 
-          done()
+      expect(doc).to.containSubset(
+        {
+          age: 39,
+          employeeNo: '1',
+          firstName: 'Homer',
+          lastName: 'Simpson'
         }
       )
     })
 
-    it("shouldn't get one missing person", function (done) {
-      people.findOne(
+    it('findOne return nothing for unknown person', async () => {
+      const doc = await people.findOne(
         {
           where: {
             firstName: { equals: 'Maude' },
             lastName: { equals: 'Flanders' }
           }
-        },
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.equal(undefined)
-          done()
         }
       )
+
+      expect(doc).to.equal(undefined)
     })
 
-    it("should update Maggie's age to 1", function (done) {
-      people.update(
+    it("update Maggie's age to 1", async () => {
+      await people.update(
         {
           employeeNo: '2',
           age: 1,
           firstName: 'Maggie',
           lastName: 'Simpson'
         },
-        {},
-        function (err) {
-          expect(err).to.equal(null)
-          done()
+        {}
+      )
+    })
+
+    it('Maggie has an age', async () => {
+      const doc = await people.findById(2)
+
+      expect(doc).to.containSubset(
+        {
+          employeeNo: '2',
+          firstName: 'Maggie',
+          lastName: 'Simpson',
+          age: 1
         }
       )
     })
 
-    it('should find Maggie has an age now', function (done) {
-      people.findById(
-        '2',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              employeeNo: '2',
-              firstName: 'Maggie',
-              lastName: 'Simpson',
-              age: 1
-            }
-          )
-          done()
-        }
-      )
-    })
-
-    it('should update Maggie again, but this time without an age', function (done) {
-      people.update(
+    it('update Maggie again, this time without an age', async () => {
+      await people.update(
         {
           employeeNo: '2',
           firstName: 'Maggie',
           lastName: 'Simpson'
         },
-        {},
-        function (err, doc) {
-          expect(err).to.equal(null)
-          done()
+        {}
+      )
+    })
+
+    it("Maggie's age has gone again", async () => {
+      const doc = await people.findById(2)
+
+      expect(doc).to.containSubset(
+        {
+          employeeNo: '2',
+          firstName: 'Maggie',
+          lastName: 'Simpson'
         }
       )
     })
 
-    it("should find Maggie's age has gone again", function (done) {
-      people.findById(
-        '2',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              employeeNo: '2',
-              firstName: 'Maggie',
-              lastName: 'Simpson'
-            }
-          )
-          done()
-        }
-      )
+    it('delete Maggie by id', async () => {
+      await people.destroyById(2)
     })
 
-    it('should delete Maggie/Margaret by via her id', function (done) {
-      people.destroyById(
-        '2',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          done()
-        }
-      )
+    it('can not find a deleted record', async () => {
+      const doc = await people.findById(2)
+
+      expect(doc).to.equal(undefined)
     })
 
-    it('should fail getting a deleted record', function (done) {
-      people.findById(
-        '2',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.equal(undefined)
-          done()
-        }
-      )
-    })
-
-    it('should upsert (insert) a person with an object', function (done) {
-      people.upsert(
+    it('upsert (insert) a person', async () => {
+      const idProperties = await people.upsert(
         {
           employeeNo: '4',
           firstName: 'Marge',
@@ -457,23 +385,20 @@ describe('PG storage tests', function () {
           age: 45,
           children: { name: 'Lisa', age: 13 }
         },
-        {},
-        function (err, idProperties) {
-          expect(idProperties).to.eql(
-            {
-              idProperties: {
-                employeeNo: '4'
-              }
-            }
-          )
-          expect(err).to.equal(null)
-          done()
+        {}
+      )
+
+      expect(idProperties).to.eql(
+        {
+          idProperties: {
+            employeeNo: '4'
+          }
         }
       )
     })
 
-    it('should upsert (insert) a person with an array as an object', function (done) {
-      people.upsert(
+    it('upsert (insert) a person with an array subobject', async () => {
+      const idProperties = await people.upsert(
         {
           employeeNo: '4',
           firstName: 'Marge',
@@ -484,118 +409,93 @@ describe('PG storage tests', function () {
             { name: 'Bart', age: 12 }
           ]
         },
-        {},
-        function (err, idProperties) {
-          expect(idProperties).to.eql(
-            {
-              idProperties: {
-                employeeNo: '4'
-              }
-            }
-          )
-          expect(err).to.equal(null)
-          done()
+        {}
+      )
+
+      expect(idProperties).to.eql(
+        {
+          idProperties: {
+            employeeNo: '4'
+          }
         }
       )
     })
 
-    it('should upsert (insert) Grampa', function (done) {
-      people.upsert(
+    it('upsert (insert) Grampa', async () => {
+      const idProperties = await people.upsert(
         {
           employeeNo: '10',
           firstName: 'Abe',
           lastName: 'Simpson',
           age: 82
         },
-        {},
-        function (err, idProperties) {
-          expect(idProperties).to.eql(
-            {
-              idProperties: {
-                employeeNo: '10'
-              }
-            }
-          )
-          expect(err).to.equal(null)
-          done()
+        {}
+      )
+
+      expect(idProperties).to.eql(
+        {
+          idProperties: {
+            employeeNo: '10'
+          }
         }
       )
     })
 
-    it('should find Grampa has been inserted via upsert', function (done) {
-      people.findById(
-        '10',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              employeeNo: '10',
-              firstName: 'Abe',
-              lastName: 'Simpson',
-              age: 82
-            }
-          )
-          done()
+    it('find Grampa by id', async () => {
+      const doc = await people.findById(10)
+
+      expect(doc).to.containSubset(
+        {
+          employeeNo: '10',
+          firstName: 'Abe',
+          lastName: 'Simpson',
+          age: 82
         }
       )
     })
 
-    it('should upsert (update) Grampa', function (done) {
-      people.upsert(
+    it('upsert (update) Grampa', async () => {
+      await people.upsert(
         {
           employeeNo: '10',
           firstName: 'Abraham',
           lastName: 'Simpson',
           age: 83
         },
-        {},
-        function (err, doc) {
-          expect(err).to.equal(null)
-          done()
-        }
+        {}
       )
     })
 
-    it('should find Grampa has now been updates via upsert', function (done) {
-      people.findById(
-        '10',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              employeeNo: '10',
-              firstName: 'Abraham',
-              lastName: 'Simpson',
-              age: 83
-            }
-          )
-          done()
+    it('find Grampa by id, verify update', async () => {
+      const doc = await people.findById(10)
+
+      expect(doc).to.containSubset(
+        {
+          employeeNo: '10',
+          firstName: 'Abraham',
+          lastName: 'Simpson',
+          age: 83
         }
       )
     })
   })
 
-  describe('reference data', () => {
-    it('should find a star (reference table loaded as seed data) via primary key', function (done) {
-      star.findById(
-        'Proxima Centauri',
-        function (err, doc) {
-          expect(err).to.equal(null)
-          expect(doc).to.containSubset(
-            {
-              name: 'Proxima Centauri',
-              type: 'Red Dwarf'
-            }
-          )
-          done()
+  describe('reference table, loaded as seed data', () => {
+    it('find star via primary key', async () => {
+      const doc = await star.findById('Proxima Centauri')
+
+      expect(doc).to.containSubset(
+        {
+          name: 'Proxima Centauri',
+          type: 'Red Dwarf'
         }
       )
     })
   })
 
   describe('related tables', () => {
-    it('should create mars, with two moons and a few craters', function (done) {
-      planets.create(
+    it('create mars, with two moons and a few craters', async () => {
+      const idProperties = await planets.create(
         {
           name: 'mars',
           title: 'Mars',
@@ -622,17 +522,14 @@ describe('PG storage tests', function () {
             }
           ]
         },
-        {},
-        function (err, idProperties) {
-          expect(err).to.equal(null)
-          expect(idProperties).to.eql(
-            {
-              idProperties: {
-                name: 'mars'
-              }
-            }
-          )
-          done()
+        {}
+      )
+
+      expect(idProperties).to.eql(
+        {
+          idProperties: {
+            name: 'mars'
+          }
         }
       )
     })
