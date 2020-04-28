@@ -49,8 +49,7 @@ describe('Multicopy tests', function () {
     await sqlScriptRunner.cleanup(client)
   })
 
-  it('close database connections', function (done) {
+  after('close database connections', () => {
     client.end()
-    done()
   })
 })

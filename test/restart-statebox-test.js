@@ -30,25 +30,22 @@ describe('Restart statebox test - cat state machine', function () {
     }
   })
 
-  it('boot tymly', function (done) {
-    tymly.boot(
-      tymlyConfig,
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        statebox = tymlyServices.statebox
-        done()
-      }
+  it('boot tymly', async () => {
+    const tymlyServices = await tymly.boot(
+      tymlyConfig
     )
+
+    tymlyService = tymlyServices.tymly
+    statebox = tymlyServices.statebox
   })
 
-  it('find cat state machine', function () {
+  it('find cat state machine', () => {
     const stateMachine = statebox.findStateMachineByName(STATE_MACHINE_NAME)
     expect(stateMachine.name).to.eql(STATE_MACHINE_NAME)
   })
 
-  it('execute cat state machine', function (done) {
-    statebox.startExecution(
+  it('execute cat state machine', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         petName: 'Rupert',
         gender: 'male',
@@ -57,51 +54,36 @@ describe('Restart statebox test - cat state machine', function () {
         petDiary: []
       }, // input
       STATE_MACHINE_NAME, // state machine name
-      {}, // options
-      function (err, result) {
-        expect(err).to.eql(null)
-        rupert = result.executionName
-        done()
-      }
+      {} // options
     )
+
+    rupert = executionDescription.executionName
   })
 
-  xit('reboot tymly', function (done) {
-    tymly.boot(
-      tymlyConfig,
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        statebox = tymlyServices.statebox
-        done()
-      }
+  xit('reboot tymly', async () => {
+    const tymlyServices = await tymly.boot(
+      tymlyConfig
     )
+    statebox = tymlyServices.statebox
   })
 
-  it('complete Rupert\'s day', function (done) {
-    statebox.waitUntilStoppedRunning(
-      rupert,
-      function (err, executionDescription) {
-        try {
-          expect(err).to.eql(null)
-          expect(executionDescription.status).to.eql('SUCCEEDED')
-          expect(executionDescription.stateMachineName).to.eql('tymlyTest_aDayInTheLife')
-          expect(executionDescription.currentStateName).to.eql('Sleeping')
-          expect(executionDescription.ctx.hoursSinceLastMeal).to.eql(0)
-          expect(executionDescription.ctx.hoursSinceLastMotion).to.eql(0)
-          expect(executionDescription.ctx.gender).to.eql('male')
-          expect(executionDescription.ctx.petDiary).to.be.an('array')
-          expect(executionDescription.ctx.petDiary[0]).to.equal('Look out, Rupert is waking up!')
-          expect(executionDescription.ctx.petDiary[2]).to.equal("Rupert is walking... where's he off to?")
-          expect(executionDescription.ctx.petDiary[6]).to.equal('Shh, Rupert is eating...')
-          done()
-        } catch (oops) {
-          done(oops)
-        }
-      }
-    )
+  it('complete Rupert\'s day', async () => {
+    const executionDescription =
+      await statebox.waitUntilStoppedRunning(rupert)
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.stateMachineName).to.eql('tymlyTest_aDayInTheLife')
+    expect(executionDescription.currentStateName).to.eql('Sleeping')
+    expect(executionDescription.ctx.hoursSinceLastMeal).to.eql(0)
+    expect(executionDescription.ctx.hoursSinceLastMotion).to.eql(0)
+    expect(executionDescription.ctx.gender).to.eql('male')
+    expect(executionDescription.ctx.petDiary).to.be.an('array')
+    expect(executionDescription.ctx.petDiary[0]).to.equal('Look out, Rupert is waking up!')
+    expect(executionDescription.ctx.petDiary[2]).to.equal("Rupert is walking... where's he off to?")
+    expect(executionDescription.ctx.petDiary[6]).to.equal('Shh, Rupert is eating...')
   })
 
-  it('should shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })

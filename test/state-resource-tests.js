@@ -16,7 +16,7 @@ process.on('unhandledRejection', (reason, p) => {
   // application specific logging, throwing an error, or other logic here
 })
 
-describe('State Resource Tests', function () {
+describe('Import and Synchronize State Resources', function () {
   this.timeout(process.env.TIMEOUT || 5000)
   const IMPORT_STATE_MACHINE_NAME = 'tymlyTest_importCsv_1_0'
   const SYNC_STATE_MACHINE_NAME = 'tymlyTest_syncAnimal_1_0'
@@ -29,8 +29,8 @@ describe('State Resource Tests', function () {
     }
   })
 
-  it('should boot Tymly', function (done) {
-    tymly.boot(
+  it('boot Tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
@@ -41,120 +41,97 @@ describe('State Resource Tests', function () {
         ],
 
         config: {}
-      },
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        client = tymlyServices.storage.client
-        statebox = tymlyServices.statebox
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    client = tymlyServices.storage.client
+    statebox = tymlyServices.statebox
   })
 
-  it('should execute importingCsvFiles', function (done) {
-    statebox.startExecution(
+  it('execute importingCsvFiles', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         sourceDir: path.resolve(__dirname, './fixtures/input')
       },
       IMPORT_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.currentStateName).to.equal('ImportingCsvFiles')
-        done()
       }
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.currentStateName).to.equal('ImportingCsvFiles')
   })
 
-  it('should check the animals have been added', function (done) {
-    client.query(
-      'select * from tymly_test.animal_with_age',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rows[0].animal).to.eql('cat')
-          expect(result.rows[1].animal).to.eql('dog')
-          expect(result.rows[2].animal).to.eql('mouse')
-
-          expect(result.rows[0].colour).to.eql('black')
-          expect(result.rows[1].colour).to.eql('brown')
-          expect(result.rows[2].colour).to.eql('grey')
-
-          expect(result.rows[0].age).to.eql(2)
-          expect(result.rows[1].age).to.eql(6)
-          expect(result.rows[2].age).to.eql(3)
-          done()
-        }
-      }
+  it('verify the animals have been added', async () => {
+    const result = await client.query(
+      'select * from tymly_test.animal_with_age'
     )
+
+    expect(result.rows[0].animal).to.eql('cat')
+    expect(result.rows[1].animal).to.eql('dog')
+    expect(result.rows[2].animal).to.eql('mouse')
+
+    expect(result.rows[0].colour).to.eql('black')
+    expect(result.rows[1].colour).to.eql('brown')
+    expect(result.rows[2].colour).to.eql('grey')
+
+    expect(result.rows[0].age).to.eql(2)
+    expect(result.rows[1].age).to.eql(6)
+    expect(result.rows[2].age).to.eql(3)
   })
 
-  it('should execute synchronizingTable', function (done) {
-    statebox.startExecution(
+  it('execute synchronizingTable', async () => {
+    const executionDescription = await statebox.startExecution(
       {
         outputDir: OUTPUT_DIR_PATH
       },
       SYNC_STATE_MACHINE_NAME,
       {
         sendResponse: 'COMPLETE'
-      },
-      function (err, executionDescription) {
-        expect(err).to.eql(null)
-        expect(executionDescription.status).to.eql('SUCCEEDED')
-        expect(executionDescription.currentStateName).to.equal('SynchronizingTable')
-        done()
       }
     )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.currentStateName).to.equal('SynchronizingTable')
   })
 
-  it('should check the animals have been added and converted', function (done) {
-    client.query(
-      'select * from tymly_test.animal_with_year',
-      function (err, result) {
-        if (err) {
-          done(err)
-        } else {
-          expect(result.rows.length).to.eql(3)
-          for (const res of result.rows) {
-            switch (res.animal) {
-              case 'dog':
-                expect(res.colour).to.eql('brown')
-                expect(res.year_born).to.eql(2011)
-                break
-              case 'cat':
-                expect(res.colour).to.eql('black')
-                expect(res.year_born).to.eql(2015)
-                break
-              case 'mouse':
-                expect(res.colour).to.eql('grey')
-                expect(res.year_born).to.eql(2014)
-                break
-            }
-          }
-          done()
-        }
-      }
+  it('verify the animals have been added and converted', async () => {
+    const result = await client.query(
+      'select * from tymly_test.animal_with_year'
     )
-  })
 
-  it('should uninstall test schemas', async () => {
-    sqlScriptRunner.uninstall(client)
-  })
-
-  it('should remove output directory now tests are complete', function (done) {
-    if (fs.existsSync(OUTPUT_DIR_PATH)) {
-      rimraf(OUTPUT_DIR_PATH, {}, done)
-    } else {
-      done()
+    expect(result.rows.length).to.eql(3)
+    for (const res of result.rows) {
+      switch (res.animal) {
+        case 'dog':
+          expect(res.colour).to.eql('brown')
+          expect(res.year_born).to.eql(2011)
+          break
+        case 'cat':
+          expect(res.colour).to.eql('black')
+          expect(res.year_born).to.eql(2015)
+          break
+        case 'mouse':
+          expect(res.colour).to.eql('grey')
+          expect(res.year_born).to.eql(2014)
+          break
+      }
     }
   })
 
-  it('should shutdown Tymly', async () => {
+  after('uninstall test schemas', async () => {
+    sqlScriptRunner.uninstall(client)
+  })
+
+  after('should remove output directory now tests are complete', () => {
+    if (fs.existsSync(OUTPUT_DIR_PATH)) {
+      rimraf.sync(OUTPUT_DIR_PATH, {})
+    }
+  })
+
+  after('should shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
