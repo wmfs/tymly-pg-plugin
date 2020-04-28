@@ -1,3 +1,38 @@
+## [1.195.3](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.2...v1.195.3) (2020-04-28)
+
+
+### 🐛 Bug Fixes
+
+* Reworked storage._insertMultipleSeedData to remove async package dependency ([98f6d15](https://github.com/wmfs/tymly-pg-plugin/commit/98f6d1531e316f7cc014675c08ab2d98aa383b91))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.1 to 1.135.2 ([71fa864](https://github.com/wmfs/tymly-pg-plugin/commit/71fa8641423411af89ffe10458a17cfd4eb35643))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.135.2 to 1.136.0 ([6afc27a](https://github.com/wmfs/tymly-pg-plugin/commit/6afc27a1e0f1d1e6194b8f7acc6d2db0c3070312))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.136.0 to 1.137.0 ([f4a1cdc](https://github.com/wmfs/tymly-pg-plugin/commit/f4a1cdce4900696d499df6af8ebf486be5f01efd))
+* **deps-dev:** Bump mocha from 7.1.1 to 7.1.2 ([dc24286](https://github.com/wmfs/tymly-pg-plugin/commit/dc2428676e48e67ce1b36053f8f9d6ec398ef7a5))
+* **deps-dev:** Bump semantic-release from 17.0.6 to 17.0.7 ([93ab9d1](https://github.com/wmfs/tymly-pg-plugin/commit/93ab9d1b444fc365289ed7287c03044dcff9a6f2))
+* **dev:** Remove unused boom dependency ([fe55303](https://github.com/wmfs/tymly-pg-plugin/commit/fe553035b4c8a10cc62458306bc30717778a7991))
+
+
+### 📦 Code Refactoring
+
+* **Multicopy state-resource test:** Move from callback style to async/await ([5e29a64](https://github.com/wmfs/tymly-pg-plugin/commit/5e29a642cd0550242145f840c091c66cedd1a1e7))
+* **Multicopy test:** No need for callback in after function ([6292ad2](https://github.com/wmfs/tymly-pg-plugin/commit/6292ad23d5071b923657290f69772d3905687fc0))
+* **restart test:** Move from callback style to async/await ([88f87fa](https://github.com/wmfs/tymly-pg-plugin/commit/88f87fa1d39e3f6cb4acc2b512cfa7bcb2659d8e))
+* **State resource tests:** Switch from callback style to async/await ([03d85a0](https://github.com/wmfs/tymly-pg-plugin/commit/03d85a0038e4d1ee796173ea8173e0f4524e30a0))
+* **storage service vis state machines tests:** Switch from callback style to async/await ([9f47797](https://github.com/wmfs/tymly-pg-plugin/commit/9f47797d05df69213dcf5fb0fe0a5177a9442dc9))
+* **test:** Switch from pg-model callback style to promises ([81da424](https://github.com/wmfs/tymly-pg-plugin/commit/81da4244582a8c2dd7a1f083e6727e9d119d3139))
+* Pull _insertModelSeedData out from _insertMultipleSeedData ([2aeee00](https://github.com/wmfs/tymly-pg-plugin/commit/2aeee008f22a336b7ab83e4919deb95cfe367023))
+* Swap for loop for Array.map in generate-upsert-statement ([508c6d6](https://github.com/wmfs/tymly-pg-plugin/commit/508c6d6a86a6edfe2e20c2bf9bf7390a34caa979))
+
+
+### 🚨 Tests
+
+* Remove obsolete mocha.opts ([5703d34](https://github.com/wmfs/tymly-pg-plugin/commit/5703d34910efda1772c50d5ecde78950735c7e02))
+* Tweaked names to better reflect what the tests are doing ([e7d5323](https://github.com/wmfs/tymly-pg-plugin/commit/e7d532343b51d407e66e69f963bd29effaed63fc))
+
 ## [1.195.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.1...v1.195.2) (2020-04-20)
 
 
