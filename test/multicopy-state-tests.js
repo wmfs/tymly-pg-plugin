@@ -9,7 +9,7 @@ const path = require('path')
 const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const process = require('process')
 
-describe('Testing functionality as a state-resource', function () {
+describe('Multicopy state-resource tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
   let client
   let tymlyService
@@ -24,8 +24,8 @@ describe('Testing functionality as a state-resource', function () {
     }
   })
 
-  it('should create some tymly services to test PostgreSQL storage', function (done) {
-    tymly.boot(
+  it('boot tymly', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
@@ -36,18 +36,15 @@ describe('Testing functionality as a state-resource', function () {
         ],
 
         config: {}
-      },
-      function (err, tymlyServices) {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        client = tymlyServices.storage.client
-        statebox = tymlyServices.statebox
-        done()
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    client = tymlyServices.storage.client
+    statebox = tymlyServices.statebox
   })
 
-  it('should start a multicopy execution', async () => {
+  it('start multicopy execution', async () => {
     const executionDescription = await statebox.startExecution(
       {
         sourceDir: path.resolve(__dirname, 'fixtures', 'food-data')
@@ -59,7 +56,7 @@ describe('Testing functionality as a state-resource', function () {
     executionName = executionDescription.executionName
   })
 
-  it('should successfully complete a multicopy execution', async () => {
+  it('complete multicopy execution', async () => {
     const executionDescription = await statebox.waitUntilStoppedRunning(executionName)
 
     expect(executionDescription.status).to.eql('SUCCEEDED')
@@ -67,7 +64,7 @@ describe('Testing functionality as a state-resource', function () {
     expect(executionDescription.currentStateName).to.eql('ImportingCsvFiles')
   })
 
-  it('should find the correct data in the correct database tables (meat)', async () => {
+  it('verify data in "meat" table', async () => {
     const result = await client.query('select * from food_test.meat')
 
     expect(result.rows[0].food_name).to.eql('steak')
@@ -79,7 +76,7 @@ describe('Testing functionality as a state-resource', function () {
     expect(result.rows[2].food_group).to.eql('white meat')
   })
 
-  it('should find the correct data in the correct database tables (veg)', async () => {
+  it('verify data in "veg" table', async () => {
     const result = await client.query('select * from food_test.veg')
 
     expect(result.rows[0].food_name).to.eql('peas')
@@ -91,11 +88,11 @@ describe('Testing functionality as a state-resource', function () {
     expect(result.rows[2].food_group).to.eql('root')
   })
 
-  it('should clean up DB env', async () => {
+  after('clean up DB env', async () => {
     await sqlScriptRunner.cleanup(client)
   })
 
-  it('should shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
