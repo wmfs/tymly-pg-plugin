@@ -16,7 +16,7 @@ process.on('unhandledRejection', (reason, p) => {
   // application specific logging, throwing an error, or other logic here
 })
 
-describe('State Resource Tests', function () {
+describe('Import and Synchronize State Resources', function () {
   this.timeout(process.env.TIMEOUT || 5000)
   const IMPORT_STATE_MACHINE_NAME = 'tymlyTest_importCsv_1_0'
   const SYNC_STATE_MACHINE_NAME = 'tymlyTest_syncAnimal_1_0'
