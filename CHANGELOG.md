@@ -1,3 +1,17 @@
+## [1.195.4](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.3...v1.195.4) (2020-05-05)
+
+
+### 🐛 Bug Fixes
+
+* **services:** Remove redundant boot callback parameter ([cbec5b4](https://github.com/wmfs/tymly-pg-plugin/commit/cbec5b44cfc96f8da8275975211620e3e350a171))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.0 to 1.137.1 ([99980b0](https://github.com/wmfs/tymly-pg-plugin/commit/99980b08e59a7022bcd8ab36cb3af5b4ac91321a))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.137.1 to 1.137.2 ([b5ff142](https://github.com/wmfs/tymly-pg-plugin/commit/b5ff1427a7e87f2cae7c4f86e0dddb20a0865ec4))
+* **deps-dev:** Bump cz-conventional-changelog from 3.1.0 to 3.2.0 ([41e8da8](https://github.com/wmfs/tymly-pg-plugin/commit/41e8da84b7e0b45dd26ab824efc13c3224fdeae8))
+
 ## [1.195.3](https://github.com/wmfs/tymly-pg-plugin/compare/v1.195.2...v1.195.3) (2020-04-28)
 
 
