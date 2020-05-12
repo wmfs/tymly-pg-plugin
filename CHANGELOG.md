@@ -1,3 +1,10 @@
+# [1.203.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.202.0...v1.203.0) (2020-05-12)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-delta-file from 1.52.0 to 1.54.0 ([bb564cd](https://github.com/wmfs/tymly-pg-plugin/commit/bb564cd3061cc16b38f503e28351710d563b7f73))
+
 # [1.202.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.201.0...v1.202.0) (2020-05-12)
 
 
