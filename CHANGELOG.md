@@ -1,3 +1,10 @@
+# [1.204.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.203.0...v1.204.0) (2020-05-12)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.20.0 to 1.21.0 ([a4133e9](https://github.com/wmfs/tymly-pg-plugin/commit/a4133e963743a024c8de3d6def4074629ffb16ca))
+
 # [1.203.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.202.0...v1.203.0) (2020-05-12)
 
 
