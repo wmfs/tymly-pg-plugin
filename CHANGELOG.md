@@ -1,3 +1,17 @@
+# [1.205.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.204.0...v1.205.0) (2020-06-01)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.69.0 to 1.71.0 ([d7b107a](https://github.com/wmfs/tymly-pg-plugin/commit/d7b107ae8d1573631f269bff15ef17216ba2c1d2))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.138.0 to 1.140.0 ([c286c04](https://github.com/wmfs/tymly-pg-plugin/commit/c286c04d8b336f6e68717d41afcf0ee7677b6436))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.140.0 to 1.141.0 ([683df81](https://github.com/wmfs/tymly-pg-plugin/commit/683df81782f528450fe31e1c893e0b0788efa65e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.141.0 to 1.143.0 ([7fbc5bf](https://github.com/wmfs/tymly-pg-plugin/commit/7fbc5bf16e0c83192a7b2fa87121d98740e08968))
+* **deps-dev:** Bump codecov from 3.6.5 to 3.7.0 ([93778fa](https://github.com/wmfs/tymly-pg-plugin/commit/93778fa2660472ebfbec653c025a0980d992b669))
+* **deps-dev:** Bump mocha from 7.1.2 to 7.2.0 ([482ac80](https://github.com/wmfs/tymly-pg-plugin/commit/482ac8083615f172d27ee2c67082d423728d9857))
+* **deps-dev:** Bump nyc from 15.0.1 to 15.1.0 ([29b914f](https://github.com/wmfs/tymly-pg-plugin/commit/29b914f7f56809056cc9c46c1709235bd2d2efaa))
+* **deps-dev:** Bump semantic-release from 17.0.7 to 17.0.8 ([16f1642](https://github.com/wmfs/tymly-pg-plugin/commit/16f1642067a206e6c6b2497a855e147ac4e44e41))
+
 # [1.204.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.203.0...v1.204.0) (2020-05-12)
 
 
