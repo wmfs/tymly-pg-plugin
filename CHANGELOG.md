@@ -1,3 +1,21 @@
+# [1.208.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.207.0...v1.208.0) (2020-07-13)
+
+
+### 🛠 Builds
+
+* **deps:** Bump lodash from 4.17.15 to 4.17.19 ([4cc9c96](https://github.com/wmfs/tymly-pg-plugin/commit/4cc9c9623d87ad9a8127b60e36289d6234490703))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.144.0 to 1.145.0 ([004582f](https://github.com/wmfs/tymly-pg-plugin/commit/004582f37514933731862e2527f23263c43f4ec1))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.145.0 to 1.146.0 ([54e9e1b](https://github.com/wmfs/tymly-pg-plugin/commit/54e9e1be52d32364c89d3a8f2c8bd62950404688))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.146.0 to 1.147.0 ([ac92a06](https://github.com/wmfs/tymly-pg-plugin/commit/ac92a065c34685ec9c6a88f0a6f1a783927c2f64))
+* **deps-dev:** Bump mocha from 7.2.0 to 8.0.1 ([0918dbd](https://github.com/wmfs/tymly-pg-plugin/commit/0918dbdc57847b1399c5896177a03f350d7c3859))
+* **deps-dev:** Bump semantic-release from 17.0.8 to 17.1.0 ([37c04bc](https://github.com/wmfs/tymly-pg-plugin/commit/37c04bc6f4ed760f41ab79bc2a5014bbdc74c3e1))
+* **deps-dev:** Bump semantic-release from 17.1.0 to 17.1.1 ([cddaece](https://github.com/wmfs/tymly-pg-plugin/commit/cddaecede6aefb67d248c95cd25ccd26b1923d5d))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** use updated circle node image [skip ci] ([af0c623](https://github.com/wmfs/tymly-pg-plugin/commit/af0c623b19b89b950135b485c60830c034575a85))
+
 # [1.207.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.206.0...v1.207.0) (2020-06-02)
 
 
