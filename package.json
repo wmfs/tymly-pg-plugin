@@ -30,7 +30,7 @@
     "@wmfs/pg-diff-sync": "1.19.0",
     "@wmfs/pg-info": "1.16.0",
     "@wmfs/pg-model": "1.22.1",
-    "@wmfs/pg-telepods": "1.72.0",
+    "@wmfs/pg-telepods": "1.73.0",
     "@wmfs/relationize": "1.22.0",
     "@wmfs/supercopy": "1.38.0"
   },
