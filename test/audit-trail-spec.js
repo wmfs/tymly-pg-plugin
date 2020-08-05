@@ -3,6 +3,7 @@
 const expect = require('chai').expect
 const DateTime = require('luxon').DateTime
 const AuditTrail = require('../lib/components/state-resources/audit-trail')
+const AuditService = require('../lib/components/services/audit').serviceClass
 
 const rawHistory = [
   {
@@ -138,9 +139,15 @@ describe('Audit Trail tests', () => {
             }
           }
         }
-      }
+      },
+      pgScripts: { }
     }
   }
+
+  const auditService = new AuditService()
+  auditService.boot(env)
+  env.bootedServices.audit = auditService
+
   let auditTrail
 
   before(() => {
