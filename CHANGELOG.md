@@ -1,3 +1,27 @@
+## [1.215.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.215.0...v1.215.1) (2020-08-07)
+
+
+### 🐛 Bug Fixes
+
+* if not date, skip date format. Add additional fields if specified ([0575972](https://github.com/wmfs/tymly-pg-plugin/commit/0575972858c270b36dc7966fe4acafae73b264ad))
+* lint fix ([3a04299](https://github.com/wmfs/tymly-pg-plugin/commit/3a04299e004fa108cb40c70ff818fd63b6bad5b6))
+* move audit log formatting over to the audit service, from the state resource ([728e6d4](https://github.com/wmfs/tymly-pg-plugin/commit/728e6d42ab0888ad07ddb9a84e70e09f7820e3c8))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.152.0 to 1.153.0 ([e36e67c](https://github.com/wmfs/tymly-pg-plugin/commit/e36e67ce41868c0676ef7f0dafc6e201e506b2a7))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.153.0 to 1.154.0 ([1381f9d](https://github.com/wmfs/tymly-pg-plugin/commit/1381f9ddae5a18ebbc5f3ed97a41682ee1c7492f))
+* **deps-dev:** Bump codecov from 3.7.0 to 3.7.1 ([aa47055](https://github.com/wmfs/tymly-pg-plugin/commit/aa47055721a9e89cb31e6efee9850aef0ba8ade1))
+* **deps-dev:** Bump codecov from 3.7.1 to 3.7.2 ([47df193](https://github.com/wmfs/tymly-pg-plugin/commit/47df1936d6f5cede2e42c2084509b9de5804313d))
+* **deps-dev:** Bump mocha from 8.0.1 to 8.1.0 ([be954d8](https://github.com/wmfs/tymly-pg-plugin/commit/be954d83c6c9aaa35c09386343eb362687708590))
+* **deps-dev:** Bump mocha from 8.1.0 to 8.1.1 ([1c9e538](https://github.com/wmfs/tymly-pg-plugin/commit/1c9e53801975de6d692d6701b6553d189b2a9b00))
+
+
+### 📦 Code Refactoring
+
+* move audit log load from state-resource into audit service ([f68b5a4](https://github.com/wmfs/tymly-pg-plugin/commit/f68b5a47f4149b43d6d18a68e25fa36d4a0dd2fa))
+
 # [1.215.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.214.0...v1.215.0) (2020-07-16)
 
 
