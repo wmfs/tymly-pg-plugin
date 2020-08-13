@@ -52,85 +52,93 @@ describe('Audit service tests', function () {
       return res[0]
     }
 
-    it('insert a dog to animal-with-age', async () => {
-      await models.tymlyTest_animalWithAge.create({
-        animal: 'dog',
-        colour: 'brown'
+    describe('insert', () => {
+      it('insert a dog to animal-with-age', async () => {
+        await models.tymlyTest_animalWithAge.create({
+          animal: 'dog',
+          colour: 'brown'
+        })
+      })
+
+      it('row in table', async () => {
+        const res = await dog()
+
+        expect(res.colour).to.eql('brown')
+      })
+
+      it('insert captured in tymly.rewind', async () => {
+        const res = await dogChanges()
+
+        expect(res.length).to.eql(1)
+        expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+        expect(res[0].keyString).to.eql('dog')
+        expect(res[0].diff.action).to.eql('insert')
       })
     })
 
-    it('check the dog is brown', async () => {
-      const res = await dog()
+    describe('update record', () => {
+      it('update the dog\'s colour to black', async () => {
+        await models.tymlyTest_animalWithAge.update({
+          animal: 'dog',
+          colour: 'black'
+        }, {})
+      })
 
-      expect(res.colour).to.eql('brown')
+      it('change committed', async () => {
+        const res = await dog()
+
+        expect(res.colour).to.eql('black')
+      })
+
+      it('update captured in tymly.rewind', async () => {
+        const res = await dogChanges()
+
+        expect(res.length).to.eql(2)
+        expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+        expect(res[0].keyString).to.eql('dog')
+        expect(res[0].diff.colour.from).to.eql('brown')
+        expect(res[0].diff.colour.to).to.eql('black')
+      })
     })
 
-    it('check insert is documented in tymly.rewind', async () => {
-      const res = await dogChanges()
+    describe('update again', () => {
+      it('update the dog\'s colour to piebald', async () => {
+        await models.tymlyTest_animalWithAge.update({
+          animal: 'dog',
+          colour: 'piebald'
+        }, {})
+      })
 
-      expect(res.length).to.eql(1)
-      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
-      expect(res[0].keyString).to.eql('dog')
-      expect(res[0].diff.action).to.eql('insert')
+      it('confirm row changed again', async () => {
+        const res = await dog()
+
+        expect(res.colour).to.eql('piebald')
+      })
+
+      it('second change captured in tymly.rewind', async () => {
+        const res = await dogChanges()
+
+        expect(res.length).to.eql(3)
+        expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+        expect(res[0].keyString).to.eql('dog')
+        expect(res[0].diff.colour.from).to.eql('black')
+        expect(res[0].diff.colour.to).to.eql('piebald')
+      })
     })
 
-    it('update the dog\'s colour to black', async () => {
-      await models.tymlyTest_animalWithAge.update({
-        animal: 'dog',
-        colour: 'black'
-      }, {})
-    })
+    describe('delete record', () => {
+      it('delete row', async () => {
+        await models.tymlyTest_animalWithAge.destroyById('dog')
+      })
 
-    it('confirm dog is black', async () => {
-      const res = await dog()
+      it('delete is captured in tymly.rewind', async () => {
+        const res = await dogChanges()
 
-      expect(res.colour).to.eql('black')
-    })
-
-    it('check the change has been documented in tymly.rewind', async () => {
-      const res = await dogChanges()
-
-      expect(res.length).to.eql(2)
-      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
-      expect(res[0].keyString).to.eql('dog')
-      expect(res[0].diff.colour.from).to.eql('brown')
-      expect(res[0].diff.colour.to).to.eql('black')
-    })
-
-    it('update the dog\'s colour to piebald', async () => {
-      await models.tymlyTest_animalWithAge.update({
-        animal: 'dog',
-        colour: 'piebald'
-      }, {})
-    })
-
-    it('confirm dog is piebald', async () => {
-      const res = await dog()
-
-      expect(res.colour).to.eql('piebald')
-    })
-
-    it('check the change has been documented in tymly.rewind', async () => {
-      const res = await dogChanges()
-
-      expect(res.length).to.eql(3)
-      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
-      expect(res[0].keyString).to.eql('dog')
-      expect(res[0].diff.colour.from).to.eql('black')
-      expect(res[0].diff.colour.to).to.eql('piebald')
-    })
-
-    it('clean up animal-with-age', async () => {
-      await models.tymlyTest_animalWithAge.destroyById('dog')
-    })
-
-    it('check delete is documented in tymly.rewind', async () => {
-      const res = await dogChanges()
-
-      expect(res.length).to.eql(4)
-      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
-      expect(res[0].keyString).to.eql('dog')
-      expect(res[0].diff.action).to.eql('delete')
+        expect(res.length).to.eql(4)
+        expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+        expect(res[0].keyString).to.eql('dog')
+        expect(res[0].diff.action).to.eql('delete')
+      })
     })
   })
 
