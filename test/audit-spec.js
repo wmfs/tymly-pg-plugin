@@ -13,7 +13,7 @@ describe('Audit service tests', function () {
 
   let tymlyService, models, client
 
-    before(function () {
+  before(function () {
     if (process.env.PG_CONNECTION_STRING && !/^postgres:\/\/[^:]+:[^@]+@(?:localhost|127\.0\.0\.1).*$/.test(process.env.PG_CONNECTION_STRING)) {
       console.log(`Skipping tests due to unsafe PG_CONNECTION_STRING value (${process.env.PG_CONNECTION_STRING})`)
       this.skip()
