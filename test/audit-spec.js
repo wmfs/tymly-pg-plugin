@@ -92,6 +92,34 @@ describe('Audit service tests', function () {
       expect(res[0].diff.colour.from).to.eql('brown')
       expect(res[0].diff.colour.to).to.eql('black')
     })
+
+    it('update the dog\'s colour to piebald', async () => {
+      await models.tymlyTest_animalWithAge.update({
+        animal: 'dog',
+        colour: 'piebald'
+      }, {})
+    })
+
+    it('confirm dog is piebald', async () => {
+      const res = await models.tymlyTest_animalWithAge.find({})
+
+      expect(res[0].colour).to.eql('piebald')
+    })
+
+    it('check the change has been documented in tymly.rewind', async () => {
+      const res = await models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_age' }
+        },
+        orderBy: ['-modified']
+      })
+
+      expect(res.length).to.eql(3)
+      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+      expect(res[0].keyString).to.eql('dog')
+      expect(res[0].diff.colour.from).to.eql('black')
+      expect(res[0].diff.colour.to).to.eql('piebald')
+    })
   })
 
   describe('Unaudited table', () => {
