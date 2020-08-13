@@ -11,9 +11,9 @@ const process = require('process')
 describe('Audit service tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
 
-  let tymlyService, models, rewindIdToDestroy, client
+  let tymlyService, models, client
 
-  before(function () {
+    before(function () {
     if (process.env.PG_CONNECTION_STRING && !/^postgres:\/\/[^:]+:[^@]+@(?:localhost|127\.0\.0\.1).*$/.test(process.env.PG_CONNECTION_STRING)) {
       console.log(`Skipping tests due to unsafe PG_CONNECTION_STRING value (${process.env.PG_CONNECTION_STRING})`)
       this.skip()
@@ -52,6 +52,19 @@ describe('Audit service tests', function () {
       expect(res[0].colour).to.eql('brown')
     })
 
+    it('check insert is documented in tymly.rewind', async () => {
+      const res = await models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_age' }
+        }
+      })
+
+      expect(res.length).to.eql(1)
+      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+      expect(res[0].keyString).to.eql('dog')
+      expect(res[0].diff.action).to.eql('insert')
+    })
+
     it('update the dog\'s colour to black', async () => {
       await models.tymlyTest_animalWithAge.update({
         animal: 'dog',
@@ -69,10 +82,11 @@ describe('Audit service tests', function () {
       const res = await models.tymly_rewind.find({
         where: {
           modelName: { equals: 'tymly_test.animal_with_age' }
-        }
+        },
+        orderBy: ['-modified']
       })
 
-      rewindIdToDestroy = res[0].id
+      expect(res.length).to.eql(2)
       expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
       expect(res[0].keyString).to.eql('dog')
       expect(res[0].diff.colour.from).to.eql('brown')
@@ -127,7 +141,7 @@ describe('Audit service tests', function () {
   })
 
   after('clean up rewind', async () => {
-    await models.tymly_rewind.destroyById(rewindIdToDestroy)
+    await client.query("delete from tymly.rewind where model_name = 'tymly_test.animal_with_age'")
   })
 
   after('uninstall test schemas', async () => {
