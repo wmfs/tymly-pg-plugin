@@ -9,7 +9,7 @@ const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const process = require('process')
 
 describe('Audit service tests', function () {
-  this.timeout(process.env.TIMEOUT || 5000)
+  //this.timeout(process.env.TIMEOUT || 5000)
 
   let tymlyService, models, client
 
@@ -120,6 +120,24 @@ describe('Audit service tests', function () {
       expect(res[0].diff.colour.from).to.eql('black')
       expect(res[0].diff.colour.to).to.eql('piebald')
     })
+
+    it('clean up animal-with-age', async () => {
+      await models.tymlyTest_animalWithAge.destroyById('dog')
+    })
+
+    it('check delete is documented in tymly.rewind', async () => {
+      const res = await models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_age' }
+        },
+        orderBy: ['-modified']
+      })
+
+      expect(res.length).to.eql(4)
+      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+      expect(res[0].keyString).to.eql('dog')
+      expect(res[0].diff.action).to.eql('delete')
+    })
   })
 
   describe('Unaudited table', () => {
@@ -158,10 +176,6 @@ describe('Audit service tests', function () {
 
       expect(res.length).to.eql(0)
     })
-  })
-
-  after('clean up animal-with-age', async () => {
-    await models.tymlyTest_animalWithAge.destroyById('dog')
   })
 
   after('clean up animal-with-year', async () => {
