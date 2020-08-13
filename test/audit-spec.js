@@ -20,8 +20,8 @@ describe('Audit service tests', function () {
     }
   })
 
-  it('create some tymly services', (done) => {
-    tymly.boot(
+  before('create some tymly services', async () => {
+    const tymlyServices = await tymly.boot(
       {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
@@ -30,110 +30,111 @@ describe('Audit service tests', function () {
           path.resolve(__dirname, './fixtures/blueprints/animal-blueprint')
         ],
         config: {}
-      },
-      (err, tymlyServices) => {
-        expect(err).to.eql(null)
-        tymlyService = tymlyServices.tymly
-        client = tymlyServices.storage.client
-        models = tymlyServices.storage.models
-        done(err)
       }
     )
+
+    tymlyService = tymlyServices.tymly
+    client = tymlyServices.storage.client
+    models = tymlyServices.storage.models
   })
 
-  it('insert a dog to animal-with-age', async () => {
-    await models.tymlyTest_animalWithAge.create({
-      animal: 'dog',
-      colour: 'brown'
+  describe('Audited table', () => {
+    it('insert a dog to animal-with-age', async () => {
+      await models.tymlyTest_animalWithAge.create({
+        animal: 'dog',
+        colour: 'brown'
+      })
+    })
+
+    it('check the dog is brown', async () => {
+      const res = await models.tymlyTest_animalWithAge.find({})
+
+      expect(res[0].colour).to.eql('brown')
+    })
+
+    it('update the dog\'s colour to black', async () => {
+      await models.tymlyTest_animalWithAge.update({
+        animal: 'dog',
+        colour: 'black'
+      }, {})
+    })
+
+    it('confirm dog is black', async () => {
+      const res = await models.tymlyTest_animalWithAge.find({})
+
+      expect(res[0].colour).to.eql('black')
+    })
+
+    it('check the change has been documented in tymly.rewind', async () => {
+      const res = await models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_age' }
+        }
+      })
+
+      rewindIdToDestroy = res[0].id
+      expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
+      expect(res[0].keyString).to.eql('dog')
+      expect(res[0].diff.colour.from).to.eql('brown')
+      expect(res[0].diff.colour.to).to.eql('black')
     })
   })
 
-  it('check the dog is brown', async () => {
-    const res = await models.tymlyTest_animalWithAge.find({})
-
-    expect(res[0].colour).to.eql('brown')
-  })
-
-  it('update the dog\'s colour to black', async () => {
-    await models.tymlyTest_animalWithAge.update({
-      animal: 'dog',
-      colour: 'black'
-    }, {})
-  })
-
-  it('confirm dog is black', async () => {
-    const res = await models.tymlyTest_animalWithAge.find({})
-
-    expect(res[0].colour).to.eql('black')
-  })
-
-  it('check the change has been documented in tymly.rewind', async () => {
-    const res = await models.tymly_rewind.find({
-      where: {
-        modelName: { equals: 'tymly_test.animal_with_age' }
-      }
+  describe('Unaudited table', () => {
+    it('insert a cat to animal-with-year', async () => {
+      await models.tymlyTest_animalWithYear.create({
+        animal: 'cat',
+        colour: 'ginger'
+      })
     })
 
-    rewindIdToDestroy = res[0].id
-    expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
-    expect(res[0].keyString).to.eql('dog')
-    expect(res[0].diff.colour.from).to.eql('brown')
-    expect(res[0].diff.colour.to).to.eql('black')
-  })
+    it('check the cat is ginger', async () => {
+      const res = await models.tymlyTest_animalWithYear.find({})
 
-  it('insert a cat to animal-with-year', async () => {
-    await models.tymlyTest_animalWithYear.create({
-      animal: 'cat',
-      colour: 'ginger'
+      expect(res[0].colour).to.eql('ginger')
+    })
+
+    it('update the cat update the cat\'s colour to white', async () => {
+      await models.tymlyTest_animalWithYear.update({
+        animal: 'cat',
+        colour: 'white'
+      }, {})
+    })
+
+    it('check the cat is white', async () => {
+      const res = await models.tymlyTest_animalWithYear.find({})
+
+      expect(res[0].colour).to.eql('white')
+    })
+
+    it('check the change has NOT been documented in tymly.rewind', async () => {
+      const res = await models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_year' }
+        }
+      })
+
+      expect(res.length).to.eql(0)
     })
   })
 
-  it('check the cat is ginger', async () => {
-    const res = await models.tymlyTest_animalWithYear.find({})
-
-    expect(res[0].colour).to.eql('ginger')
-  })
-
-  it('update the cat update the cat\'s colour to white', async () => {
-    await models.tymlyTest_animalWithYear.update({
-      animal: 'cat',
-      colour: 'white'
-    }, {})
-  })
-
-  it('check the cat is white', async () => {
-    const res = await models.tymlyTest_animalWithYear.find({})
-
-    expect(res[0].colour).to.eql('white')
-  })
-
-  it('check the change has NOT been documented in tymly.rewind', async () => {
-    const res = await models.tymly_rewind.find({
-      where: {
-        modelName: { equals: 'tymly_test.animal_with_year' }
-      }
-    })
-
-    expect(res.length).to.eql(0)
-  })
-
-  it('clean up animal-with-age', async () => {
+  after('clean up animal-with-age', async () => {
     await models.tymlyTest_animalWithAge.destroyById('dog')
   })
 
-  it('clean up animal-with-year', async () => {
+  after('clean up animal-with-year', async () => {
     await models.tymlyTest_animalWithYear.destroyById('cat')
   })
 
-  it('clean up rewind', async () => {
+  after('clean up rewind', async () => {
     await models.tymly_rewind.destroyById(rewindIdToDestroy)
   })
 
-  it('uninstall test schemas', async () => {
+  after('uninstall test schemas', async () => {
     await sqlScriptRunner.uninstall(client)
   })
 
-  it('shutdown Tymly', async () => {
+  after('shutdown Tymly', async () => {
     await tymlyService.shutdown()
   })
 })
