@@ -9,7 +9,7 @@ const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const process = require('process')
 
 describe('Audit service tests', function () {
-  //this.timeout(process.env.TIMEOUT || 5000)
+  this.timeout(process.env.TIMEOUT || 5000)
 
   let tymlyService, models, client
 
@@ -39,6 +39,19 @@ describe('Audit service tests', function () {
   })
 
   describe('Audited table', () => {
+    function dogChanges () {
+      return models.tymly_rewind.find({
+        where: {
+          modelName: { equals: 'tymly_test.animal_with_age' }
+        },
+        orderBy: ['-modified']
+      })
+    }
+    async function dog () {
+      const res = await models.tymlyTest_animalWithAge.find({})
+      return res[0]
+    }
+
     it('insert a dog to animal-with-age', async () => {
       await models.tymlyTest_animalWithAge.create({
         animal: 'dog',
@@ -47,17 +60,13 @@ describe('Audit service tests', function () {
     })
 
     it('check the dog is brown', async () => {
-      const res = await models.tymlyTest_animalWithAge.find({})
+      const res = await dog()
 
-      expect(res[0].colour).to.eql('brown')
+      expect(res.colour).to.eql('brown')
     })
 
     it('check insert is documented in tymly.rewind', async () => {
-      const res = await models.tymly_rewind.find({
-        where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
-        }
-      })
+      const res = await dogChanges()
 
       expect(res.length).to.eql(1)
       expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
@@ -73,18 +82,13 @@ describe('Audit service tests', function () {
     })
 
     it('confirm dog is black', async () => {
-      const res = await models.tymlyTest_animalWithAge.find({})
+      const res = await dog()
 
-      expect(res[0].colour).to.eql('black')
+      expect(res.colour).to.eql('black')
     })
 
     it('check the change has been documented in tymly.rewind', async () => {
-      const res = await models.tymly_rewind.find({
-        where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
-        },
-        orderBy: ['-modified']
-      })
+      const res = await dogChanges()
 
       expect(res.length).to.eql(2)
       expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
@@ -101,18 +105,13 @@ describe('Audit service tests', function () {
     })
 
     it('confirm dog is piebald', async () => {
-      const res = await models.tymlyTest_animalWithAge.find({})
+      const res = await dog()
 
-      expect(res[0].colour).to.eql('piebald')
+      expect(res.colour).to.eql('piebald')
     })
 
     it('check the change has been documented in tymly.rewind', async () => {
-      const res = await models.tymly_rewind.find({
-        where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
-        },
-        orderBy: ['-modified']
-      })
+      const res = await dogChanges()
 
       expect(res.length).to.eql(3)
       expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
@@ -126,12 +125,7 @@ describe('Audit service tests', function () {
     })
 
     it('check delete is documented in tymly.rewind', async () => {
-      const res = await models.tymly_rewind.find({
-        where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
-        },
-        orderBy: ['-modified']
-      })
+      const res = await dogChanges()
 
       expect(res.length).to.eql(4)
       expect(res[0].modelName).to.eql('tymly_test.animal_with_age')
