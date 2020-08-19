@@ -128,7 +128,7 @@ const rawHistory = [
 
 const formattedHistory = [
   {
-    change: 'Delete',
+    change: 'Delete henry',
     modifiedBy: 'bob',
     modified: '10:00 Dec 1, 2028'
   },
@@ -148,7 +148,7 @@ const formattedHistory = [
     modified: '11:00 Dec 1, 2018'
   },
   {
-    change: 'Insert',
+    change: 'Insert henry',
     modifiedBy: 'bob',
     modified: '10:00 Dec 1, 2018'
   }
@@ -189,7 +189,8 @@ describe('Audit Trail tests', () => {
               title: 'Smell',
               audit: 'raw'
             }
-          }
+          },
+          label: 'name'
         }
       },
       pgScripts: { }
