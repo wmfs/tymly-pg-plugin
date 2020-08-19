@@ -29,7 +29,7 @@ BEGIN
     json_extract_path_text(old_json, '_modified_by')
   );
 
-  RETURN new;
+  RETURN old;
 END;
 $BODY$
   LANGUAGE plpgsql VOLATILE

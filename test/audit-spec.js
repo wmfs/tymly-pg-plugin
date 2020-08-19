@@ -2,7 +2,9 @@
 
 'use strict'
 
-const expect = require('chai').expect
+const chai = require('chai')
+chai.use(require('dirty-chai'))
+const expect = chai.expect
 const tymly = require('@wmfs/tymly')
 const path = require('path')
 const sqlScriptRunner = require('./fixtures/sql-script-runner')
@@ -49,7 +51,7 @@ describe('Audit service tests', function () {
     }
     async function dog () {
       const res = await models.tymlyTest_animalWithAge.find({})
-      return res[0]
+      return res.length ? res[0] : null
     }
 
     describe('insert', () => {
@@ -129,6 +131,12 @@ describe('Audit service tests', function () {
     describe('delete record', () => {
       it('delete row', async () => {
         await models.tymlyTest_animalWithAge.destroyById('dog')
+      })
+
+      it('row is gone', async () => {
+        const res = await dog()
+
+        expect(res).to.be.null()
       })
 
       it('delete is captured in tymly.rewind', async () => {
