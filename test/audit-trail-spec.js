@@ -16,6 +16,27 @@ const rawHistory = [
       animal: 'dog'
     },
     diff: {
+      action: 'insert'
+    },
+    modifiedBy: 'bob',
+    modified: DateTime.fromObject({
+      year: 2018,
+      month: 12,
+      day: 1,
+      hour: 10,
+      minute: 0
+    }).toJSDate()
+  },
+  {
+    modelName: 'test_animal',
+    keyString: 'dog_henry',
+    oldValues: {
+      name: 'henry',
+      colour: null,
+      size: 'small',
+      animal: 'dog'
+    },
+    diff: {
       colour: {
         from: '',
         to: 'brown'
@@ -81,10 +102,36 @@ const rawHistory = [
       hour: 12,
       minute: 5
     }).toJSDate()
+  },
+  {
+    modelName: 'test_animal',
+    keyString: 'dog_henry',
+    oldValues: {
+      name: 'henry',
+      colour: null,
+      size: 'small',
+      animal: 'dog'
+    },
+    diff: {
+      action: 'delete'
+    },
+    modifiedBy: 'bob',
+    modified: DateTime.fromObject({
+      year: 2028,
+      month: 12,
+      day: 1,
+      hour: 10,
+      minute: 0
+    }).toJSDate()
   }
 ]
 
 const formattedHistory = [
+  {
+    change: 'Delete',
+    modifiedBy: 'bob',
+    modified: '10:00 Dec 1, 2028'
+  },
   {
     change: 'Size "small" was cleared',
     modifiedBy: 'bill',
@@ -99,6 +146,11 @@ const formattedHistory = [
     change: 'Colour set to "brown"',
     modifiedBy: 'bob',
     modified: '11:00 Dec 1, 2018'
+  },
+  {
+    change: 'Insert',
+    modifiedBy: 'bob',
+    modified: '10:00 Dec 1, 2018'
   }
 ]
 
