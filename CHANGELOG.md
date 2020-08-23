@@ -1,3 +1,10 @@
+# [1.216.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.215.1...v1.216.0) (2020-08-17)
+
+
+### 🛠 Builds
+
+* **deps:** Bump lodash from 4.17.19 to 4.17.20 ([47f6b71](https://github.com/wmfs/tymly-pg-plugin/commit/47f6b71ed2e22a2e27954bb4ed26f3368880cc50))
+
 ## [1.215.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.215.0...v1.215.1) (2020-08-07)
 
 
