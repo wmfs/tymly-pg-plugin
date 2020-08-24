@@ -24,7 +24,7 @@
     "debug": "4.1.1",
     "dottie": "2.0.2",
     "lodash": "4.17.20",
-    "luxon": "1.24.1",
+    "luxon": "1.25.0",
     "@wmfs/hl-pg-client": "1.22.0",
     "@wmfs/pg-delta-file": "1.58.0",
     "@wmfs/pg-diff-sync": "1.21.0",
