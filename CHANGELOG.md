@@ -1,3 +1,10 @@
+# [1.219.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.218.0...v1.219.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-diff-sync from 1.21.0 to 1.23.0 ([ed0a308](https://github.com/wmfs/tymly-pg-plugin/commit/ed0a308fd0b9484de778e7244367f2870c7ffd92))
+
 # [1.218.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.217.0...v1.218.0) (2020-08-24)
 
 
