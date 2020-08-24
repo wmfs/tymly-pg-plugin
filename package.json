@@ -26,7 +26,7 @@
     "lodash": "4.17.20",
     "luxon": "1.25.0",
     "@wmfs/hl-pg-client": "1.22.0",
-    "@wmfs/pg-delta-file": "1.59.0",
+    "@wmfs/pg-delta-file": "1.62.0",
     "@wmfs/pg-diff-sync": "1.23.0",
     "@wmfs/pg-info": "1.16.0",
     "@wmfs/pg-model": "1.24.0",
