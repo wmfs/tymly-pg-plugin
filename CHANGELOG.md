@@ -1,3 +1,61 @@
+# [1.224.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.223.0...v1.224.0) (2020-08-25)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/hl-pg-client from 1.22.0 to 1.23.0 ([ec0715b](https://github.com/wmfs/tymly-pg-plugin/commit/ec0715ba37bb1c05d5bc4f56445c3ad86d4781d9))
+
+# [1.223.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.222.0...v1.223.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-delta-file from 1.59.0 to 1.62.0 ([8936447](https://github.com/wmfs/tymly-pg-plugin/commit/8936447ef9bf75980f1fdc9b2b401099851cf87b))
+
+# [1.222.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.221.0...v1.222.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-model from 1.23.0 to 1.24.0 ([3c89062](https://github.com/wmfs/tymly-pg-plugin/commit/3c890626b908f55aa85c3388349c43d962e45697))
+
+# [1.221.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.220.0...v1.221.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.75.0 to 1.78.0 ([b097ac0](https://github.com/wmfs/tymly-pg-plugin/commit/b097ac07f11c76c3d1884e29cd1709073e333888))
+
+# [1.220.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.219.0...v1.220.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/relationize from 1.23.0 to 1.24.0 ([4b82b44](https://github.com/wmfs/tymly-pg-plugin/commit/4b82b443fb12e5e3e2ed5cc91c68f651ee8d971e))
+
+# [1.219.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.218.0...v1.219.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-diff-sync from 1.21.0 to 1.23.0 ([ed0a308](https://github.com/wmfs/tymly-pg-plugin/commit/ed0a308fd0b9484de778e7244367f2870c7ffd92))
+
+# [1.218.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.217.0...v1.218.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-delta-file from 1.58.0 to 1.59.0 ([0c530cd](https://github.com/wmfs/tymly-pg-plugin/commit/0c530cde070140e56b838ee7b568d1f2876fe1ed))
+
+# [1.217.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.216.0...v1.217.0) (2020-08-24)
+
+
+### 🛠 Builds
+
+* **deps:** bump luxon from 1.24.1 to 1.25.0 ([2568533](https://github.com/wmfs/tymly-pg-plugin/commit/2568533be245e72c11a084f0f01f8262be8ab743))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.154.0 to 1.156.0 ([327b2ba](https://github.com/wmfs/tymly-pg-plugin/commit/327b2ba1efaac317c3c7c70346f8a8217bbd69f3))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.156.0 to 1.157.0 ([50a905a](https://github.com/wmfs/tymly-pg-plugin/commit/50a905a6dc50bbb6e57a1b28ecef613633a066e0))
+
 # [1.216.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.215.1...v1.216.0) (2020-08-17)
 
 
