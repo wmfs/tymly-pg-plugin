@@ -1,3 +1,53 @@
+# [1.225.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.224.0...v1.225.0) (2020-08-31)
+
+
+### ✨ Features
+
+* Can specify schemaName in ResourceConfig ([c822b16](https://github.com/wmfs/tymly-pg-plugin/commit/c822b1628ed2afdaaa66883d9c9827af4aaa906e))
+* extend audit rewind table to capture inserts ([c44f10a](https://github.com/wmfs/tymly-pg-plugin/commit/c44f10a5f9ed446af3e1bf6787432bea97b7b9c0))
+* extended audit rewind to capture delete event ([4c44ada](https://github.com/wmfs/tymly-pg-plugin/commit/4c44adabb52f37e75c4b8cd75e8eaf2a6ef60797))
+* Use ResourceConfig.quote to pass quote option to supercopy. ([84b6c87](https://github.com/wmfs/tymly-pg-plugin/commit/84b6c87f53384497cbdf8164c434cfdcca281c3e))
+
+
+### 🐛 Bug Fixes
+
+* Extend audit log format to pick up model.label for inserts and deletes ([30ce086](https://github.com/wmfs/tymly-pg-plugin/commit/30ce086b21516e2e8b67273dca1d7a01c735d238))
+* Strip null labels ([c5c2ba9](https://github.com/wmfs/tymly-pg-plugin/commit/c5c2ba90abc8e1871a32fe41352ae7697049e831))
+* **audit log:** Provide bast text for inserts and deletes in the formatted logs ([8fe1f82](https://github.com/wmfs/tymly-pg-plugin/commit/8fe1f825c9f4e57bc21aa292ea7d8bf67fe7a1b2))
+* **trigger:** Fixed delete trigger ([69c591b](https://github.com/wmfs/tymly-pg-plugin/commit/69c591b850864adeaf86493dbd5057707a0117fd))
+* **trigger installer:** Install each trigger in turn ([b6a083f](https://github.com/wmfs/tymly-pg-plugin/commit/b6a083fafba3417aea1c3200bed3b1b8fab57bc8))
+
+
+### 🛠 Builds
+
+* Bump [@wmfs](https://github.com/wmfs)/pg-telepods to 1.79.0 from 1.78.0 ([d5b262d](https://github.com/wmfs/tymly-pg-plugin/commit/d5b262d150034133ca2bb8a2bb2f53607b056240))
+* Bump [@wmfs](https://github.com/wmfs)/supercopy to 1.39 from 1.38 ([c59ce03](https://github.com/wmfs/tymly-pg-plugin/commit/c59ce03b4e0e9b9ce897813f393ce2e6fdeff94e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.157.0 to 1.159.0 ([f4022fc](https://github.com/wmfs/tymly-pg-plugin/commit/f4022fcb2324490e186a076f74505295c14b564a))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.159.0 to 1.160.0 ([ded11b9](https://github.com/wmfs/tymly-pg-plugin/commit/ded11b978e3c95d273b29fa80787895ace8ffba1))
+* **deps-dev:** Bump cz-conventional-changelog from 3.2.0 to 3.2.1 ([5a3dec7](https://github.com/wmfs/tymly-pg-plugin/commit/5a3dec71831f772a968f9cbd41990b0c90cb48fa))
+* **deps-dev:** Bump cz-conventional-changelog from 3.2.1 to 3.3.0 ([910106a](https://github.com/wmfs/tymly-pg-plugin/commit/910106a1c2a7ace3865b7c420e71a504f61c8352))
+* **deps-dev:** Bump mocha from 8.1.1 to 8.1.2 ([ec445ea](https://github.com/wmfs/tymly-pg-plugin/commit/ec445ea692d6c41850387aedbc36c213b7cde327))
+* **deps-dev:** Bump mocha from 8.1.2 to 8.1.3 ([04efea5](https://github.com/wmfs/tymly-pg-plugin/commit/04efea50bbd70837a71cb26de17aa055b999addb))
+
+
+### 📦 Code Refactoring
+
+* add a couple of describes into the audit test ([7f87483](https://github.com/wmfs/tymly-pg-plugin/commit/7f8748305cef05c9e49eeebdbcd6b5f1e54c9f5b))
+* added some more describe sections into the audit test ([55f6d80](https://github.com/wmfs/tymly-pg-plugin/commit/55f6d80d0fbb7dc385a4e46cb535a1f6b1ff1eb9))
+* auditFunctions and schemaNames don't need to be properties ([09ce821](https://github.com/wmfs/tymly-pg-plugin/commit/09ce82138e4c84b5eb6f84561831651dbafc4d6c))
+* lint fix ([53a5bde](https://github.com/wmfs/tymly-pg-plugin/commit/53a5bde41fc50ac0c6a0b369a0214cab906fb43c))
+* pass through when the fire the trigger and any trigger name suffix ([628325c](https://github.com/wmfs/tymly-pg-plugin/commit/628325c3414a2593bde1ac9fe14971e4a24b08ed))
+* passed triggerName into generateTriggerStatement ([681e797](https://github.com/wmfs/tymly-pg-plugin/commit/681e79727ac04d846b8112dbfb9b9787f93b2f52))
+* pull out a couple of functions in the audit tests ([d255a53](https://github.com/wmfs/tymly-pg-plugin/commit/d255a53426f66ab08c84e4d929f6cb64ac498e1a))
+* pull out gatherAuditFunctions ([539ae6f](https://github.com/wmfs/tymly-pg-plugin/commit/539ae6f733abd47953778771f0fcfecda639c812))
+* split out generateTriggerStatement parameters ([09b61cd](https://github.com/wmfs/tymly-pg-plugin/commit/09b61cde81ed35a7eaf1657585750de58c74e7cb))
+* start building a little function info object, rather than just passing name around ([8e94a6a](https://github.com/wmfs/tymly-pg-plugin/commit/8e94a6a1e4c49f79ed8a3ef9d11fe130b2f48c0a))
+
+
+### 🚨 Tests
+
+* log a second update test ([aa19f78](https://github.com/wmfs/tymly-pg-plugin/commit/aa19f780163f6adf934f5b40ffb40fa4828ff855))
+
 # [1.224.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.223.0...v1.224.0) (2020-08-25)
 
 
