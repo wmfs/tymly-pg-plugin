@@ -1,3 +1,10 @@
+## [1.225.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.225.0...v1.225.1) (2020-09-04)
+
+
+### 🐛 Bug Fixes
+
+* Ensure audit logs are returns in most to least recent order. ([e96c77d](https://github.com/wmfs/tymly-pg-plugin/commit/e96c77d5e3d23db010a6e0d2adc164877882df6e))
+
 # [1.225.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.224.0...v1.225.0) (2020-08-31)
 
 
