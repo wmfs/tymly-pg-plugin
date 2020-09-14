@@ -40,11 +40,16 @@ describe('Audit service tests', function () {
     models = tymlyServices.storage.models
   })
 
+  before('clear out rewind table', async () => {
+    await client.query("delete from tymly.rewind where model_name = 'tymly_test.animal_with_age'")
+  })
+
   describe('Audited table', () => {
     function dogChanges () {
       return models.tymly_rewind.find({
         where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
+          modelName: { equals: 'tymly_test.animal_with_age' },
+          keyString: { equals: 'dog' }
         },
         orderBy: ['-modified']
       })
