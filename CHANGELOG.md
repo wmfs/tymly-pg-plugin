@@ -1,3 +1,20 @@
+## [1.225.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.225.1...v1.225.2) (2020-09-14)
+
+
+### 🐛 Bug Fixes
+
+* Audit log ordering fix ([759fdc6](https://github.com/wmfs/tymly-pg-plugin/commit/759fdc681427c07e589722dc217f6c1baeadb04e))
+
+
+### 🚨 Tests
+
+* Corrected Test ([2a573ff](https://github.com/wmfs/tymly-pg-plugin/commit/2a573ff7e298006ee77299cfc8732aca8fa98050))
+
+
+### 💎 Styles
+
+* Lint fix ([7564090](https://github.com/wmfs/tymly-pg-plugin/commit/7564090a6abf7c47a257b124451d57dad759e480))
+
 ## [1.225.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.225.0...v1.225.1) (2020-09-04)
 
 
