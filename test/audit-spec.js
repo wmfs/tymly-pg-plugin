@@ -61,7 +61,6 @@ describe('Audit service tests', function () {
 
     describe('insert', () => {
       it('insert a dog to animal-with-age', async () => {
-        const d = await dog();
         await models.tymlyTest_animalWithAge.create({
           animal: 'dog',
           colour: 'brown'
