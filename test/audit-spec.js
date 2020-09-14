@@ -40,11 +40,16 @@ describe('Audit service tests', function () {
     models = tymlyServices.storage.models
   })
 
+  before('clear out rewind table', async () => {
+    await client.query("delete from tymly.rewind where model_name = 'tymly_test.animal_with_age'")
+  })
+
   describe('Audited table', () => {
     function dogChanges () {
       return models.tymly_rewind.find({
         where: {
-          modelName: { equals: 'tymly_test.animal_with_age' }
+          modelName: { equals: 'tymly_test.animal_with_age' },
+          keyString: { equals: 'dog' }
         },
         orderBy: ['-modified']
       })
@@ -56,6 +61,7 @@ describe('Audit service tests', function () {
 
     describe('insert', () => {
       it('insert a dog to animal-with-age', async () => {
+        const d = await dog();
         await models.tymlyTest_animalWithAge.create({
           animal: 'dog',
           colour: 'brown'
