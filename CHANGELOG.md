@@ -1,3 +1,11 @@
+# [1.226.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.225.2...v1.226.0) (2020-09-28)
+
+
+### 🛠 Builds
+
+* **deps:** Bump debug from 4.1.1 to 4.2.0 ([fcad0a3](https://github.com/wmfs/tymly-pg-plugin/commit/fcad0a3d564837cdbc503149312fac0a7c77c3a8))
+* **deps-dev:** Bump semantic-release from 17.1.1 to 17.1.2 ([2f82132](https://github.com/wmfs/tymly-pg-plugin/commit/2f82132a3066dc408f1a94f35f10088b23df4e6b))
+
 ## [1.225.2](https://github.com/wmfs/tymly-pg-plugin/compare/v1.225.1...v1.225.2) (2020-09-14)
 
 
