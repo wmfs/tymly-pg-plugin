@@ -1,3 +1,43 @@
+# [1.232.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.231.0...v1.232.0) (2020-11-12)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-info from 1.17.0 to 1.19.0 ([68acc6a](https://github.com/wmfs/tymly-pg-plugin/commit/68acc6ab99f8f5563db091e4d7e98c2a94100d54))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.164.0 to 1.165.0 ([a0d31a2](https://github.com/wmfs/tymly-pg-plugin/commit/a0d31a231f71de9d27b577cae734ca94ff8ab24e))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.165.0 to 1.166.0 ([2583e63](https://github.com/wmfs/tymly-pg-plugin/commit/2583e6393f932498e2cdf8019b40d2bd7d8a7eed))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.166.0 to 1.167.0 ([8e88245](https://github.com/wmfs/tymly-pg-plugin/commit/8e882456d2d6a30e2b6dbd19981bf5a073f5290c))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.167.0 to 1.168.0 ([5998903](https://github.com/wmfs/tymly-pg-plugin/commit/5998903324b136f2ba34f29980348aebf4d1e79a))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.168.0 to 1.169.0 ([ee64ec1](https://github.com/wmfs/tymly-pg-plugin/commit/ee64ec1ec1ec5552764eb326a37db1da0177d69c))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.169.0 to 1.170.0 ([9a7336d](https://github.com/wmfs/tymly-pg-plugin/commit/9a7336d30a6bebec08bc42549e0e2dcb299773a8))
+* **deps-dev:** Bump codecov from 3.7.2 to 3.8.0 ([5f3cdb0](https://github.com/wmfs/tymly-pg-plugin/commit/5f3cdb0be49ba24243632d146f8c398ff8605939))
+* **deps-dev:** Bump codecov from 3.8.0 to 3.8.1 ([33c6d0e](https://github.com/wmfs/tymly-pg-plugin/commit/33c6d0ee7a83bd3c9e61cbbbb2881ccda28e4d59))
+* **deps-dev:** Bump mocha from 8.1.3 to 8.2.1 ([6e769bb](https://github.com/wmfs/tymly-pg-plugin/commit/6e769bbea9bfdf29483632faeda37c3c0d4d549a))
+* **deps-dev:** Bump semantic-release from 17.1.2 to 17.2.0 ([899814b](https://github.com/wmfs/tymly-pg-plugin/commit/899814b2869024c080e49261f1ca09035e32aecb))
+* **deps-dev:** Bump semantic-release from 17.2.0 to 17.2.1 ([7395420](https://github.com/wmfs/tymly-pg-plugin/commit/7395420ab2890d9cc8bf88d0c77795badc236f8e))
+* **deps-dev:** Bump semantic-release from 17.2.1 to 17.2.2 ([e962e9b](https://github.com/wmfs/tymly-pg-plugin/commit/e962e9bc172c73d7d33d41b83d6a5440c9d87540))
+* **deps-dev:** Bump standard from 14.3.4 to 15.0.0 ([c45b21d](https://github.com/wmfs/tymly-pg-plugin/commit/c45b21dfb8f96e15e57a816a2a1b86631b1e5e0e))
+* **deps-dev:** Bump standard from 15.0.0 to 15.0.1 ([4314190](https://github.com/wmfs/tymly-pg-plugin/commit/431419091c4c20e68915cd666fb5b0d4efc99a99))
+* **deps-dev:** Bump standard from 15.0.1 to 16.0.0 ([93441dd](https://github.com/wmfs/tymly-pg-plugin/commit/93441dda9a2352433d4ae8615e6ca6ccd52b1940))
+* **deps-dev:** Bump standard from 16.0.0 to 16.0.1 ([4130632](https://github.com/wmfs/tymly-pg-plugin/commit/41306329159cd77cac11334144ba57e1fde77cbb))
+* **deps-dev:** Bump standard from 16.0.1 to 16.0.2 ([b91304b](https://github.com/wmfs/tymly-pg-plugin/commit/b91304b72266aa87a7090a9457fc484c92a5028c))
+
+
+### 📦 Code Refactoring
+
+* remove standard from npm test script [skip ci] ([259f97d](https://github.com/wmfs/tymly-pg-plugin/commit/259f97df739ace257686cd78aa133accb976fffe))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** add parallelism for unit tests [ch2766] ([e772e21](https://github.com/wmfs/tymly-pg-plugin/commit/e772e21f459cb87b7e2462184094d21e82d705dc))
+* **circle:** authenticate Docker image pull [ch2767] ([03b1963](https://github.com/wmfs/tymly-pg-plugin/commit/03b1963fc976ba381b1dde1ab7eeca5424684372))
+* **circle:** cache dependencies [ch2770] ([123d2ae](https://github.com/wmfs/tymly-pg-plugin/commit/123d2ae86c5dafb28b24deaf6921e06159ac512f))
+* **circle:** refactor test script [skip ci] ([c5b130b](https://github.com/wmfs/tymly-pg-plugin/commit/c5b130b75567fd7f5406fc09d0a49909226d2842))
+* **circle:** separate lint job [ch1009] ([c7ebd6b](https://github.com/wmfs/tymly-pg-plugin/commit/c7ebd6ba86cbbde525f952ea7b4ae8e65a67386f))
+* **circle:** update build environment variable context name [ch2771] ([42fdd75](https://github.com/wmfs/tymly-pg-plugin/commit/42fdd75faf08634516fcfb4d596a12b1c4ba0df9))
+* **circle:** use tmpfs postgres image [ch2769] ([96c2fcc](https://github.com/wmfs/tymly-pg-plugin/commit/96c2fccf7af56409f85ecca2ad15af8da07d1f99))
+
 # [1.231.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.230.0...v1.231.0) (2020-10-05)
 
 
