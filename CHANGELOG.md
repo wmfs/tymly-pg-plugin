@@ -1,3 +1,22 @@
+# [1.233.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.232.0...v1.233.0) (2020-12-01)
+
+
+### ✨ Features
+
+* Allow headerData to be passed in to pg-delta-file [ch3358] ([e078dec](https://github.com/wmfs/tymly-pg-plugin/commit/e078dec03f614268cb56ec5ec43a03c5851ab894))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.170.0 to 1.171.0 ([bde9b38](https://github.com/wmfs/tymly-pg-plugin/commit/bde9b38abd907b1fa6067175f2ad54dc72ba1af6))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.171.0 to 1.172.0 ([6a4a743](https://github.com/wmfs/tymly-pg-plugin/commit/6a4a743327b7ce776a297ba872a0d45b241902f6))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.172.0 to 1.173.0 ([8f6dac7](https://github.com/wmfs/tymly-pg-plugin/commit/8f6dac7815edda2c2ca97a3c4d3bd41200cebe41))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.173.0 to 1.174.0 ([dcb213f](https://github.com/wmfs/tymly-pg-plugin/commit/dcb213f92310c918a5464587cd478efe0194a43a))
+* **deps-dev:** Bump semantic-release from 17.2.2 to 17.2.3 ([2dedf87](https://github.com/wmfs/tymly-pg-plugin/commit/2dedf8779791cf1ef9bb87a17c8f2465e0101eb8))
+* **deps-dev:** Bump semantic-release from 17.2.3 to 17.2.4 ([e19b14b](https://github.com/wmfs/tymly-pg-plugin/commit/e19b14b6aed674403d70e34c494c1c6a9f39da51))
+* **deps-dev:** Bump semantic-release from 17.2.4 to 17.3.0 ([08881f0](https://github.com/wmfs/tymly-pg-plugin/commit/08881f03406fc8c87513e7e70f760369442f23e0))
+* **deps-dev:** Bump standard from 16.0.2 to 16.0.3 ([b5c721c](https://github.com/wmfs/tymly-pg-plugin/commit/b5c721c6dcba6cd26a9d5008a4516630c7c92d1d))
+
 # [1.232.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.231.0...v1.232.0) (2020-11-12)
 
 
