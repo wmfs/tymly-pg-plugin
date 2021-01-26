@@ -1,3 +1,19 @@
+# [1.238.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.237.0...v1.238.0) (2021-01-26)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-telepods from 1.87.0 to 1.87.1 ([0accddc](https://github.com/wmfs/tymly-pg-plugin/commit/0accddc5c396ebd7290c455c3c8f0c011aa3a0d5))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.184.0 to 1.185.0 ([fd98e38](https://github.com/wmfs/tymly-pg-plugin/commit/fd98e381713a623f2c4d9463c90117bc424051fd))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.185.0 to 1.186.0 ([d91df4e](https://github.com/wmfs/tymly-pg-plugin/commit/d91df4e7745fc3d82d0ff1658cd27093fbf7ca77))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.186.0 to 1.187.0 ([ce37eec](https://github.com/wmfs/tymly-pg-plugin/commit/ce37eec02ef39062d7905c7092d027526f9b10a8))
+* **deps-dev:** Bump semantic-release from 17.3.1 to 17.3.2 ([c3a43c0](https://github.com/wmfs/tymly-pg-plugin/commit/c3a43c0b70af7eeec979d2de7eef2dfecaa9e4d2))
+* **deps-dev:** Bump semantic-release from 17.3.2 to 17.3.3 ([04464e2](https://github.com/wmfs/tymly-pg-plugin/commit/04464e27885f8e74ed4b1fc70d646e7a95c2aa47))
+* **deps-dev:** Bump semantic-release from 17.3.3 to 17.3.4 ([6485d1c](https://github.com/wmfs/tymly-pg-plugin/commit/6485d1c6b50ee162dc60743852b616c7fd139e3c))
+* **deps-dev:** Bump semantic-release from 17.3.4 to 17.3.5 ([f1e2f6b](https://github.com/wmfs/tymly-pg-plugin/commit/f1e2f6bb2419156b8f58709fed9d6290579b95fa))
+* **deps-dev:** Bump semantic-release from 17.3.5 to 17.3.6 ([4534581](https://github.com/wmfs/tymly-pg-plugin/commit/4534581fd490acba0d18138d73e419409bf4187a))
+* **deps-dev:** Bump semantic-release from 17.3.6 to 17.3.7 ([02d8ff3](https://github.com/wmfs/tymly-pg-plugin/commit/02d8ff352285a85af4efc296420c1eb3617a874e))
+
 # [1.237.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.236.0...v1.237.0) (2021-01-12)
 
 
