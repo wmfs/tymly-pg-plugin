@@ -1,3 +1,12 @@
+# [1.239.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.238.0...v1.239.0) (2021-02-09)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-diff-sync from 1.23.0 to 1.24.0 ([8ceab61](https://github.com/wmfs/tymly-pg-plugin/commit/8ceab61878b631713991fbc938a20fd488d440fa))
+* **deps-dev:** Bump chai from 4.2.0 to 4.3.0 ([d649a5a](https://github.com/wmfs/tymly-pg-plugin/commit/d649a5a92f25872ed8c91bf0809c409233f6581d))
+* **deps-dev:** Bump semantic-release from 17.3.7 to 17.3.8 ([d36794c](https://github.com/wmfs/tymly-pg-plugin/commit/d36794cc7d790f6b3fbb77730e1de211b75ab134))
+
 # [1.238.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.237.0...v1.238.0) (2021-01-26)
 
 
