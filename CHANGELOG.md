@@ -1,3 +1,12 @@
+# [1.240.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.239.0...v1.240.0) (2021-02-16)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-delta-file from 1.67.0 to 1.67.1 ([a79730a](https://github.com/wmfs/tymly-pg-plugin/commit/a79730a0e9195eac38c383c7bf5c851fb0461b81))
+* **deps-dev:** Bump mocha from 8.2.1 to 8.3.0 ([22c123b](https://github.com/wmfs/tymly-pg-plugin/commit/22c123b706f3866575db6dae822cb0255a049ba5))
+* **deps-dev:** Bump semantic-release from 17.3.8 to 17.3.9 ([58d5cea](https://github.com/wmfs/tymly-pg-plugin/commit/58d5cead4075028c4fe8e1454904031125054758))
+
 # [1.239.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.238.0...v1.239.0) (2021-02-09)
 
 
