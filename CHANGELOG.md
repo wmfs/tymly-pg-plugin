@@ -1,3 +1,10 @@
+# [1.241.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.240.0...v1.241.0) (2021-02-17)
+
+
+### 🛠 Builds
+
+* **deps:** Bump luxon from 1.25.0 to 1.26.0 ([8f1410b](https://github.com/wmfs/tymly-pg-plugin/commit/8f1410bd4629d5c4fa6684fe92cc4fbad517b48d))
+
 # [1.240.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.239.0...v1.240.0) (2021-02-16)
 
 
