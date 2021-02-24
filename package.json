@@ -27,7 +27,7 @@
     "luxon": "1.26.0",
     "@wmfs/hl-pg-client": "1.27.0",
     "@wmfs/pg-delta-file": "1.68.0",
-    "@wmfs/pg-diff-sync": "1.24.0",
+    "@wmfs/pg-diff-sync": "1.25.0",
     "@wmfs/pg-info": "1.19.0",
     "@wmfs/pg-model": "1.26.0",
     "@wmfs/pg-telepods": "1.87.1",
