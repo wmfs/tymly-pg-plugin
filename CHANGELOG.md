@@ -1,3 +1,13 @@
+# [1.243.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.242.0...v1.243.0) (2021-02-24)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-diff-sync from 1.24.0 to 1.25.0 ([6cc4092](https://github.com/wmfs/tymly-pg-plugin/commit/6cc4092c687f425b70f20ae7f00c39b306878133))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/pg-model from 1.25.0 to 1.26.0 ([dba0a75](https://github.com/wmfs/tymly-pg-plugin/commit/dba0a759baae2e2da7d826818db17829d4e3335b))
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/supercopy from 1.43.0 to 1.44.0 ([23d10ee](https://github.com/wmfs/tymly-pg-plugin/commit/23d10ee6189cf67366eba8d24ec6ee755a8cba01))
+* **deps:** Bump lodash from 4.17.20 to 4.17.21 ([a22187b](https://github.com/wmfs/tymly-pg-plugin/commit/a22187b60549f4e903a973934d862a2dbdabe260))
+
 # [1.242.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.241.0...v1.242.0) (2021-02-24)
 
 
