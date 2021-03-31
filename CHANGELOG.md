@@ -1,3 +1,39 @@
+# [1.246.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.245.0...v1.246.0) (2021-03-31)
+
+
+### ✨ Features
+
+* 🎸 Add ResourceConfig deletesFunctionName ([da62b63](https://github.com/wmfs/tymly-pg-plugin/commit/da62b632dd4a5244e11c2d85fbdffc88e6955efa))
+
+
+### 🐛 Bug Fixes
+
+* 🐛 Added headerData to parameter validation ([3b93cb2](https://github.com/wmfs/tymly-pg-plugin/commit/3b93cb28a160af5dde6a3ba7c742ed9134e6a4a6))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.189.0 to 1.190.0 ([6129ebb](https://github.com/wmfs/tymly-pg-plugin/commit/6129ebb7d7eda27ef7b30694a362176242b84876))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.190.0 to 1.191.0 ([ecc79b6](https://github.com/wmfs/tymly-pg-plugin/commit/ecc79b67c88a20d47b4ae12f0f2bfcc9b8d09435))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.191.0 to 1.192.0 ([d645f0b](https://github.com/wmfs/tymly-pg-plugin/commit/d645f0bf82ae4c3808e989723b09c6ae88256ff6))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.192.0 to 1.193.0 ([68aa0b8](https://github.com/wmfs/tymly-pg-plugin/commit/68aa0b8911ddef43c4a93ad8a83ed0ff81d79e55))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.193.0 to 1.194.0 ([0c7d283](https://github.com/wmfs/tymly-pg-plugin/commit/0c7d28339ce16c5993ce006ce9f36397c0067f11))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.194.0 to 1.195.0 ([68b62ba](https://github.com/wmfs/tymly-pg-plugin/commit/68b62bac41e8386535599bb4ea20d7b07d9e028b))
+* **deps-dev:** Bump chai from 4.3.0 to 4.3.1 ([de75d29](https://github.com/wmfs/tymly-pg-plugin/commit/de75d2945612441476b3a02796d067030f835b0c))
+* **deps-dev:** Bump chai from 4.3.1 to 4.3.2 ([adef17e](https://github.com/wmfs/tymly-pg-plugin/commit/adef17e235b19f72b7a118fb46a6dc225e3a06db))
+* **deps-dev:** Bump chai from 4.3.2 to 4.3.3 ([b1ae748](https://github.com/wmfs/tymly-pg-plugin/commit/b1ae7487674612d15ce951b24a250050d28f27cd))
+* **deps-dev:** Bump chai from 4.3.3 to 4.3.4 ([cf56718](https://github.com/wmfs/tymly-pg-plugin/commit/cf567180ed08c6e4d445ac224e8ae545edee5d44))
+* **deps-dev:** Bump mocha from 8.3.0 to 8.3.1 ([7f8d61d](https://github.com/wmfs/tymly-pg-plugin/commit/7f8d61dfc3657499b47ec4fd85a8ac448f85a0d0))
+* **deps-dev:** Bump mocha from 8.3.1 to 8.3.2 ([c80e631](https://github.com/wmfs/tymly-pg-plugin/commit/c80e6318716ced8a115d4f01a9f74711785e0c44))
+* **deps-dev:** Bump semantic-release from 17.3.9 to 17.4.0 ([fd591ec](https://github.com/wmfs/tymly-pg-plugin/commit/fd591ec72aeb6c9aa1f1a6d8c93ac375c3599fb4))
+* **deps-dev:** Bump semantic-release from 17.4.0 to 17.4.1 ([c1b5722](https://github.com/wmfs/tymly-pg-plugin/commit/c1b5722b4558c2a52055abf153b91ea8973343c0))
+* **deps-dev:** Bump semantic-release from 17.4.1 to 17.4.2 ([c958ffd](https://github.com/wmfs/tymly-pg-plugin/commit/c958ffd0c0801b4d8742cc569c61fe9c800eb530))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** update postgres config to 13.2 ([7f3710b](https://github.com/wmfs/tymly-pg-plugin/commit/7f3710b07213c58c04f0c0683d07ebeb29bba97e))
+
 # [1.245.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.244.0...v1.245.0) (2021-02-24)
 
 
