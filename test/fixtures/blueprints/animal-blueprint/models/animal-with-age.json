@@ -34,5 +34,6 @@
   ],
   "required": [
     "animal"
-  ]
+  ],
+  "audit": true
 }
