@@ -1,3 +1,16 @@
+## [1.246.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.246.0...v1.246.1) (2021-04-28)
+
+
+### 🐛 Bug Fixes
+
+* generate sequences before running scripts ([6e57853](https://github.com/wmfs/tymly-pg-plugin/commit/6e578534acced9de26195e17b1ca8b104a4e6963))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.195.0 to 1.195.1 ([013c72c](https://github.com/wmfs/tymly-pg-plugin/commit/013c72cda379c1d8b4f02aac6b05dbf8aad6aa61))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.195.1 to 1.196.0 ([37b2562](https://github.com/wmfs/tymly-pg-plugin/commit/37b2562fbd9361a6cf4754d8944253418951a15a))
+
 # [1.246.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.245.0...v1.246.0) (2021-03-31)
 
 
