@@ -1,3 +1,26 @@
+# [1.247.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.246.1...v1.247.0) (2021-05-12)
+
+
+### ✨ Features
+
+* 🎸 Add fullExtract parameter to exportingCsvDeltaFile ([59564fd](https://github.com/wmfs/tymly-pg-plugin/commit/59564fd0e7abefa0ea4ec0d5b49b22a72ef6bf2c))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.196.0 to 1.197.0 ([e50f1c5](https://github.com/wmfs/tymly-pg-plugin/commit/e50f1c545e4339b943284bc99d7432e0ec5de1cc))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.197.0 to 1.198.0 ([ecf521f](https://github.com/wmfs/tymly-pg-plugin/commit/ecf521f7bc0b5bf1f7b5429567bd7f477d8960fe))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.198.0 to 1.199.0 ([ff076f8](https://github.com/wmfs/tymly-pg-plugin/commit/ff076f87e4a3d3d5da750722610226144f94b7ff))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.199.0 to 1.200.0 ([0f16294](https://github.com/wmfs/tymly-pg-plugin/commit/0f16294adc25e5e4e126b6f2837f3263b916e9f2))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.200.0 to 1.201.0 ([57f3bc9](https://github.com/wmfs/tymly-pg-plugin/commit/57f3bc983bc63985d1cae51781b7d8618d960be1))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.201.0 to 1.202.0 ([a1a5051](https://github.com/wmfs/tymly-pg-plugin/commit/a1a50519ea05060412ca1c3830fdfa1b1ceb0ad4))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.202.0 to 1.203.0 ([0e8b210](https://github.com/wmfs/tymly-pg-plugin/commit/0e8b2101dd0b8e731a6e3b81c5291b316fd179c1))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.203.0 to 1.204.0 ([3a9e168](https://github.com/wmfs/tymly-pg-plugin/commit/3a9e168915aea3a4f3180bba8730404c5e73f2dc))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.204.0 to 1.205.0 ([35614a8](https://github.com/wmfs/tymly-pg-plugin/commit/35614a8bedb70d4ef51350fce3895cb1ada9395e))
+* **deps-dev:** Bump codecov from 3.8.1 to 3.8.2 ([66acfa3](https://github.com/wmfs/tymly-pg-plugin/commit/66acfa3efa8b83662db0654add50ce3296a87af1))
+* **deps-dev:** Bump mocha from 8.3.2 to 8.4.0 ([f47a8e6](https://github.com/wmfs/tymly-pg-plugin/commit/f47a8e6ce99ab13b9110dddc1dd7b400f2fc4a6b))
+* **deps-dev:** Bump semantic-release from 17.4.2 to 17.4.3 ([9931ba6](https://github.com/wmfs/tymly-pg-plugin/commit/9931ba6231faec860c9f5b6b8beea7381ed0bb0c))
+
 ## [1.246.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.246.0...v1.246.1) (2021-04-28)
 
 
