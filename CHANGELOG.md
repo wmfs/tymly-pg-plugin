@@ -1,3 +1,10 @@
+# [1.250.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.249.0...v1.250.0) (2021-05-26)
+
+
+### 🛠 Builds
+
+* **deps:** Bump [@wmfs](https://github.com/wmfs)/relationize from 1.26.0 to 1.27.0 ([0cd2af5](https://github.com/wmfs/tymly-pg-plugin/commit/0cd2af580fe520bbd545a375bc07f702bdb76896))
+
 # [1.249.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.248.0...v1.249.0) (2021-05-26)
 
 
