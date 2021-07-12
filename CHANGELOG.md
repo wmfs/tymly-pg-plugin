@@ -1,3 +1,15 @@
+# [1.253.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.252.0...v1.253.0) (2021-07-09)
+
+
+### 🛠 Builds
+
+* **deps:** Bump debug from 4.3.1 to 4.3.2 ([e7720c0](https://github.com/wmfs/tymly-pg-plugin/commit/e7720c0855bfe85b3074c1ffe881caf0b15b1282))
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.208.0 to 1.209.0 ([15aca13](https://github.com/wmfs/tymly-pg-plugin/commit/15aca13acef5c4dd29f7707c0a2cec8cc23d0fe2))
+* **deps-dev:** Bump mocha from 8.4.0 to 9.0.0 ([0c39202](https://github.com/wmfs/tymly-pg-plugin/commit/0c392028d6560a651ca8a544ceab732579b1c06b))
+* **deps-dev:** Bump mocha from 9.0.0 to 9.0.1 ([78256a6](https://github.com/wmfs/tymly-pg-plugin/commit/78256a6d62eee7d9cc197aafbd5f7d12fb550986))
+* **deps-dev:** Bump mocha from 9.0.1 to 9.0.2 ([441ca53](https://github.com/wmfs/tymly-pg-plugin/commit/441ca535757010cbce71e22a5acac3582c1738d0))
+* **deps-dev:** Bump semantic-release from 17.4.3 to 17.4.4 ([2122ece](https://github.com/wmfs/tymly-pg-plugin/commit/2122eceda704370d03a31e4b9a477559d08302ae))
+
 # [1.252.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.251.0...v1.252.0) (2021-05-26)
 
 
