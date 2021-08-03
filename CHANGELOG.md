@@ -1,3 +1,29 @@
+# [1.255.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.254.0...v1.255.0) (2021-08-02)
+
+
+### 🛠 Builds
+
+* **deps:** update [@wmfs](https://github.com/wmfs)/pg-model to 1.26.1 ([bb6a37e](https://github.com/wmfs/tymly-pg-plugin/commit/bb6a37e62933a6300a31e942fd1e87efa717a743))
+
+# [1.254.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.253.0...v1.254.0) (2021-08-02)
+
+
+### ✨ Features
+
+* specify modified field ([fcc4308](https://github.com/wmfs/tymly-pg-plugin/commit/fcc43081cacaffe8a632ae09236db4008cf30a70))
+
+
+### 🛠 Builds
+
+* **deps-dev:** Bump [@wmfs](https://github.com/wmfs)/tymly from 1.209.0 to 1.212.0 ([5866a8c](https://github.com/wmfs/tymly-pg-plugin/commit/5866a8c476e39c8ba70c37a7c9249b8f660db417))
+* **deps-dev:** Bump codecov from 3.8.2 to 3.8.3 ([ed8ac3c](https://github.com/wmfs/tymly-pg-plugin/commit/ed8ac3c3a0c5da427dc9d157b158b942effecdbc))
+* **deps-dev:** Bump mocha from 9.0.2 to 9.0.3 ([a8a94bb](https://github.com/wmfs/tymly-pg-plugin/commit/a8a94bbda2c62ba24ced747724e9a2c7c4098d58))
+
+
+### ♻️ Chores
+
+* add renovate config [ch6600] ([396513d](https://github.com/wmfs/tymly-pg-plugin/commit/396513de86f6d7b0ed973fc1ba9d6281fe96a0c1))
+
 # [1.253.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.252.0...v1.253.0) (2021-07-09)
 
 
