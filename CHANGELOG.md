@@ -1,3 +1,22 @@
+# [1.258.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.257.0...v1.258.0) (2021-11-30)
+
+
+### ✨ Features
+
+* use tymly logger instead of debug ([2a80e83](https://github.com/wmfs/tymly-pg-plugin/commit/2a80e83e15af22bf75af200017c8756c9c8e85c3))
+
+
+### 🐛 Bug Fixes
+
+* referencing logger ([ebabd71](https://github.com/wmfs/tymly-pg-plugin/commit/ebabd7179a48bff88080c757da98dc75a4a2982f))
+* use logger instead of debug and update tests ([9ada1ea](https://github.com/wmfs/tymly-pg-plugin/commit/9ada1eae9a9e840bf6f554dd129f3eeb16bf13f3))
+
+
+### 🛠 Builds
+
+* **deps:** bump [@wmfs](https://github.com/wmfs)/tymly ([528df01](https://github.com/wmfs/tymly-pg-plugin/commit/528df01d3bda10948f67ed5e744ff5ed5466e04d))
+* **deps:** remove debug ([6bd907f](https://github.com/wmfs/tymly-pg-plugin/commit/6bd907f049c1f099ae640d6763d47b2f076bfa96))
+
 # [1.257.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.256.0...v1.257.0) (2021-11-26)
 
 
