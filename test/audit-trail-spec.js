@@ -167,7 +167,8 @@ describe('Audit Trail tests', () => {
       logger: {
         addLogger () {
           return {
-            debug: () => {}
+            debug: () => {},
+            child: () => {},
           }
         }
       },
