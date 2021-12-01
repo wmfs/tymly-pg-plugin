@@ -165,12 +165,8 @@ describe('Audit Trail tests', () => {
   const env = {
     bootedServices: {
       logger: {
-        addLogger () {
-          return {
-            debug: () => {},
-            child: () => {},
-          }
-        }
+        debug: () => {},
+        child: () => {},
       },
       storage: {
         models: {
