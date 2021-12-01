@@ -1,3 +1,26 @@
+## [1.258.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.258.0...v1.258.1) (2021-12-01)
+
+
+### 🐛 Bug Fixes
+
+* update from logger from tymly-core ([0b2a4fc](https://github.com/wmfs/tymly-pg-plugin/commit/0b2a4fcda9824c8fdf6ee287672e24b6d7052426))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.224.2 ([ef8b1de](https://github.com/wmfs/tymly-pg-plugin/commit/ef8b1dec6ceae2fcd65d92f90f070627582785c8))
+
+
+### 🚨 Tests
+
+* try that again ([358b250](https://github.com/wmfs/tymly-pg-plugin/commit/358b25080705575f8ad596519a74015f3cabcf7c))
+* update test to include child function from logger ([bc6aee8](https://github.com/wmfs/tymly-pg-plugin/commit/bc6aee8f7277a714cf21a1d093f3a7a51f0f537d))
+
+
+### 💎 Styles
+
+* standard ([bd77aa4](https://github.com/wmfs/tymly-pg-plugin/commit/bd77aa414d74e5c77d1f2a3ad4294f878ab8d533))
+
 # [1.258.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.257.0...v1.258.0) (2021-11-30)
 
 
