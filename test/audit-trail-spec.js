@@ -166,7 +166,7 @@ describe('Audit Trail tests', () => {
     bootedServices: {
       logger: {
         debug: () => {},
-        child: () => {},
+        child: () => {}
       },
       storage: {
         models: {
