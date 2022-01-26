@@ -1,3 +1,12 @@
+# [1.264.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.263.0...v1.264.0) (2022-01-26)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.234.0 ([7cae73d](https://github.com/wmfs/tymly-pg-plugin/commit/7cae73d80a0492017fe325e2506cca0a87b61078))
+* **deps-dev:** update dependency chai to v4.3.5 ([05283d3](https://github.com/wmfs/tymly-pg-plugin/commit/05283d3829d6e02fb3755ac4b5cdd73d159cdf12))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/supercopy to v1.47.0 ([cadd25d](https://github.com/wmfs/tymly-pg-plugin/commit/cadd25d0932e09bc2e1ab83a5e618ae16fd96b75))
+
 # [1.263.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.262.0...v1.263.0) (2022-01-25)
 
 
