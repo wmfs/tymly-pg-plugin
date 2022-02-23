@@ -24,7 +24,8 @@
     }
   },
   "listeners": [
-    "afterInsert"
+    "afterInsert",
+    "afterDelete"
   ],
   "indexes": [
     {
