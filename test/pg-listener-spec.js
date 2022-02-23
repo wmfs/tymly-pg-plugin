@@ -72,13 +72,15 @@ describe('PG listener service tests', function () {
     })
   })
 
-  describe('After insert model trigger', () => {
-    const key = 'tymly_test_people_afterInsert'
+  describe('Before and after insert model trigger', () => {
+    const afterInsertKey = 'tymly_test_people_afterInsert'
+    const beforeInsertKey = 'tymly_test_people_beforeInsert'
+
     let expectedReceived = 0
 
     it('insert a record', async () => {
       await people.create({ employeeNo: 3, firstName: 'Santa', lastName: 'Claus' })
-      expectedTotalReceived++
+      expectedTotalReceived += 2
       expectedReceived++
     })
 
@@ -86,18 +88,20 @@ describe('PG listener service tests', function () {
 
     it('check received updates', () => {
       expect(received.length).to.eql(expectedTotalReceived)
-      expect(received.filter(r => r.key === key).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === beforeInsertKey).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === afterInsertKey).length).to.eql(expectedReceived)
 
       const { record } = received[received.length - 1]
       expect(record.employee_no).to.eql(3)
     })
 
     it('insert multiple records', async () => {
-      await people.create([
+      const records = [
         { employeeNo: 4, firstName: 'Santa 1', lastName: 'Claus' },
         { employeeNo: 5, firstName: 'Santa 2', lastName: 'Claus' }
-      ])
-      expectedTotalReceived += 2
+      ]
+      await people.create(records)
+      expectedTotalReceived += records.length * 2
       expectedReceived += 2
     })
 
@@ -105,17 +109,20 @@ describe('PG listener service tests', function () {
 
     it('check received updates for additional records', () => {
       expect(received.length).to.eql(expectedTotalReceived)
-      expect(received.filter(r => r.key === key).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === beforeInsertKey).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === afterInsertKey).length).to.eql(expectedReceived)
     })
   })
 
-  describe('After delete model trigger', () => {
-    const key = 'tymly_test_people_afterDelete'
+  describe('Before and after update model trigger', () => {
+    const afterUpdateKey = 'tymly_test_people_afterUpdate'
+    const beforeUpdateKey = 'tymly_test_people_beforeUpdate'
+
     let expectedReceived = 0
 
-    it('delete a record', async () => {
-      await people.destroyById(3)
-      expectedTotalReceived++
+    it('update a record', async () => {
+      await people.update({ employeeNo: 3, firstName: 'Mrs', lastName: 'Claus' })
+      expectedTotalReceived += 2
       expectedReceived++
     })
 
@@ -123,7 +130,32 @@ describe('PG listener service tests', function () {
 
     it('check received updates', () => {
       expect(received.length).to.eql(expectedTotalReceived)
-      expect(received.filter(r => r.key === key).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === beforeUpdateKey).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === afterUpdateKey).length).to.eql(expectedReceived)
+
+      const { record } = received[received.length - 1]
+      expect(record.employee_no).to.eql(3)
+    })
+  })
+
+  describe('Before and after delete model trigger', () => {
+    const beforeDeleteKey = 'tymly_test_people_beforeDelete'
+    const afterDeleteKey = 'tymly_test_people_afterDelete'
+
+    let expectedReceived = 0
+
+    it('delete a record', async () => {
+      await people.destroyById(3)
+      expectedTotalReceived += 2
+      expectedReceived++
+    })
+
+    it('wait', done => setTimeout(done, 300))
+
+    it('check received updates', () => {
+      expect(received.length).to.eql(expectedTotalReceived)
+      expect(received.filter(r => r.key === beforeDeleteKey).length).to.eql(expectedReceived)
+      expect(received.filter(r => r.key === afterDeleteKey).length).to.eql(expectedReceived)
 
       const { record } = received[received.length - 1]
       expect(record.employee_no).to.eql(3)

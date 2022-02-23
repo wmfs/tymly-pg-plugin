@@ -24,7 +24,11 @@
     }
   },
   "listeners": [
+    "beforeInsert",
     "afterInsert",
+    "beforeUpdate",
+    "afterUpdate",
+    "beforeDelete",
     "afterDelete"
   ],
   "indexes": [
