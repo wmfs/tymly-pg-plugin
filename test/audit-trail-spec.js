@@ -164,6 +164,10 @@ function rewindMock (opts) {
 describe('Audit Trail tests', () => {
   const env = {
     bootedServices: {
+      logger: {
+        debug: () => {},
+        child: () => {}
+      },
       storage: {
         models: {
           tymly_rewind: {
