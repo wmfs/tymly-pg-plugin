@@ -10,7 +10,7 @@ const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const process = require('process')
 const WebSocket = require('ws')
 
-const TYMLY_WS_PORT = 8081
+const TYMLY_WS_PORT = 8082
 
 describe('PG listener service tests', function () {
   this.timeout(process.env.TIMEOUT || 5000)
@@ -92,7 +92,7 @@ describe('PG listener service tests', function () {
       expect(received.filter(r => r.key === afterInsertKey).length).to.eql(expectedReceived)
 
       const { record } = received[received.length - 1]
-      expect(record.employee_no).to.eql(3)
+      expect(record.employeeNo).to.eql(3)
     })
 
     it('insert multiple records', async () => {
@@ -134,7 +134,7 @@ describe('PG listener service tests', function () {
       expect(received.filter(r => r.key === afterUpdateKey).length).to.eql(expectedReceived)
 
       const { record } = received[received.length - 1]
-      expect(record.employee_no).to.eql(3)
+      expect(record.employeeNo).to.eql(3)
     })
   })
 
@@ -158,7 +158,7 @@ describe('PG listener service tests', function () {
       expect(received.filter(r => r.key === afterDeleteKey).length).to.eql(expectedReceived)
 
       const { record } = received[received.length - 1]
-      expect(record.employee_no).to.eql(3)
+      expect(record.employeeNo).to.eql(3)
     })
   })
 
