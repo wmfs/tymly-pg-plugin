@@ -162,6 +162,22 @@ describe('PG listener service tests', function () {
     })
   })
 
+  describe('Call Tymly PG notification from outside Tymly', () => {
+    it('Call pg_notify', async () => {
+      await client.query('SELECT pg_notify(\'TYMLY_NOTIFICATION\', to_jsonb(\'{ "key": "rainbow_veryColourful_afterUpdate", "record": "test" }\'::text)::text);')
+      expectedTotalReceived++
+    })
+
+    it('wait', done => setTimeout(done, 300))
+
+    it('check received updates for additional records', () => {
+      expect(received.length).to.eql(expectedTotalReceived)
+      const last = received[received.length - 1]
+      expect(last.key).to.eql('rainbow_veryColourful_afterUpdate')
+      expect(last.record).to.eql('test')
+    })
+  })
+
   describe('clean up', () => {
     it('Should uninstall test schemas', async () => {
       sqlScriptRunner.uninstall(client)
