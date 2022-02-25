@@ -73,8 +73,8 @@ describe('PG listener service tests', function () {
   })
 
   describe('Before and after insert model trigger', () => {
-    const afterInsertKey = 'tymly_test_people_afterInsert'
-    const beforeInsertKey = 'tymly_test_people_beforeInsert'
+    const afterInsertKey = 'tymlyTest_people_afterInsert'
+    const beforeInsertKey = 'tymlyTest_people_beforeInsert'
 
     let expectedReceived = 0
 
@@ -115,8 +115,8 @@ describe('PG listener service tests', function () {
   })
 
   describe('Before and after update model trigger', () => {
-    const afterUpdateKey = 'tymly_test_people_afterUpdate'
-    const beforeUpdateKey = 'tymly_test_people_beforeUpdate'
+    const afterUpdateKey = 'tymlyTest_people_afterUpdate'
+    const beforeUpdateKey = 'tymlyTest_people_beforeUpdate'
 
     let expectedReceived = 0
 
@@ -139,8 +139,8 @@ describe('PG listener service tests', function () {
   })
 
   describe('Before and after delete model trigger', () => {
-    const beforeDeleteKey = 'tymly_test_people_beforeDelete'
-    const afterDeleteKey = 'tymly_test_people_afterDelete'
+    const beforeDeleteKey = 'tymlyTest_people_beforeDelete'
+    const afterDeleteKey = 'tymlyTest_people_afterDelete'
 
     let expectedReceived = 0
 
