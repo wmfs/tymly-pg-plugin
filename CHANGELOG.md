@@ -1,3 +1,17 @@
+## [1.268.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.268.0...v1.268.1) (2022-03-22)
+
+
+### 🐛 Bug Fixes
+
+* issue with model name when loading and formatting audit trail logs ([8537285](https://github.com/wmfs/tymly-pg-plugin/commit/8537285f92fe18cde6337deee5d200c2ef471403))
+* issue with model name when loading and formatting audit trail logs ([5c0ba69](https://github.com/wmfs/tymly-pg-plugin/commit/5c0ba6946507b0180f24f27e26c5cdf7aae65cf8))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.235.1 ([0ebcf2b](https://github.com/wmfs/tymly-pg-plugin/commit/0ebcf2bc6820eef85a9eb23b877dcc8a1400aed4))
+* **deps-dev:** update dependency mocha to v9.2.2 ([bbf1f7f](https://github.com/wmfs/tymly-pg-plugin/commit/bbf1f7fa6192d4d4f3f194123b6559ac98b91c6d))
+
 # [1.268.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.267.0...v1.268.0) (2022-02-21)
 
 
