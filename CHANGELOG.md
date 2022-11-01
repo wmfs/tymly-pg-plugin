@@ -1,3 +1,15 @@
+# [1.270.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.269.0...v1.270.0) (2022-11-01)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.240.0 ([51df4e9](https://github.com/wmfs/tymly-pg-plugin/commit/51df4e9d9ec3c67221d6ce77ab98c8062e39e6f4))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.242.0 ([9fcad66](https://github.com/wmfs/tymly-pg-plugin/commit/9fcad6664c3b4f8f78ea4928a0503b1f462b669d))
+* **deps-dev:** update dependency mocha to v10.1.0 ([e8e58cb](https://github.com/wmfs/tymly-pg-plugin/commit/e8e58cb588a95326df1cef88ab07dc520cfa7181))
+* **deps-dev:** update dependency semantic-release to v19.0.4 ([e043444](https://github.com/wmfs/tymly-pg-plugin/commit/e0434445898e4ba36001de5fbdac163d461e42c7))
+* **deps-dev:** update dependency semantic-release to v19.0.5 ([1e116a3](https://github.com/wmfs/tymly-pg-plugin/commit/1e116a3d6aba1a356854bde04a9794b1b9095ec2))
+* **deps:** update dependency luxon to v3 ([bf3e7ab](https://github.com/wmfs/tymly-pg-plugin/commit/bf3e7ab090cca033813efb386a89bdda2610e251))
+
 # [1.269.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.268.1...v1.269.0) (2022-06-09)
 
 
