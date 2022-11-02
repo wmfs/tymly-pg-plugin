@@ -28,7 +28,7 @@
     "@wmfs/pg-delta-file": "1.76.0",
     "@wmfs/pg-diff-sync": "1.27.0",
     "@wmfs/pg-info": "1.19.0",
-    "@wmfs/pg-model": "1.30.0",
+    "@wmfs/pg-model": "1.31.0",
     "@wmfs/pg-telepods": "1.97.0",
     "@wmfs/relationize": "1.28.0",
     "@wmfs/supercopy": "1.48.0"
