@@ -1,3 +1,11 @@
+# [1.275.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.274.0...v1.275.0) (2022-11-03)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.246.0 ([b4c33a3](https://github.com/wmfs/tymly-pg-plugin/commit/b4c33a39fa0a2f7ae2de8295a2f6ec8af1876545))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/supercopy to v1.50.0 ([97fdd1a](https://github.com/wmfs/tymly-pg-plugin/commit/97fdd1af1dc759edddd8984dc50960deaeeb20f8))
+
 # [1.274.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.273.0...v1.274.0) (2022-11-02)
 
 
