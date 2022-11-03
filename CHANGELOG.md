@@ -1,3 +1,11 @@
+# [1.276.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.275.0...v1.276.0) (2022-11-03)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/pg-telepods to v1.102.0 ([2b87dc6](https://github.com/wmfs/tymly-pg-plugin/commit/2b87dc614cd4a285b380dd0846c24b3d11230ad7))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/relationize to v1.30.0 ([32d7620](https://github.com/wmfs/tymly-pg-plugin/commit/32d76201c9ef2cfd2cb04b05ecc25ce26783126c))
+
 # [1.275.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.274.0...v1.275.0) (2022-11-03)
 
 
