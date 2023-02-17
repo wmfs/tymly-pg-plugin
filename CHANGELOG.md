@@ -1,3 +1,35 @@
+# [1.277.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.276.0...v1.277.0) (2023-02-17)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency [@semantic-release](https://github.com/semantic-release)/changelog to v6.0.2 ([a69a89c](https://github.com/wmfs/tymly-pg-plugin/commit/a69a89cc4b6d71912d25e35b731fc2c3f9fdc243))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.247.0 ([f13e9a4](https://github.com/wmfs/tymly-pg-plugin/commit/f13e9a41491e46b361c66aa5ad6b032af249c46e))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.247.1 ([8b2db80](https://github.com/wmfs/tymly-pg-plugin/commit/8b2db8080dd5ac42d15c2ea79cd14a42e73334aa))
+* **deps-dev:** update dependency [@wmfs](https://github.com/wmfs)/tymly to v1.248.0 ([6f0e4f6](https://github.com/wmfs/tymly-pg-plugin/commit/6f0e4f6c5b8de8daefa4397f2b0e5ab0ae01a858))
+* **deps-dev:** update dependency chai to v4.3.7 ([747436e](https://github.com/wmfs/tymly-pg-plugin/commit/747436ed19a3eb25d98e9c19b251582284cc9592))
+* **deps-dev:** update dependency mocha to v10.2.0 ([8ad2c8f](https://github.com/wmfs/tymly-pg-plugin/commit/8ad2c8fcf8926cf5d8649e0f36cb415e288e72b6))
+* **deps-dev:** update dependency rimraf to v4 ([f15e978](https://github.com/wmfs/tymly-pg-plugin/commit/f15e978b46b4df9998c7b7613e7e50ca227d16a2))
+* **deps-dev:** update dependency rimraf to v4.0.5 ([8994b1d](https://github.com/wmfs/tymly-pg-plugin/commit/8994b1d36c360c48d5039ca7f2719a982c60ad4a))
+* **deps-dev:** update dependency rimraf to v4.0.6 ([0a09199](https://github.com/wmfs/tymly-pg-plugin/commit/0a0919962b5338b7388974ea373d18df9bb90407))
+* **deps-dev:** update dependency rimraf to v4.0.7 ([f3f19a6](https://github.com/wmfs/tymly-pg-plugin/commit/f3f19a6267eb3a98dc9f8ce2966f4ecfe0c30c0a))
+* **deps-dev:** update dependency rimraf to v4.1.0 ([d661853](https://github.com/wmfs/tymly-pg-plugin/commit/d661853ff2262c45d6825e28990a536e4ee1c45b))
+* **deps-dev:** update dependency rimraf to v4.1.1 ([6d4ba0e](https://github.com/wmfs/tymly-pg-plugin/commit/6d4ba0ed486defd5ecb8328d45953754a66b8557))
+* **deps-dev:** update dependency rimraf to v4.1.2 ([e9858ce](https://github.com/wmfs/tymly-pg-plugin/commit/e9858ce5faf94c10f96bd169ec44b9857fbbb860))
+* **deps-dev:** update dependency semantic-release to v20 ([16a2388](https://github.com/wmfs/tymly-pg-plugin/commit/16a23886cb420f10d28f93e93b5953b0db477b7e))
+* **deps-dev:** update dependency semantic-release to v20.0.1 ([4da908e](https://github.com/wmfs/tymly-pg-plugin/commit/4da908e70449a5974ca12b0f4546904ff85d423e))
+* **deps-dev:** update dependency semantic-release to v20.0.2 ([f39da33](https://github.com/wmfs/tymly-pg-plugin/commit/f39da33443d873c878c8121df8aeae2035f0f529))
+* **deps-dev:** update dependency semantic-release to v20.0.3 ([dc71e04](https://github.com/wmfs/tymly-pg-plugin/commit/dc71e0436a9ae039daef7cd34f1a5ec61d69d57d))
+* **deps-dev:** update dependency semantic-release to v20.0.4 ([fe8edf2](https://github.com/wmfs/tymly-pg-plugin/commit/fe8edf2ad099a2389f761fd4b16ad8a03a035667))
+* **deps-dev:** update dependency semantic-release to v20.1.0 ([057964e](https://github.com/wmfs/tymly-pg-plugin/commit/057964e2713e265dcb85fc54eae6904a7f39e68d))
+* **deps:** update dependency luxon to v3.2.1 [security] ([4fb7609](https://github.com/wmfs/tymly-pg-plugin/commit/4fb7609108a7ca62b36b6f8ef189a515d78cd434))
+
+
+### ⚙️ Continuous Integrations
+
+* **circle:** CircleCI update PostgreSQL image to 15 0 [sc-18659] ([7b40232](https://github.com/wmfs/tymly-pg-plugin/commit/7b40232186c6155bcc302024c80f061e744404cd))
+* **circle:** update postgres to 15.1-postgis ([e932b19](https://github.com/wmfs/tymly-pg-plugin/commit/e932b19db2d2e64ca30b4f4573c1be6dba9cbac1))
+
 # [1.276.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.275.0...v1.276.0) (2022-11-03)
 
 
