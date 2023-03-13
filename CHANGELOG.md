@@ -1,3 +1,10 @@
+# [1.281.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.280.0...v1.281.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency luxon to v3.3.0 ([1eca7b6](https://github.com/wmfs/tymly-pg-plugin/commit/1eca7b62b95fa5019c360260391518adefcab772))
+
 # [1.280.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.279.0...v1.280.0) (2023-03-13)
 
 
