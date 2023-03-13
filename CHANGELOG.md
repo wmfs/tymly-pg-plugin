@@ -1,3 +1,16 @@
+# [1.278.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.277.0...v1.278.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency rimraf to v4.1.3 ([6874c7e](https://github.com/wmfs/tymly-pg-plugin/commit/6874c7e96940032f7f3d3dbfe4cca5bdcaff0f5a))
+* **deps-dev:** update dependency rimraf to v4.2.0 ([bb981ed](https://github.com/wmfs/tymly-pg-plugin/commit/bb981edaaed20bc61d04030fc64b5f4b061ea86c))
+* **deps-dev:** update dependency rimraf to v4.3.0 ([7e764a8](https://github.com/wmfs/tymly-pg-plugin/commit/7e764a8fa5a31b254c5e19ddc8beb33c3cb8bb5c))
+* **deps-dev:** update dependency rimraf to v4.3.1 ([f45179b](https://github.com/wmfs/tymly-pg-plugin/commit/f45179b180843af99cc04ae600036142a7e09b37))
+* **deps-dev:** update dependency rimraf to v4.4.0 ([43843fb](https://github.com/wmfs/tymly-pg-plugin/commit/43843fb24da38b3d1d8751e5e0010f7551e2af01))
+* **deps-dev:** update dependency semantic-release to v20.1.1 ([82d8edd](https://github.com/wmfs/tymly-pg-plugin/commit/82d8eddf0bc471dcbd480859de740ee081ecd036))
+* **deps:** update dependency dottie to v2.0.3 ([6b2c750](https://github.com/wmfs/tymly-pg-plugin/commit/6b2c7508d026de877a1a902006641c7d8786794d))
+
 # [1.277.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.276.0...v1.277.0) (2023-02-17)
 
 
