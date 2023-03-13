@@ -1,3 +1,11 @@
+# [1.280.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.279.0...v1.280.0) (2023-03-13)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/pg-delta-file to v1.77.0 ([42000a0](https://github.com/wmfs/tymly-pg-plugin/commit/42000a0ada67192c541ed215f639d542ae073120))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/relationize to v1.31.0 ([4d200a5](https://github.com/wmfs/tymly-pg-plugin/commit/4d200a50e7c1177385eaef254b4dd6f14f2935f0))
+
 # [1.279.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.278.0...v1.279.0) (2023-03-13)
 
 
