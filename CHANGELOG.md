@@ -1,3 +1,18 @@
+# [1.284.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.283.0...v1.284.0) (2023-06-07)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency rimraf to v5.0.1 ([37a75b5](https://github.com/wmfs/tymly-pg-plugin/commit/37a75b5a0983228dfb4032c0b5243d567f169930))
+* **deps-dev:** update dependency semantic-release to v21.0.3 ([7a480d9](https://github.com/wmfs/tymly-pg-plugin/commit/7a480d9c9e3ac60d84e98f67b03a9b58f6a576e0))
+* **deps-dev:** update dependency standard to v17.1.0 ([daec8ea](https://github.com/wmfs/tymly-pg-plugin/commit/daec8ea0abb7252594286566843ea3c379edd747))
+* **deps:** update dependency [@wmfs](https://github.com/wmfs)/pg-info to v1.20.0 ([63d0e80](https://github.com/wmfs/tymly-pg-plugin/commit/63d0e805b742102fc6e1a4a46b03566704619df6))
+
+
+### 📦 Code Refactoring
+
+* standard code styling ([33ea94b](https://github.com/wmfs/tymly-pg-plugin/commit/33ea94bb943133c978fa0a8aa819abb307fca76b))
+
 # [1.283.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.282.0...v1.283.0) (2023-05-09)
 
 
