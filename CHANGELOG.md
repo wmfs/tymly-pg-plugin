@@ -1,3 +1,11 @@
+# [1.285.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.284.0...v1.285.0) (2023-06-20)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency semantic-release to v21.0.5 ([8a67869](https://github.com/wmfs/tymly-pg-plugin/commit/8a67869150b2410fa1902d16f0abf385290b7d4b))
+* **deps:** update dependency dottie to v2.0.4 [security] ([99361b2](https://github.com/wmfs/tymly-pg-plugin/commit/99361b21cb393c08fbb029040c8982914e91f465))
+
 # [1.284.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.283.0...v1.284.0) (2023-06-07)
 
 
