@@ -1,3 +1,10 @@
+# [1.286.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.285.0...v1.286.0) (2023-06-20)
+
+
+### 🛠 Builds
+
+* **deps:** update dependency dottie to v2.0.6 ([01a7059](https://github.com/wmfs/tymly-pg-plugin/commit/01a70598f7ee25ff42caad77721ffc90b0712af0))
+
 # [1.285.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.284.0...v1.285.0) (2023-06-20)
 
 
