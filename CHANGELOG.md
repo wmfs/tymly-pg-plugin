@@ -1,3 +1,16 @@
+# [1.289.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.288.0...v1.289.0) (2023-09-19)
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency chai to v4.3.8 ([8e7d3d1](https://github.com/wmfs/tymly-pg-plugin/commit/8e7d3d10aecab0ce557aaa2be98442bf7f82c387))
+* **deps-dev:** update dependency semantic-release to v21.0.9 ([53bc1c0](https://github.com/wmfs/tymly-pg-plugin/commit/53bc1c0c1b56ac74ac14971050ff4436c2580aef))
+* **deps-dev:** update dependency semantic-release to v21.1.0 ([62d976c](https://github.com/wmfs/tymly-pg-plugin/commit/62d976cb8b8dda7bbdbe3de72e2df5b89a140cbb))
+* **deps-dev:** update dependency semantic-release to v21.1.1 ([27881b2](https://github.com/wmfs/tymly-pg-plugin/commit/27881b2bbab09123ed8868c6ab9a3443495e0a45))
+* **deps-dev:** update dependency semantic-release to v21.1.2 ([946f2e1](https://github.com/wmfs/tymly-pg-plugin/commit/946f2e170171fde79d67c943b6d507ebb9be81e6))
+* **deps-dev:** update dependency semantic-release to v22 ([e8b5b4d](https://github.com/wmfs/tymly-pg-plugin/commit/e8b5b4df767c2555cccd0d600a33c45d1b8fecc2))
+* **deps:** revert semantic-release ([c811918](https://github.com/wmfs/tymly-pg-plugin/commit/c811918fae9d92f86b5f0c2e276348d2fb4a31e3))
+
 # [1.288.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.287.0...v1.288.0) (2023-07-26)
 
 
