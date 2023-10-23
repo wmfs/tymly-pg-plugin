@@ -1,9 +1,21 @@
 {
   "type": "object",
-  "properties": {},
-  "required": []
+  "properties": {
+    "namespace": {
+      "type": "string",
+      "description": "This is the name of the namespace in which the sequence exists."
+    },
+    "id": {
+      "type": "string",
+      "description": "This is the id of a sequence from which the next value will be fetched."
+    },
+    "prefix": {
+      "type": "string",
+      "description": "This setting allows you to specify a value which will be prepended to the returned value."
+    }
+  },
+  "required": [
+    "namespace",
+    "id"
+  ]
 }
-
-
-
-
