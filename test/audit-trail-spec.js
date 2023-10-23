@@ -130,27 +130,27 @@ const formattedHistory = [
   {
     change: 'Delete henry',
     modifiedBy: 'bob',
-    modified: '10:00 Dec 1, 2028'
+    modified: '10:00 1 Dec 2028'
   },
   {
     change: 'Size "small" was cleared',
     modifiedBy: 'bill',
-    modified: '12:05 Dec 1, 2018'
+    modified: '12:05 1 Dec 2018'
   },
   {
     change: 'Colour changed from "brown" to "black"',
     modifiedBy: 'bill',
-    modified: '12:00 Dec 1, 2018'
+    modified: '12:00 1 Dec 2018'
   },
   {
     change: 'Colour set to "brown"',
     modifiedBy: 'bob',
-    modified: '11:00 Dec 1, 2018'
+    modified: '11:00 1 Dec 2018'
   },
   {
     change: 'Insert henry',
     modifiedBy: 'bob',
-    modified: '10:00 Dec 1, 2018'
+    modified: '10:00 1 Dec 2018'
   }
 ]
 
