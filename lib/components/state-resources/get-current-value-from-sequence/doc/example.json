@@ -4,7 +4,8 @@
     "Resource": "module:getCurrentValueFromSequence",
     "ResourceConfig": {
       "namespace": "wmfs",
-      "id": "tempUprn"
+      "id": "tempUprn",
+      "prefix": "FSC"
     },
     "Next": "Create"
   }
