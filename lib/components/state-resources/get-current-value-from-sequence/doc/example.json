@@ -7,6 +7,9 @@
       "id": "tempUprn",
       "prefix": "FSC"
     },
+    "ResultSelector": {
+      "uprn.$": "$.value"
+    },
     "Next": "Create"
   }
 }
