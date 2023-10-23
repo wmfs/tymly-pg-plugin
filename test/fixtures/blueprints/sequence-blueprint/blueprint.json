@@ -1,0 +1,11 @@
+{
+
+  "namespace": "tymlyTest",
+  "name": "sequence",
+  "version": "1.0",
+  "label": "People",
+  "author": "Jas Bahra",
+  "organisation": "Tymlys",
+  "description": "An example Tymly Blueprint to test sequence state resources.",
+  "categories": ["test"]
+}

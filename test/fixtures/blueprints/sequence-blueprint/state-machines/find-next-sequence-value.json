@@ -1,0 +1,19 @@
+{
+  "name": "FindNextSequenceValue",
+  "version": "1.0",
+  "StartAt": "FindNextSequenceValue",
+  "States": {
+    "FindNextSequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getNextValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "ticketIdSeq"
+      },
+      "ResultSelector": {
+        "ticketId.$": "$.value"
+      },
+      "End": true
+    }
+  }
+}
