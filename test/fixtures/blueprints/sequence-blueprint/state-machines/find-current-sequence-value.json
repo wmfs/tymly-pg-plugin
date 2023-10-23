@@ -1,0 +1,19 @@
+{
+  "name": "FindCurrentSequenceValue",
+  "version": "1.0",
+  "StartAt": "FindCurrentSequenceValue",
+  "States": {
+    "FindCurrentSequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getCurrentValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "ticketIdSeq"
+      },
+      "ResultSelector": {
+        "ticketId.$": "$.value"
+      },
+      "End": true
+    }
+  }
+}
