@@ -40,7 +40,7 @@ describe('Sequence State Resources', function () {
   it('find current sequence value of 1', async () => {
     const executionDescription = await statebox.startExecution(
       {},
-      "tymlyTest_findCurrentSequenceValue_1_0",
+      'tymlyTest_findCurrentSequenceValue_1_0',
       {
         sendResponse: 'COMPLETE'
       }
@@ -54,7 +54,7 @@ describe('Sequence State Resources', function () {
   it('find next sequence value of 1', async () => {
     const executionDescription = await statebox.startExecution(
       {},
-      "tymlyTest_findNextSequenceValue_1_0",
+      'tymlyTest_findNextSequenceValue_1_0',
       {
         sendResponse: 'COMPLETE'
       }
@@ -68,7 +68,7 @@ describe('Sequence State Resources', function () {
   it('find next sequence value of 2', async () => {
     const executionDescription = await statebox.startExecution(
       {},
-      "tymlyTest_findNextSequenceValue_1_0",
+      'tymlyTest_findNextSequenceValue_1_0',
       {
         sendResponse: 'COMPLETE'
       }
@@ -82,7 +82,7 @@ describe('Sequence State Resources', function () {
   it('find (prefixed) current sequence value of ABC2', async () => {
     const executionDescription = await statebox.startExecution(
       {},
-      "tymlyTest_findCurrentSequenceValueWithPrefix_1_0",
+      'tymlyTest_findCurrentSequenceValueWithPrefix_1_0',
       {
         sendResponse: 'COMPLETE'
       }
@@ -96,7 +96,7 @@ describe('Sequence State Resources', function () {
   it('find (prefixed) next sequence value of XYZ3', async () => {
     const executionDescription = await statebox.startExecution(
       {},
-      "tymlyTest_findNextSequenceValueWithPrefix_1_0",
+      'tymlyTest_findNextSequenceValueWithPrefix_1_0',
       {
         sendResponse: 'COMPLETE'
       }
