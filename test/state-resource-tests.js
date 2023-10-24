@@ -123,7 +123,6 @@ describe('Import and Synchronize State Resources', function () {
     }
   })
 
-
   it('find current sequence value of 1', async () => {
     const executionDescription = await statebox.startExecution(
       {},
