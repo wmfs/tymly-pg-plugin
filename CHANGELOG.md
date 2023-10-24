@@ -1,3 +1,48 @@
+# [1.290.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.289.0...v1.290.0) (2023-10-24)
+
+
+### ✨ Features
+
+* code simplification ([0c79416](https://github.com/wmfs/tymly-pg-plugin/commit/0c79416594ec92ee59d839dd6bb333bd6fbd23ba))
+* implemented config setting to allow prefix to be set for returned value ([45bcf55](https://github.com/wmfs/tymly-pg-plugin/commit/45bcf5592ac720afc8e193fbfe9e49c5ed0b6afe))
+
+
+### 🐛 Bug Fixes
+
+* linting fixes ([4856f98](https://github.com/wmfs/tymly-pg-plugin/commit/4856f98a11a5fc0834a2a2e5a318be6312bd9c94))
+
+
+### 🛠 Builds
+
+* **deps-dev:** update dependency chai to v4.3.10 ([e74eed4](https://github.com/wmfs/tymly-pg-plugin/commit/e74eed43402bd475c82167ec26111fd05608b7fd))
+* **deps-dev:** update dependency chai to v4.3.9 ([baf1316](https://github.com/wmfs/tymly-pg-plugin/commit/baf131640c2e926e909ce028ad0d077438194b6b))
+* **deps-dev:** update dependency rimraf to v5.0.4 ([746f587](https://github.com/wmfs/tymly-pg-plugin/commit/746f587f47ac6c13b3ed88fb1c58b742b47de022))
+* **deps-dev:** update dependency rimraf to v5.0.5 ([e52fea7](https://github.com/wmfs/tymly-pg-plugin/commit/e52fea7057b056fe222ccbc8a56eccefd920cdca))
+
+
+### 📚 Documentation
+
+* fleshed out docs and added details of new prefix config option ([39c20c7](https://github.com/wmfs/tymly-pg-plugin/commit/39c20c72894b8d41c497a2b1fc8e060acbb24195))
+* improved clarity of example ([e7729c2](https://github.com/wmfs/tymly-pg-plugin/commit/e7729c25fa7987c35706c744dceeb8cb6d5c4458))
+
+
+### 🚨 Tests
+
+* combined tests into single text file ([108565a](https://github.com/wmfs/tymly-pg-plugin/commit/108565aa268244d81bd475b94fac729711fe2d0f))
+* test fix ([565eb63](https://github.com/wmfs/tymly-pg-plugin/commit/565eb63f84caff8b828d0fcd53689130c1cc216b))
+* tests for get current/next sequence value state resources ([27afa53](https://github.com/wmfs/tymly-pg-plugin/commit/27afa53698ba6f9bb5153de5814ca7b2537fbfc9))
+
+
+### 💎 Styles
+
+* linting fixes ([957ede8](https://github.com/wmfs/tymly-pg-plugin/commit/957ede872236ddd337116686a010a6f774c75946))
+* removed unnecessary whitespace ([cdea621](https://github.com/wmfs/tymly-pg-plugin/commit/cdea62160ef5021e66aec9e28aa8bd55cb46edb6))
+
+
+### 🗑 Reverts
+
+* reverting to so that test passes on circle (but not locally) ([624db0b](https://github.com/wmfs/tymly-pg-plugin/commit/624db0bfa7d82dd803b50ac40fa5a87a156ddce2))
+
 # [1.289.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.288.0...v1.289.0) (2023-09-19)
 
 
