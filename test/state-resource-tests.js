@@ -8,6 +8,9 @@ const path = require('path')
 const fs = require('fs')
 const rimraf = require('rimraf')
 const process = require('process')
+const chai = require('chai')
+const chaiSubset = require('chai-subset')
+chai.use(chaiSubset)
 const sqlScriptRunner = require('./fixtures/sql-script-runner')
 const OUTPUT_DIR_PATH = path.resolve(__dirname, './output')
 
@@ -35,11 +38,10 @@ describe('Import and Synchronize State Resources', function () {
         pluginPaths: [
           path.resolve(__dirname, './../lib')
         ],
-
         blueprintPaths: [
-          path.resolve(__dirname, './fixtures/blueprints/animal-blueprint')
+          path.resolve(__dirname, './fixtures/blueprints/animal-blueprint'),
+          path.resolve(__dirname, './fixtures/blueprints/sequence-blueprint')
         ],
-
         config: {}
       }
     )
@@ -119,6 +121,77 @@ describe('Import and Synchronize State Resources', function () {
           break
       }
     }
+  })
+
+
+  it('find current sequence value of 1', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findCurrentSequenceValue_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: '1'
+    })
+  })
+
+  it('find next sequence value of 1', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findNextSequenceValue_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: '1'
+    })
+  })
+
+  it('find next sequence value of 2', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findNextSequenceValue_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: '2'
+    })
+  })
+
+  it('find (prefixed) current sequence value of ABC2', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findCurrentSequenceValueWithPrefix_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: 'ABC2'
+    })
+  })
+
+  it('find (prefixed) next sequence value of XYZ3', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findNextSequenceValueWithPrefix_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: 'XYZ3'
+    })
   })
 
   after('uninstall test schemas', async () => {
