@@ -1,3 +1,10 @@
+# [1.291.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.290.0...v1.291.0) (2024-01-11)
+
+
+### 🛠 Builds
+
+* **deps:** bump pg-info + pg-model ([111b2a1](https://github.com/wmfs/tymly-pg-plugin/commit/111b2a152148cd5ef2323a3cddd27e8715389507))
+
 # [1.290.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.289.0...v1.290.0) (2023-10-24)
 
 
