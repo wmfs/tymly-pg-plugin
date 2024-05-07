@@ -1,0 +1,16 @@
+{
+  "name": "ResetSequence",
+  "version": "1.0",
+  "StartAt": "ResetSequence",
+  "States": {
+    "ResetSequence": {
+      "Type": "Task",
+      "Resource": "module:resetSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "ticketIdSeq"
+      },
+      "End": true
+    }
+  }
+}

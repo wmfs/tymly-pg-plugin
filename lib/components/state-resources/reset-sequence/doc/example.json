@@ -1,0 +1,11 @@
+{
+  "ResetSequence": {
+    "Type": "Task",
+    "Resource": "module:resetSequence",
+    "ResourceConfig": {
+      "namespace": "wmfs",
+      "id": "tempUprn"
+    },
+    "Next": "Create"
+  }
+}
