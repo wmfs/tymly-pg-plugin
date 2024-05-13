@@ -1,0 +1,31 @@
+{
+  "Comment": "Audit Trail Search",
+  "name": "Audit Trail Search",
+  "Version": "1.0",
+  "version": "1.0",
+  "categories": [
+    "system"
+  ],
+  "StartAt": "GrabAuditTrail",
+  "States": {
+    "GrabAuditTrail": {
+      "Type": "Task",
+      "Resource": "module:auditTrail",
+      "Parameters": {
+        "model.$": "$.model",
+        "keys.$": "States.StringToJson($.keys)",
+        "format.$": "$.format"
+      },
+      "ResultPath": "$.auditTrail",
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_auditTrailViewer",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

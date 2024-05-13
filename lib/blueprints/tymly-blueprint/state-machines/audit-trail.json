@@ -1,0 +1,39 @@
+{
+  "Comment": "Audit Trail",
+  "name": "Audit Trail",
+  "Version": "1.0",
+  "version": "1.0",
+  "categories": [
+    "system"
+  ],
+  "instigators": [
+    "user"
+  ],
+  "instigatorGroup": "app",
+  "StartAt": "GetModels",
+  "States": {
+    "GetModels": {
+      "Type": "Task",
+      "Resource": "function:tymly_getModelsForAuditTrail",
+      "ResultPath": "$",
+      "Next": "AwaitingHumanInput"
+    },
+    "AwaitingHumanInput": {
+      "Type": "Task",
+      "Resource": "module:awaitingHumanInput",
+      "ResourceConfig": {
+        "uiName": "tymly_auditTrail",
+        "dataPath": "$"
+      },
+      "End": true
+    }
+  },
+  "restrictions": [
+    {
+      "roleId": "tymly_auditTrailViewer",
+      "allows": [
+        "*"
+      ]
+    }
+  ]
+}

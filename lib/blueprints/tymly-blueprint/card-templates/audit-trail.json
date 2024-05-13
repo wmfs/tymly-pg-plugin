@@ -1,0 +1,76 @@
+{
+  "templateMeta": {
+    "name": "audit-trail",
+    "title": "Audit Trail",
+    "category": "system"
+  },
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "spacing": "none",
+      "items": [
+        {
+          "id": "model",
+          "type": "Input.ChoiceSet",
+          "title": "Model",
+          "filter": true,
+          "choicesPath": "data.availableModels"
+        },
+        {
+          "id": "keys",
+          "type": "Input.Text",
+          "isMultiline": true,
+          "title": "Keys",
+          "value": "{}"
+        },
+        {
+          "type": "Container",
+          "spacing": "none",
+          "justifyContent": true,
+          "items": [
+            {
+              "type": "Action.ApiLookup",
+              "title": "Search",
+              "stateMachineName": "tymly_auditTrailSearch_1_0",
+              "input": {
+                "page": "$.page",
+                "model": "$.model",
+                "keys": "$.keys",
+                "format": "readable"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "showWhen": "Array.isArray(data.auditTrail) && data.auditTrail.length",
+      "items": [
+        {
+          "type": "Timeline",
+          "arrayPath": "data.auditTrail",
+          "items": [
+            {
+              "type": "TimelineEntry",
+              "title": "{{ item.change }}",
+              "subtitle": "{{ formatDate(item.modified, 'DD MMM YYYY HH:mm') }} - {{ item.modifiedBy || 'Unknown author' }}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "hooks": {
+    "afterLeave": {
+      "actions": [
+        {
+          "type": "Action.StoreData"
+        }
+      ]
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/wmfs/cardscript-schema/master/lib/schema.json",
+  "version": "1.0"
+}
