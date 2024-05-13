@@ -193,7 +193,7 @@ describe('Import and Synchronize State Resources', function () {
     })
   })
 
-  it('should reset the sequence', async () => {
+  it('should successfully reset the sequence', async () => {
     const executionDescription = await statebox.startExecution(
       {},
       'tymlyTest_resetSequence_1_0',
@@ -204,6 +204,19 @@ describe('Import and Synchronize State Resources', function () {
 
     expect(executionDescription.status).to.eql('SUCCEEDED')
     expect(executionDescription.currentStateName).to.eql('ResetSequence')
+  })
+
+  it('should fail to reset a sequence that doesn\'t exist', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_failResetSequence_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.status).to.eql('FAILED')
+    expect(executionDescription.executionOptions.error.cause).to.eql('relation "tymly_test.not_exists" does not exist')
   })
 
   it('find sequence value of 1 due to reset', async () => {
