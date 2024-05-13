@@ -18,6 +18,11 @@
           "choicesPath": "data.availableModels"
         },
         {
+          "showWhen": "data.model",
+          "type": "TextBlock",
+          "text": "The primary key of this model uses: <b>{{ data.modelPrimaryKeys[data.model].join(', ') }}</b>"
+        },
+        {
           "id": "keys",
           "type": "Input.Text",
           "isMultiline": true,
@@ -30,6 +35,11 @@
           "justifyContent": true,
           "items": [
             {
+              "type": "TextBlock",
+              "text": ""
+            },
+            {
+              "disableWhen": "!data.model",
               "type": "Action.ApiLookup",
               "title": "Search",
               "stateMachineName": "tymly_auditTrailSearch_1_0",
