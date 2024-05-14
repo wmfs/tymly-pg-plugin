@@ -48,7 +48,6 @@ describe('PG storage service tests', function () {
       people = models.tymlyTest_people
       planets = models.tymlyTest_planets
       star = models.tymlyTest_star
-      asteroids = tymlyServices.storage.sequences.tymlyTest_asteroids
 
       const seededStar = await star.findById('Arcturus')
       expect(seededStar.name).to.eql('Arcturus')
