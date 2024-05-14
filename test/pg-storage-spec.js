@@ -18,6 +18,7 @@ describe('PG storage service tests', function () {
   let people
   let planets
   let star
+  let asteroids
 
   before(function () {
     if (process.env.PG_CONNECTION_STRING && !/^postgres:\/\/[^:]+:[^@]+@(?:localhost|127\.0\.0\.1).*$/.test(process.env.PG_CONNECTION_STRING)) {
@@ -48,6 +49,7 @@ describe('PG storage service tests', function () {
       people = models.tymlyTest_people
       planets = models.tymlyTest_planets
       star = models.tymlyTest_star
+      asteroids = tymlyServices.storage.sequences.tymlyTest_asteroids
 
       const seededStar = await star.findById('Arcturus')
       expect(seededStar.name).to.eql('Arcturus')
@@ -608,6 +610,15 @@ describe('PG storage service tests', function () {
           modifiedBy: 'modifier'
         }
       )
+    })
+  })
+
+  describe('sequences', () => {
+    it('should detect a sequence for asteroids', async () => {
+      expect(asteroids.startWith).to.eql(1)
+      expect(asteroids.namespace).to.eql('tymlyTest')
+      expect(asteroids.id).to.eql('asteroids')
+      expect(asteroids.name).to.eql('asteroids')
     })
   })
 

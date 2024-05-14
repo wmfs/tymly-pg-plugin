@@ -216,7 +216,8 @@ describe('Import and Synchronize State Resources', function () {
     )
 
     expect(executionDescription.status).to.eql('FAILED')
-    expect(executionDescription.executionOptions.error.cause).to.eql('relation "tymly_test.not_exists" does not exist')
+    expect(executionDescription.executionOptions.error.error).to.eql('SEQUENCE_NOT_FOUND')
+    expect(executionDescription.executionOptions.error.cause).to.eql('The sequence "tymly_test.not_exists" was not found. Please ensure the sequence exists.')
   })
 
   it('find sequence value of 1 due to reset', async () => {
