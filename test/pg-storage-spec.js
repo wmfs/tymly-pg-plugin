@@ -615,10 +615,11 @@ describe('PG storage service tests', function () {
 
   describe('sequences', () => {
     it('should detect a sequence for asteroids', async () => {
-      expect(asteroids.startWith).to.eql(1)
-      expect(asteroids.namespace).to.eql('tymlyTest')
-      expect(asteroids.id).to.eql('asteroids')
-      expect(asteroids.name).to.eql('asteroids')
+      const res = await storage.checkSequenceExists('tymlyTest_asteroids', storage.sequences)
+      expect(res.startWith).to.eql(1)
+      expect(res.namespace).to.eql('tymlyTest')
+      expect(res.id).to.eql('asteroids')
+      expect(res.name).to.eql('asteroids')
     })
   })
 
