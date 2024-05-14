@@ -18,7 +18,6 @@ describe('PG storage service tests', function () {
   let people
   let planets
   let star
-  let asteroids
 
   before(function () {
     if (process.env.PG_CONNECTION_STRING && !/^postgres:\/\/[^:]+:[^@]+@(?:localhost|127\.0\.0\.1).*$/.test(process.env.PG_CONNECTION_STRING)) {
@@ -615,7 +614,7 @@ describe('PG storage service tests', function () {
 
   describe('sequences', () => {
     it('should detect a sequence for asteroids', async () => {
-      const res = await storage.checkSequenceExists('tymlyTest_asteroids', storage.sequences)
+      const res = await storage.checkSequenceExists('tymlyTest_asteroids')
       expect(res.startWith).to.eql(1)
       expect(res.namespace).to.eql('tymlyTest')
       expect(res.id).to.eql('asteroids')
