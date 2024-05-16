@@ -611,6 +611,16 @@ describe('PG storage service tests', function () {
     })
   })
 
+  describe('sequences', () => {
+    it('should detect a sequence for asteroids', async () => {
+      const res = await storage.checkSequenceExists('tymlyTest_asteroids')
+      expect(res.startWith).to.eql(1)
+      expect(res.namespace).to.eql('tymlyTest')
+      expect(res.id).to.eql('asteroids')
+      expect(res.name).to.eql('asteroids')
+    })
+  })
+
   describe('clean up', () => {
     it('Should uninstall test schemas', async () => {
       sqlScriptRunner.uninstall(client)

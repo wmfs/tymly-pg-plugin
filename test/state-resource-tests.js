@@ -193,6 +193,47 @@ describe('Import and Synchronize State Resources', function () {
     })
   })
 
+  it('should successfully reset the sequence', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_resetSequence_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.status).to.eql('SUCCEEDED')
+    expect(executionDescription.currentStateName).to.eql('ResetSequence')
+  })
+
+  it('should fail to reset a sequence that doesn\'t exist', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_failResetSequence_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.status).to.eql('FAILED')
+    expect(executionDescription.executionOptions.error.error).to.eql('SEQUENCE_NOT_FOUND')
+    expect(executionDescription.executionOptions.error.cause).to.eql('Sequence tymlyTest_notExists was not found. Ensure it exists before attempting to manipulate')
+  })
+
+  it('find sequence value of 1 due to reset', async () => {
+    const executionDescription = await statebox.startExecution(
+      {},
+      'tymlyTest_findCurrentSequenceValue_1_0',
+      {
+        sendResponse: 'COMPLETE'
+      }
+    )
+
+    expect(executionDescription.ctx).to.containSubset({
+      ticketId: '1'
+    })
+  })
+
   after('uninstall test schemas', async () => {
     sqlScriptRunner.uninstall(client)
   })
