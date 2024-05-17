@@ -1,3 +1,16 @@
+# [1.292.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.291.0...v1.292.0) (2024-05-17)
+
+
+### Bug Fixes
+
+* generateNotes preset ([54e8a0e](https://github.com/wmfs/tymly-pg-plugin/commit/54e8a0eef81bb1bfc29e48c4724c8ca0072fd1fb))
+
+
+### Features
+
+* **(pin 262) crr dd:** [sc-24352] Improve Human Readable ID ([#1017](https://github.com/wmfs/tymly-pg-plugin/issues/1017)) ([62b042c](https://github.com/wmfs/tymly-pg-plugin/commit/62b042cf89c3f81bde1c8d7d7363697399d0cacc))
+* [sc-25381] Issue with generating sequences on boot ([#1022](https://github.com/wmfs/tymly-pg-plugin/issues/1022)) ([ae047b0](https://github.com/wmfs/tymly-pg-plugin/commit/ae047b073c720ae95f52c0ab04abed6692881076))
+
 # [1.291.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.290.0...v1.291.0) (2024-01-11)
 
 
