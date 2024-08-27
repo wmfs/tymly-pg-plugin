@@ -1,3 +1,10 @@
+# [1.293.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.292.0...v1.293.0) (2024-08-27)
+
+
+### Features
+
+* allow progress frequency for exporting csv delta file ([#1039](https://github.com/wmfs/tymly-pg-plugin/issues/1039)) ([0288a0e](https://github.com/wmfs/tymly-pg-plugin/commit/0288a0e6ffdd00d72d7a0d569e066d5261178b0f))
+
 # [1.292.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.291.0...v1.292.0) (2024-05-17)
 
 
