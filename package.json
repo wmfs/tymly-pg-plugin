@@ -23,7 +23,7 @@
   "dependencies": {
     "dottie": "2.0.6",
     "lodash": "4.17.21",
-    "luxon": "3.3.0",
+    "luxon": "3.5.0",
     "@wmfs/hl-pg-client": "1.31.0",
     "@wmfs/pg-delta-file": "1.79.0",
     "@wmfs/pg-diff-sync": "1.31.0",
