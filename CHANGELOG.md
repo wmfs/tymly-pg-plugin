@@ -1,3 +1,5 @@
+# [1.297.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.296.0...v1.297.0) (2024-11-04)
+
 # [1.296.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.295.0...v1.296.0) (2024-11-04)
 
 # [1.295.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.294.0...v1.295.0) (2024-11-04)
