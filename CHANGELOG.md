@@ -1,3 +1,15 @@
+## [1.306.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.305.0...v1.306.0) (2025-01-13)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** [sc-29160] Resolve issue with semantic-release changelog notes ([#1074](https://github.com/wmfs/tymly-pg-plugin/issues/1074)) ([ea8699a](https://github.com/wmfs/tymly-pg-plugin/commit/ea8699a927670b9467f5973cba2d342282056f59))
+* **deps-dev:** update dependency @wmfs/tymly to v1.287.0 ([#1073](https://github.com/wmfs/tymly-pg-plugin/issues/1073)) ([c93083c](https://github.com/wmfs/tymly-pg-plugin/commit/c93083c2f3844248885e92a30f450cd5240eabfb))
+* **deps-dev:** update dependency @wmfs/tymly to v1.288.0 ([#1075](https://github.com/wmfs/tymly-pg-plugin/issues/1075)) ([b9ab38b](https://github.com/wmfs/tymly-pg-plugin/commit/b9ab38b4a6991ab2140cdb1e01b57b99c5368576))
+* **deps-dev:** update dependency @wmfs/tymly to v1.289.0 ([#1076](https://github.com/wmfs/tymly-pg-plugin/issues/1076)) ([a817c58](https://github.com/wmfs/tymly-pg-plugin/commit/a817c5827d87e4e8d49c91b7aabef6833c5f4e7c))
+* **deps-dev:** update dependency @wmfs/tymly to v1.291.0 ([#1077](https://github.com/wmfs/tymly-pg-plugin/issues/1077)) ([804f9ac](https://github.com/wmfs/tymly-pg-plugin/commit/804f9acffbe640459450b8e6f2f9707880e7bd45))
+* **deps-dev:** update dependency semantic-release to v24.2.1 ([#1072](https://github.com/wmfs/tymly-pg-plugin/issues/1072)) ([e7ae8a5](https://github.com/wmfs/tymly-pg-plugin/commit/e7ae8a584d326fdcbe7287b20aa65fde2dc9f57d))
+* **deps:** update dependency @wmfs/relationize to v1.33.0 ([#1078](https://github.com/wmfs/tymly-pg-plugin/issues/1078)) ([30ec75a](https://github.com/wmfs/tymly-pg-plugin/commit/30ec75a49ea2abed5776d7d42d336f7620f0411a))
+
 # [1.305.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.304.0...v1.305.0) (2024-12-10)
 
 # [1.304.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.303.0...v1.304.0) (2024-12-09)
