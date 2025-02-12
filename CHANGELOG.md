@@ -1,3 +1,15 @@
+## [1.307.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.306.0...v1.307.0) (2025-02-12)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/exec to v7 ([#1081](https://github.com/wmfs/tymly-pg-plugin/issues/1081)) ([6ae4002](https://github.com/wmfs/tymly-pg-plugin/commit/6ae4002adbf14e9048c7e3a7261f73e231630fee))
+* **deps-dev:** update dependency @semantic-release/exec to v7.0.2 ([#1082](https://github.com/wmfs/tymly-pg-plugin/issues/1082)) ([f55f5b3](https://github.com/wmfs/tymly-pg-plugin/commit/f55f5b3476267d02f8852914bfa7c1ac344189fb))
+* **deps-dev:** update dependency @semantic-release/exec to v7.0.3 ([#1083](https://github.com/wmfs/tymly-pg-plugin/issues/1083)) ([b7d8752](https://github.com/wmfs/tymly-pg-plugin/commit/b7d8752a02f76ebcad84dc7d394e7f94c6af822b))
+* **deps-dev:** update dependency @wmfs/tymly to v1.292.0 ([#1079](https://github.com/wmfs/tymly-pg-plugin/issues/1079)) ([2063055](https://github.com/wmfs/tymly-pg-plugin/commit/2063055730f0f45938b652a2ffa66aaede150d88))
+* **deps-dev:** update dependency mocha to v11.1.0 ([#1080](https://github.com/wmfs/tymly-pg-plugin/issues/1080)) ([fafb071](https://github.com/wmfs/tymly-pg-plugin/commit/fafb07119953ec7f40835124ddfd2c031e353777))
+* **deps-dev:** update dependency semantic-release to v24.2.2 ([#1084](https://github.com/wmfs/tymly-pg-plugin/issues/1084)) ([1483dd8](https://github.com/wmfs/tymly-pg-plugin/commit/1483dd848b1d3b782e4029cecce89667ec8c1f88))
+* **deps:** update dependency @wmfs/hl-pg-client to v1.35.0 ([#1085](https://github.com/wmfs/tymly-pg-plugin/issues/1085)) ([b1846af](https://github.com/wmfs/tymly-pg-plugin/commit/b1846af57693688907366781c93cab75442e5bf6))
+
 ## [1.306.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.305.0...v1.306.0) (2025-01-13)
 
 ### Build system dependencies :hammer:
