@@ -1,3 +1,11 @@
+## [1.313.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.312.0...v1.313.0) (2025-03-17)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.299.0 ([#1099](https://github.com/wmfs/tymly-pg-plugin/issues/1099)) ([f336685](https://github.com/wmfs/tymly-pg-plugin/commit/f336685773da60e167a0b90673f23d5772d36a6b))
+* **deps:** update dependency @wmfs/pg-delta-file to v1.88.0 ([#1097](https://github.com/wmfs/tymly-pg-plugin/issues/1097)) ([6c34800](https://github.com/wmfs/tymly-pg-plugin/commit/6c34800d4a32fd544fc24c0bd8f4d984891aa2af))
+* **deps:** update dependency @wmfs/pg-telepods to v1.113.0 ([#1098](https://github.com/wmfs/tymly-pg-plugin/issues/1098)) ([c4e1b61](https://github.com/wmfs/tymly-pg-plugin/commit/c4e1b6197e0f52ef0c838fde95e8d4be7793f1bd))
+
 ## [1.312.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.311.0...v1.312.0) (2025-03-17)
 
 ### Build system dependencies :hammer:
