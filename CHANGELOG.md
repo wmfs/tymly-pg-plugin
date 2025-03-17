@@ -1,3 +1,15 @@
+## [1.311.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.310.0...v1.311.0) (2025-03-17)
+
+### New Feature(s) :rocket:
+
+* [sc-29926] PG Script service to run pg-script blueprint components [#1095](https://github.com/wmfs/tymly-pg-plugin/issues/1095) ([2b88041](https://github.com/wmfs/tymly-pg-plugin/commit/2b880417a9394fb1f778f3905b8d6d11fa10c116))
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.294.0 ([#1092](https://github.com/wmfs/tymly-pg-plugin/issues/1092)) ([b91ffac](https://github.com/wmfs/tymly-pg-plugin/commit/b91ffac90f9b2a68de0a17d594de2ace2f199dde))
+* **deps-dev:** update dependency @wmfs/tymly to v1.295.0 ([#1093](https://github.com/wmfs/tymly-pg-plugin/issues/1093)) ([cc288cc](https://github.com/wmfs/tymly-pg-plugin/commit/cc288cc16690eac8d73b24998437811f76cc783c))
+* **deps-dev:** update dependency @wmfs/tymly to v1.296.0 ([#1094](https://github.com/wmfs/tymly-pg-plugin/issues/1094)) ([7052bdb](https://github.com/wmfs/tymly-pg-plugin/commit/7052bdb2faeafa8d5042cf38831f098ed8b0488d))
+
 ## [1.310.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.309.0...v1.310.0) (2025-02-17)
 
 ### Build system dependencies :hammer:
