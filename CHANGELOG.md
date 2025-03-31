@@ -1,3 +1,9 @@
+## [1.317.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.316.0...v1.317.0) (2025-03-31)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @wmfs/pg-delta-file to v1.90.0 ([#1105](https://github.com/wmfs/tymly-pg-plugin/issues/1105)) ([f975068](https://github.com/wmfs/tymly-pg-plugin/commit/f975068409be78ba3047b69f1a259eb45e660f5f))
+
 ## [1.316.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.315.0...v1.316.0) (2025-03-31)
 
 ### Build system dependencies :hammer:
