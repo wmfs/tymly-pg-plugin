@@ -1,3 +1,9 @@
+## [1.327.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.326.0...v1.327.0) (2025-04-28)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @wmfs/pg-telepods to v1.118.0 ([#1123](https://github.com/wmfs/tymly-pg-plugin/issues/1123)) ([e6a1cdf](https://github.com/wmfs/tymly-pg-plugin/commit/e6a1cdf32e57163c919b8df1943cfe870beb832f))
+
 ## [1.326.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.325.0...v1.326.0) (2025-04-28)
 
 ### Build system dependencies :hammer:
