@@ -1,3 +1,12 @@
+## [1.328.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.327.0...v1.328.0) (2025-05-14)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @semantic-release/exec to v7.1.0 ([#1125](https://github.com/wmfs/tymly-pg-plugin/issues/1125)) ([3e1f06f](https://github.com/wmfs/tymly-pg-plugin/commit/3e1f06fa05cc293dc83f1100be650a97fe500dbe))
+* **deps-dev:** update dependency mocha to v11.2.2 ([#1124](https://github.com/wmfs/tymly-pg-plugin/issues/1124)) ([8bca71f](https://github.com/wmfs/tymly-pg-plugin/commit/8bca71f15bdea152cb878028b9e9f2e8702cdfa1))
+* **deps:** update dependency @wmfs/hl-pg-client to v1.42.0 ([#1126](https://github.com/wmfs/tymly-pg-plugin/issues/1126)) ([adc6ad5](https://github.com/wmfs/tymly-pg-plugin/commit/adc6ad5171bc09c2705bce506b3dc8cf394d87cd))
+* **deps:** update dependency @wmfs/pg-telepods to v1.119.0 ([#1128](https://github.com/wmfs/tymly-pg-plugin/issues/1128)) ([3fc70df](https://github.com/wmfs/tymly-pg-plugin/commit/3fc70dfa0f482c3fde03f149fbb782e38b32f009))
+
 ## [1.327.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.326.0...v1.327.0) (2025-04-28)
 
 ### Build system dependencies :hammer:
