@@ -1,3 +1,18 @@
+## [1.333.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.332.0...v1.333.0) (2025-05-29)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.310.0 ([#1129](https://github.com/wmfs/tymly-pg-plugin/issues/1129)) ([21a1c20](https://github.com/wmfs/tymly-pg-plugin/commit/21a1c20ecb26bb4de1e9d0a2d1e19573aabab8e6))
+* **deps-dev:** update dependency @wmfs/tymly to v1.311.0 ([#1136](https://github.com/wmfs/tymly-pg-plugin/issues/1136)) ([fda5905](https://github.com/wmfs/tymly-pg-plugin/commit/fda5905488108ea693fbeeecd90361afbe25b93a))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9 ([#1138](https://github.com/wmfs/tymly-pg-plugin/issues/1138)) ([fb5d06e](https://github.com/wmfs/tymly-pg-plugin/commit/fb5d06e9791833fd5b20ba6bb4a3b9b40efe8baa))
+* **deps-dev:** update dependency mocha to v11.3.0 ([#1134](https://github.com/wmfs/tymly-pg-plugin/issues/1134)) ([a08f52a](https://github.com/wmfs/tymly-pg-plugin/commit/a08f52aa8b85bdfdd6b228585779e3f3721998f1))
+* **deps-dev:** update dependency mocha to v11.4.0 ([#1137](https://github.com/wmfs/tymly-pg-plugin/issues/1137)) ([c203f9b](https://github.com/wmfs/tymly-pg-plugin/commit/c203f9be465db30e1ae8454478ef94df83c1ce4f))
+* **deps-dev:** update dependency mocha to v11.5.0 ([#1140](https://github.com/wmfs/tymly-pg-plugin/issues/1140)) ([f96a5a5](https://github.com/wmfs/tymly-pg-plugin/commit/f96a5a5eec97a1a3244fc1534d580ec1512eb0bd))
+* **deps-dev:** update dependency semantic-release to v24.2.4 ([#1135](https://github.com/wmfs/tymly-pg-plugin/issues/1135)) ([0737f26](https://github.com/wmfs/tymly-pg-plugin/commit/0737f2673d35c78edb2f132a9a2507d656219499))
+* **deps-dev:** update dependency semantic-release to v24.2.5 ([#1139](https://github.com/wmfs/tymly-pg-plugin/issues/1139)) ([6bb0ab4](https://github.com/wmfs/tymly-pg-plugin/commit/6bb0ab4b470c0560f200f886345ab587846dcf64))
+* **deps:** update dependency @wmfs/pg-telepods to v1.122.0 ([#1141](https://github.com/wmfs/tymly-pg-plugin/issues/1141)) ([e16b926](https://github.com/wmfs/tymly-pg-plugin/commit/e16b926bb4aae916bb51a71bf33b13f82181dd42))
+* **deps:** update dependency @wmfs/supercopy to v1.55.0 ([#1142](https://github.com/wmfs/tymly-pg-plugin/issues/1142)) ([00a2dc7](https://github.com/wmfs/tymly-pg-plugin/commit/00a2dc7b9528e6478cd70526e95d847e7e610ef0))
+
 ## [1.332.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.331.0...v1.332.0) (2025-05-14)
 
 ### Build system dependencies :hammer:
