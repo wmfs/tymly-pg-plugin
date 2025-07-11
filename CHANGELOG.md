@@ -1,3 +1,11 @@
+## [1.341.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.340.0...v1.341.0) (2025-07-11)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.313.0 ([#1157](https://github.com/wmfs/tymly-pg-plugin/issues/1157)) ([5d3da8c](https://github.com/wmfs/tymly-pg-plugin/commit/5d3da8cdf0c23636284711ea1311d8fb886e7df3))
+* **deps-dev:** update dependency conventional-changelog-conventionalcommits to v9.1.0 ([#1159](https://github.com/wmfs/tymly-pg-plugin/issues/1159)) ([a8af6fa](https://github.com/wmfs/tymly-pg-plugin/commit/a8af6fab4cc5c75e1b4ab0e84c44f8b2d32cd720))
+* **deps:** update dependency @wmfs/pg-delta-file to v1.104.0 ([#1158](https://github.com/wmfs/tymly-pg-plugin/issues/1158)) ([ca21f8d](https://github.com/wmfs/tymly-pg-plugin/commit/ca21f8d167b7e014371e0d787ea28640b3210efb))
+
 ## [1.340.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.339.0...v1.340.0) (2025-07-10)
 
 ### Build system dependencies :hammer:
