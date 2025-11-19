@@ -1,3 +1,9 @@
+## [1.346.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.345.0...v1.346.0) (2025-11-19)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @wmfs/relationize to v1.36.0 ([#1176](https://github.com/wmfs/tymly-pg-plugin/issues/1176)) ([8584efa](https://github.com/wmfs/tymly-pg-plugin/commit/8584efabec63c5022ed913991b0fe1fbb12f3c9d))
+
 ## [1.345.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.344.0...v1.345.0) (2025-11-19)
 
 ### Build system dependencies :hammer:
