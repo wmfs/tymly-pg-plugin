@@ -49,7 +49,7 @@
     "@semantic-release/release-notes-generator": "14.1.0",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/exec": "7.1.0",
-    "@wmfs/tymly": "1.316.0"
+    "@wmfs/tymly": "1.317.0"
   },
   "scripts": {
     "lint": "standard",
