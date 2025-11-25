@@ -1,3 +1,11 @@
+## [1.347.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.346.0...v1.347.0) (2025-11-25)
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.316.0 ([#1184](https://github.com/wmfs/tymly-pg-plugin/issues/1184)) ([65fe1a6](https://github.com/wmfs/tymly-pg-plugin/commit/65fe1a6f332e8b6c9077d7ab423ffc2e08e0e9f7))
+* **deps-dev:** update dependency rimraf to v6.1.2 ([#1183](https://github.com/wmfs/tymly-pg-plugin/issues/1183)) ([727cfc5](https://github.com/wmfs/tymly-pg-plugin/commit/727cfc59883708c60f05e64a78d4c5f58c432712))
+* **deps:** update dependency @wmfs/relationize to v1.37.0 ([#1185](https://github.com/wmfs/tymly-pg-plugin/issues/1185)) ([b113423](https://github.com/wmfs/tymly-pg-plugin/commit/b11342313dedcb4a005b6047458c108b8ff16157))
+
 ## [1.346.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.345.0...v1.346.0) (2025-11-19)
 
 ### Build system dependencies :hammer:
