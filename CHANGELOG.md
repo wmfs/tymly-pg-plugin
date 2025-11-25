@@ -1,3 +1,10 @@
+## [1.348.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.347.0...v1.348.0) (2025-11-25)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency @wmfs/hl-pg-client to v1.46.0 ([#1173](https://github.com/wmfs/tymly-pg-plugin/issues/1173)) ([46e5926](https://github.com/wmfs/tymly-pg-plugin/commit/46e5926445b83abbe3134cf2bcd4c641d74edb9a))
+* **deps:** update dependency @wmfs/pg-diff-sync to v1.33.0 ([#1174](https://github.com/wmfs/tymly-pg-plugin/issues/1174)) ([b41aca0](https://github.com/wmfs/tymly-pg-plugin/commit/b41aca03a85ec5b358b9d22b09ef19447aa4c1f3))
+
 ## [1.347.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.346.0...v1.347.0) (2025-11-25)
 
 ### Build system dependencies :hammer:
