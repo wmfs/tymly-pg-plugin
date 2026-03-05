@@ -22,7 +22,7 @@
   "main": "./lib/index.js",
   "dependencies": {
     "dottie": "2.0.6",
-    "lodash": "4.17.21",
+    "lodash": "4.17.23",
     "luxon": "3.7.1",
     "@wmfs/hl-pg-client": "1.46.0",
     "@wmfs/pg-delta-file": "1.104.0",
