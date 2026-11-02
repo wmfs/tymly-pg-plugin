@@ -1,3 +1,9 @@
+## [1.351.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.350.0...v1.351.0) (2026-11-02)
+
+### Build system dependencies :hammer:
+
+* **deps:** update dependency luxon to v3.7.2 ([#1165](https://github.com/wmfs/tymly-pg-plugin/issues/1165)) ([0a82f74](https://github.com/wmfs/tymly-pg-plugin/commit/0a82f746213f83d93043e3f35a02afa24ac223d4))
+
 ## [1.350.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.349.0...v1.350.0) (2026-11-02)
 
 ### Build system dependencies :hammer:
