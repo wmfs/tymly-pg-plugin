@@ -24,14 +24,14 @@
     "dottie": "2.0.7",
     "lodash": "4.18.1",
     "luxon": "3.7.2",
-    "@wmfs/hl-pg-client": "1.47.0",
+    "@wmfs/hl-pg-client": "1.48.0",
     "@wmfs/pg-delta-file": "1.106.0",
     "@wmfs/pg-diff-sync": "1.35.0",
     "@wmfs/pg-info": "1.21.1",
     "@wmfs/pg-model": "1.38.0",
-    "@wmfs/pg-telepods": "1.128.0",
+    "@wmfs/pg-telepods": "1.130.0",
     "@wmfs/relationize": "1.39.0",
-    "@wmfs/supercopy": "1.57.0"
+    "@wmfs/supercopy": "1.59.0"
   },
   "devDependencies": {
     "chai": "4.5.0",
@@ -49,7 +49,7 @@
     "@semantic-release/release-notes-generator": "14.1.1",
     "@semantic-release/git": "11.0.1",
     "@semantic-release/exec": "7.1.0",
-    "@wmfs/tymly": "1.322.0"
+    "@wmfs/tymly": "1.324.0"
   },
   "scripts": {
     "lint": "standard",
