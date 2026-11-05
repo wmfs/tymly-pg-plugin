@@ -1,3 +1,15 @@
+## [1.353.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.353.0...v1.353.1) (2026-11-05)
+
+### Bug Fix(es) :bug:
+
+* declare missing debug dependency ([cb507a0](https://github.com/wmfs/tymly-pg-plugin/commit/cb507a0035411662b1d9953d47a95647f334459a))
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.326.0 ([#1233](https://github.com/wmfs/tymly-pg-plugin/issues/1233)) ([97211b2](https://github.com/wmfs/tymly-pg-plugin/commit/97211b2aa674b7ba6fde67c86161482f92663ceb))
+* **deps-dev:** update dependency @wmfs/tymly to v1.327.0 ([#1236](https://github.com/wmfs/tymly-pg-plugin/issues/1236)) ([c1e65d6](https://github.com/wmfs/tymly-pg-plugin/commit/c1e65d66ee4c9c923cc8d2b0cfc1d8458c26ab67))
+* **deps-dev:** update dependency mocha to v12 ([#1235](https://github.com/wmfs/tymly-pg-plugin/issues/1235)) ([bb482db](https://github.com/wmfs/tymly-pg-plugin/commit/bb482dbe0fad52065d0bc6ae820d3ef7c0f39881))
+
 ## [1.353.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.352.0...v1.353.0) (2026-11-03)
 
 ### Build system dependencies :hammer:
