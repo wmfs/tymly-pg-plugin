@@ -31,7 +31,7 @@
     "@wmfs/pg-info": "1.21.1",
     "@wmfs/pg-model": "1.38.0",
     "@wmfs/pg-telepods": "1.130.2",
-    "@wmfs/relationize": "1.39.0",
+    "@wmfs/relationize": "1.40.0",
     "@wmfs/supercopy": "1.59.0"
   },
   "devDependencies": {
