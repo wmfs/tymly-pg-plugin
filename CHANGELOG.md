@@ -1,3 +1,15 @@
+## [1.354.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.353.1...v1.354.0) (2026-11-17)
+
+### Tests :alembic:
+
+* [sc-34555] tymly-pg-plugin: cats-blueprint restart fixture uses quoted numbers in NumericGreaterThan ([36e8ad2](https://github.com/wmfs/tymly-pg-plugin/commit/36e8ad20662708711dfb04dd849f1c4381b5a2f3))
+
+### Build system dependencies :hammer:
+
+* **deps-dev:** update dependency @wmfs/tymly to v1.328.0 ([#1237](https://github.com/wmfs/tymly-pg-plugin/issues/1237)) ([6cd0494](https://github.com/wmfs/tymly-pg-plugin/commit/6cd0494963e6ffc3ae794fa1b4971ce9ce35658b))
+* **deps-dev:** update dependency rimraf to v6.1.4 ([#1234](https://github.com/wmfs/tymly-pg-plugin/issues/1234)) ([61d689a](https://github.com/wmfs/tymly-pg-plugin/commit/61d689ab46f91b2cb38333bed4fa2fb244dd32d7))
+* **deps:** update [@wmfs](https://github.com/wmfs) packages ([#1238](https://github.com/wmfs/tymly-pg-plugin/issues/1238)) ([cb9ad65](https://github.com/wmfs/tymly-pg-plugin/commit/cb9ad65981a1c4de6636a18bbe77eb02e3dedd2a))
+
 ## [1.353.1](https://github.com/wmfs/tymly-pg-plugin/compare/v1.353.0...v1.353.1) (2026-11-05)
 
 ### Bug Fix(es) :bug:
