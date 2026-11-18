@@ -1,0 +1,17 @@
+{
+  "name": "FindNextLegacyYearlySequenceValue",
+  "version": "1.0",
+  "StartAt": "FindNextLegacyYearlySequenceValue",
+  "States": {
+    "FindNextLegacyYearlySequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getNextValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "legacyYearlySeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}
