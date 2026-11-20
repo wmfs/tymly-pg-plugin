@@ -1,0 +1,18 @@
+{
+  "name": "FindNextYearlySequenceValue",
+  "version": "1.0",
+  "StartAt": "FindNextYearlySequenceValue",
+  "States": {
+    "FindNextYearlySequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getNextValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "yearlyTicketIdSeq",
+        "prefix": "TKT"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}

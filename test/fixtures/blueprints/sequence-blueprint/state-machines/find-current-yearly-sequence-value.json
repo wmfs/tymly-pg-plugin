@@ -1,0 +1,17 @@
+{
+  "name": "FindCurrentYearlySequenceValue",
+  "version": "1.0",
+  "StartAt": "FindCurrentYearlySequenceValue",
+  "States": {
+    "FindCurrentYearlySequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getCurrentValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "yearlyTicketIdSeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}
