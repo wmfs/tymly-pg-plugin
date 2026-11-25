@@ -7,7 +7,7 @@
     },
     "id": {
       "type": "string",
-      "description": "This is the id of a sequence from which the current value will be fetched."
+      "description": "This is the id of the sequence to reset."
     },
     "prefix": {
       "type": "string",

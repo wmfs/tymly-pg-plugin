@@ -31,6 +31,25 @@ This function will then be applied to all models by default unless they have ```
 ### Storage
 Keeps storage of relevant blueprint objects and creates them in the database provided at PG_CONNECTION_STRING.
 
+#### Yearly sequences
+A blueprint sequence can restart its numbering every calendar year, e.g. for IDs like `FSC123/2026`:
+
+```json
+{
+  "startWith": 1,
+  "resetsYearly": true,
+  "timezone": "Europe/London"
+}
+```
+
+`timezone` is optional and defaults to `Europe/London`. Values are held per sequence and year in `tymly.yearly_sequence`, and the first value issued in a new year starts again at `startWith`, so nothing needs to run at New Year. `getNextValueFromSequence` returns the year alongside the value; build IDs from that (`States.Format('FSC{}/{}', $.sequence.value, $.sequence.year)`) rather than looking the year up separately.
+
+Things to check when switching an existing sequence to `resetsYearly`:
+
+* **First boot carries over the existing sequence's position** into the current year, so values already issued this year aren't handed out again. That's only right if the sequence has only issued values for the current year - if it has been counting for several years, or the release goes out in early January before it has been reset, this year carries on from the old total instead of restarting (next year restarts as normal).
+* **Remove any scheduled New Year `resetSequence`** for the sequence. It isn't needed, and if it ran late, after values had been issued, it would restart the year and hand out duplicates.
+* **If the Postgres sequence is ever missing at boot**, it's recreated and that sequence's yearly numbering is cleared, as the old sequence would have restarted. A warning is logged when this happens.
+
 ## <a name="test"></a>Testing
 
 Before running these tests, you'll need a test PostgreSQL database available and set a `PG_CONNECTION_STRING` environment variable to point to it, for example:

@@ -1,0 +1,17 @@
+{
+  "name": "ResetYearlySequence",
+  "version": "1.0",
+  "StartAt": "ResetYearlySequence",
+  "States": {
+    "ResetYearlySequence": {
+      "Type": "Task",
+      "Resource": "module:resetSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "yearlyTicketIdSeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}

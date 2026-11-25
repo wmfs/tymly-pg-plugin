@@ -1,0 +1,17 @@
+{
+  "name": "ResetNonYearlySequence",
+  "version": "1.0",
+  "StartAt": "ResetNonYearlySequence",
+  "States": {
+    "ResetNonYearlySequence": {
+      "Type": "Task",
+      "Resource": "module:resetSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "nonYearlySeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}
