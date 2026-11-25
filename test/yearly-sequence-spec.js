@@ -150,6 +150,32 @@ describe('Yearly sequences', function () {
     })
   })
 
+  describe('a sequence with resetsYearly set to false', () => {
+    it('behaves like a plain Postgres sequence, with no year', async () => {
+      expect(await run('findCurrentNonYearlySequenceValue')).to.eql({ value: '1' })
+      expect(await run('findNextNonYearlySequenceValue')).to.eql({ value: '1' })
+      expect(await run('findNextNonYearlySequenceValue')).to.eql({ value: '2' })
+      expect(await run('findCurrentNonYearlySequenceValue')).to.eql({ value: '2' })
+    })
+
+    it('is not held in tymly.yearly_sequence', async () => {
+      const { rows } = await client.query(
+        "SELECT * FROM tymly.yearly_sequence WHERE id = 'tymlyTest_nonYearlySeq'"
+      )
+      expect(rows).to.eql([])
+    })
+
+    it('resetSequence restarts the Postgres sequence', async () => {
+      await run('resetNonYearlySequence')
+      expect(await run('findNextNonYearlySequenceValue')).to.eql({ value: '1' })
+    })
+
+    it('keeps counting across a reboot', async () => {
+      await reboot()
+      expect(await run('findNextNonYearlySequenceValue')).to.eql({ value: '2' })
+    })
+  })
+
   describe('several instances booting together', () => {
     it('set up their yearly sequences once, without errors or duplicates', async () => {
       const key = 'tymlyTest_yearlyTicketIdSeq'

@@ -1,0 +1,17 @@
+{
+  "name": "FindNextNonYearlySequenceValue",
+  "version": "1.0",
+  "StartAt": "FindNextNonYearlySequenceValue",
+  "States": {
+    "FindNextNonYearlySequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getNextValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "nonYearlySeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}
