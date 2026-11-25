@@ -1,3 +1,13 @@
+## [1.357.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.356.0...v1.357.0) (2026-11-25)
+
+### New Feature(s) :rocket:
+
+* [sc-34210] Automatic yearly reset for human-readable ID sequences (replace the manual new-year reset) ([#1241](https://github.com/wmfs/tymly-pg-plugin/issues/1241)) ([1c93ca0](https://github.com/wmfs/tymly-pg-plugin/commit/1c93ca06d7d73968b6ffdc59925c93cc519c1e86))
+
+### CICD Configuration Changes :construction_worker:
+
+* add tymly-ci commit check [sc-34622] ([fb194d5](https://github.com/wmfs/tymly-pg-plugin/commit/fb194d567394ce6c3951326597d685e23b5e48dd))
+
 ## [1.356.0](https://github.com/wmfs/tymly-pg-plugin/compare/v1.355.0...v1.356.0) (2026-11-20)
 
 ### Build system dependencies :hammer:
