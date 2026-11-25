@@ -1,0 +1,17 @@
+{
+  "name": "ResetYearlyOffsetSequence",
+  "version": "1.0",
+  "StartAt": "ResetYearlyOffsetSequence",
+  "States": {
+    "ResetYearlyOffsetSequence": {
+      "Type": "Task",
+      "Resource": "module:resetSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "yearlyOffsetSeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}

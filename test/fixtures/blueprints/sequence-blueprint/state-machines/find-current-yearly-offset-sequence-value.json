@@ -1,0 +1,17 @@
+{
+  "name": "FindCurrentYearlyOffsetSequenceValue",
+  "version": "1.0",
+  "StartAt": "FindCurrentYearlyOffsetSequenceValue",
+  "States": {
+    "FindCurrentYearlyOffsetSequenceValue": {
+      "Type": "Task",
+      "Resource": "module:getCurrentValueFromSequence",
+      "ResourceConfig": {
+        "namespace": "tymlyTest",
+        "id": "yearlyOffsetSeq"
+      },
+      "ResultPath": "$.sequence",
+      "End": true
+    }
+  }
+}

@@ -11,12 +11,27 @@ const path = require('path')
 const process = require('process')
 const HlPgClient = require('@wmfs/hl-pg-client')
 
+// thisYear is worked out once, separately from the code under test, so these tests would fail if
+// run across midnight on New Year's Eve.
 const YEAR_SQL = "SELECT extract(year from (now() at time zone 'Europe/London'))::integer AS year"
 const CLEAR_TEST_ROWS = "DELETE FROM tymly.yearly_sequence WHERE id LIKE 'tymlyTest\\_%'"
 
 describe('Yearly sequences', function () {
   this.timeout(process.env.TIMEOUT || 5000)
-  let setupClient, client, tymlyService, statebox, thisYear
+  let setupClient, client, storage, tymlyService, statebox, thisYear
+
+  async function reboot () {
+    if (tymlyService) await tymlyService.shutdown()
+    const tymlyServices = await tymly.boot({
+      pluginPaths: [path.resolve(__dirname, './../lib')],
+      blueprintPaths: [path.resolve(__dirname, './fixtures/blueprints/sequence-blueprint')],
+      config: {}
+    })
+    tymlyService = tymlyServices.tymly
+    client = tymlyServices.storage.client
+    storage = tymlyServices.storage
+    statebox = tymlyServices.statebox
+  }
 
   async function run (stateMachineName) {
     const executionDescription = await statebox.startExecution(
@@ -46,21 +61,7 @@ describe('Yearly sequences', function () {
   })
 
   it('boot Tymly', async () => {
-    const tymlyServices = await tymly.boot(
-      {
-        pluginPaths: [
-          path.resolve(__dirname, './../lib')
-        ],
-        blueprintPaths: [
-          path.resolve(__dirname, './fixtures/blueprints/sequence-blueprint')
-        ],
-        config: {}
-      }
-    )
-
-    tymlyService = tymlyServices.tymly
-    client = tymlyServices.storage.client
-    statebox = tymlyServices.statebox
+    await reboot()
   })
 
   it('carries an existing sequence\'s position into the current year on first boot', async () => {
@@ -115,30 +116,61 @@ describe('Yearly sequences', function () {
     tymlyService = null
     await setupClient.query('DROP SCHEMA tymly_test CASCADE')
     await setupClient.query('CREATE SCHEMA tymly_test')
-
-    const tymlyServices = await tymly.boot({
-      pluginPaths: [path.resolve(__dirname, './../lib')],
-      blueprintPaths: [path.resolve(__dirname, './fixtures/blueprints/sequence-blueprint')],
-      config: {}
-    })
-    tymlyService = tymlyServices.tymly
-    statebox = tymlyServices.statebox
+    await reboot()
 
     expect(await run('findNextYearlySequenceValue')).to.eql({ value: 'TKT1', year: thisYear })
     expect(await run('findNextLegacyYearlySequenceValue')).to.eql({ value: '1', year: thisYear })
   })
 
   it('keeps counting across a normal reboot', async () => {
-    await tymlyService.shutdown()
-    const tymlyServices = await tymly.boot({
-      pluginPaths: [path.resolve(__dirname, './../lib')],
-      blueprintPaths: [path.resolve(__dirname, './fixtures/blueprints/sequence-blueprint')],
-      config: {}
-    })
-    tymlyService = tymlyServices.tymly
-    statebox = tymlyServices.statebox
-
+    await reboot()
     expect(await run('findNextYearlySequenceValue')).to.eql({ value: 'TKT2', year: thisYear })
+  })
+
+  describe('a sequence with startWith 100', () => {
+    it('current value is 99 before anything is issued', async () => {
+      expect(await run('findCurrentYearlyOffsetSequenceValue')).to.eql({ value: '99', year: thisYear })
+    })
+
+    it('issues 100, then 101', async () => {
+      expect(await run('findNextYearlyOffsetSequenceValue')).to.eql({ value: '100', year: thisYear })
+      expect(await run('findNextYearlyOffsetSequenceValue')).to.eql({ value: '101', year: thisYear })
+    })
+
+    it('restarts at 100 after a reset', async () => {
+      await run('resetYearlyOffsetSequence')
+      expect(await run('findCurrentYearlyOffsetSequenceValue')).to.eql({ value: '99', year: thisYear })
+      expect(await run('findNextYearlyOffsetSequenceValue')).to.eql({ value: '100', year: thisYear })
+    })
+
+    it('still restarts at 100 if Tymly reboots straight after a reset', async () => {
+      await run('resetYearlyOffsetSequence')
+      await reboot()
+      expect(await run('findNextYearlyOffsetSequenceValue')).to.eql({ value: '100', year: thisYear })
+    })
+  })
+
+  describe('several instances booting together', () => {
+    it('set up their yearly sequences once, without errors or duplicates', async () => {
+      const key = 'tymlyTest_yearlyTicketIdSeq'
+      const sqlId = 'tymly_test.yearly_ticket_id_seq'
+      const definition = storage.sequences[key]
+      await run('findNextYearlySequenceValue')
+      await run('findNextYearlySequenceValue') // this year is now on 4
+      await setupClient.query(`DROP SEQUENCE ${sqlId}`)
+
+      // Each call runs on its own pooled connection, like separate instances booting at once.
+      // Only one of them should find the sequence missing and clear its yearly numbering.
+      const warnings = []
+      await Promise.all(
+        Array.from({ length: 5 }, () => storage._initYearlySequence(key, sqlId, definition, { warning: w => warnings.push(w) }))
+      )
+      expect(warnings.length).to.eql(1)
+
+      const { rows } = await client.query('SELECT year, value FROM tymly.yearly_sequence WHERE id = $1', [key])
+      expect(rows).to.eql([{ year: thisYear, value: '0' }])
+      expect(await run('findNextYearlySequenceValue')).to.eql({ value: 'TKT1', year: thisYear })
+    })
   })
 
   after('clean up', async () => {
